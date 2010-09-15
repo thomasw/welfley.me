@@ -1,0 +1,19 @@
+/* bheavior: url('/assets/js/PIE.HTC') enables rounded corners and drop shadows see http://css3pie.com/ */
+
+/* Enables display: inline-block; for the project selector in IE 7 */
+html body #content #project_selector li { zoom: 1; *display: inline; }
+
+/* Alternate style for the active project that doesn't use rounded corners */
+html body #content #project_selector .active { padding: 9px; border: 1px solid #999;}
+
+/* Adds drop shadow to bottom menu */
+body>footer nav { behavior: url('/assets/js/PIE.htc');}
+
+/* The position relative fixes some z-index issue that happens because of PIE */
+.secondary_page #content>header nav ul a { position: relative; behavior: url('/assets/js/PIE.htc'); }
+.secondary_page #content>header nav ul a:hover { behavior: url('/assets/js/PIE.htc');}
+
+/* The subheading triangle isn't positioned correctly in IE 7, this fixes it
+in a way that doesn't impact IE8 */
+html .secondary_page #content>header nav { background-position: bottom 10px; }
+html #Resume #content>header nav { background-position: bottom 248px; }

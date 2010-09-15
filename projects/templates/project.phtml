@@ -1,0 +1,14 @@
+
+				<hgroup>
+					<h1>{{project.name}}</h1>
+					<h2>{{project.role}}</h2>
+				</hgroup>
+				<section class="project_meta">
+					{% if project.flickr_embed_code %}
+					{% autoescape off%}{{project.flickr_embed_code}}{% endautoescape %}
+					{% else %}
+					<p><img src="{% if project.screenshot %}{{project.screenshot.url}}{% else %}#{% endif%}" alt="{{project.screenshot_alt_text}}" /></p>
+					{% endif %}
+					{% if project.url %}<p class="project_link"><a href="{{project.url}}">{{project.url_text}}</a></p>{% endif %}
+				</section>
+				{% autoescape off%}{{project.description}}{% endautoescape %}

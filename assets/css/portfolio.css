@@ -1,0 +1,113 @@
+body { background: #e9e5dd url('../img/bg.png') center 30px repeat-y; padding: 30px 0 51px 0; text-align: center; font: 15.5px Helvetica, "Trebuchet MS", sans-serif; line-height:1.7em;}
+header, #content, #contact_me, #resume, footer p { width: 695px; margin: 0 auto; background:#f5f1e9; text-align: left;}
+a { color: #4d423e;}
+
+/* Main header */
+body>header { padding: 25px 75px 0 75px; font-size: 30px;}
+body>header a { text-decoration: none; color: #000;}
+body>header h1, header h2 { font-weight: normal; line-height: 1.2em;}
+body>header h1 strong { font-size: 48px; color: #c14411;}
+body>header h2 { padding: 0 0 0 40px;}
+body>header h2 strong { color:#436b69;}
+
+#content { padding: 20px 75px 0 75px; }
+
+/* Primary Page */
+#content strong { font-size: 125%; }
+#content p { margin: 20px 0;}
+#content section ul { list-style-type: disc; margin: 20px 0 20px 40px;}
+
+#home section {}
+#home section h1 { font-weight: normal; font: 160% 'Cantarell', 'Gotham', Arial, serif; color: #c14411; margin: 0 0;}
+#home #know #frontend { display: block; float: left; width: 45%; }
+#home #know #backend { display: block; float: right; width: 45%; }
+#home #know .start { color:#436b69; margin: 0; font-weight: bold; font-size: 130%; }
+#home #know:after { content: ""; display: block; height: 0; width: 0; clear: both;}
+
+/* Secondary Pages */
+.secondary_page #content { padding: 0; width: 845px; margin: 20px auto 0 auto; }
+.secondary_page #content>header { height: 87px; margin: 0; width: 100%; position: relative;}
+.secondary_page #content>header h1 { height: 49px; line-height:1.5em; font-size: 160%; background: #c14411 url('../img/secondary_header_bg.png') repeat-x; padding: 17px 0 0 75px; color:#f5f1e9;} 
+.secondary_page #content>header nav { position: absolute; top: 0; right: 75px; height: 85px; margin: 0 40px 0 0; background: url('../img/triangle.png') right bottom no-repeat;  font-size: 14px;}
+.secondary_page #content>header nav ul { margin: 0 -40px 0 0;}
+.secondary_page #content>header nav ul li { display: block; float: left; margin:25px 0 10px 20px;}
+.secondary_page #content>header nav ul a { display: block; line-height: 1em; padding: 5px 6px 4px 6px; background: #e9e5dd; color: #4d423e; text-decoration: none; -moz-box-shadow: 0px 0px 2px #333; -webkit-box-shadow: 0px 0px 2px #333; box-shadow: 0px 0px 2px #333; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.secondary_page #content>header nav ul a:hover { background: #4d423e; color: #e9e5dd; -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none; }
+
+.secondary_page_content { padding: 0 75px; font-size: 100%;}
+.secondary_page_content strong { font-size: 100%; font-weight: bold;}
+
+/* Contact Me Page */
+#contact_methods form, #contact_methods #alternate_contact_methods { float: left;}
+
+#contact_methods form { width: 65%; margin: 0 5% 0 0;}
+#contact_methods form section { margin: 13px 0; width: 90%;}
+#contact_methods form label { display: block; font-weight: bold; font-size: 115%;}
+#contact_methods form input { width: 100%; height: 25px; padding: 5px; font-size:100%;}
+#contact_methods form textarea { width: 100%; height: 300px; padding: 5px; font-size:100%;}
+#contact_methods form #humanity_check { display: none; }
+#contact_methods form button { line-height: 1em; float: right; padding: 10px; margin: 0 -10px 0 0;}
+
+#alternate_contact_methods { width: 30%;}
+#alternate_contact_methods h1 { font-weight: normal; font: 160% 'Cantarell', 'Gotham', Arial serif; color: #c14411; margin: 0 0 15px 0;}
+
+/* Projects */
+#project_slideshow #project_data { list-style-type: none; margin: 0; padding: 0;}
+#project_slideshow #project_data li {padding: 0 75px;}
+#project_slideshow hgroup h1 { vertical-align: baseline; display: inline; font-weight: normal; font: 160% 'Cantarell', 'Gotham', Arial serif; color: #c14411; }
+#project_slideshow hgroup h2 { vertical-align: baseline; display: inline; font-weight: normal; font-size: 100%; color: #436b69; padding: 0 0 0 5px;}
+
+#project_slideshow .project_meta { float: right; margin: -27px 0 15px 20px; text-align: center; }
+#project_slideshow .project_meta p { padding: 0; margin: 0; }
+#project_slideshow .project_meta img { display: block; border: 1px solid #000; width: 300px; height: 200px; background: #fff; margin: 0 0 15px 0;}
+
+.project_link a { display: inline-block; background: url('../img/action.png') right center no-repeat; padding: 0 30px 0 0; margin: 0 auto; font-weight: bold; color: #000;}
+
+#project_nav { padding: 0 75px; position: relative; }
+#project_selector {text-align: center; width: 100%; margin: 0 auto;}
+#project_selector li { display: -moz-inline-block; display: inline-block; vertical-align: middle;  margin: 0 5px 10px 5px; padding: 10px; }
+#project_selector .active { background: #e9e5dd; -moz-box-shadow: inset 0px 0px 6px #666; -webkit-box-shadow: inset 0px 0px 5px #000; box-shadow: inset 0px 0px 5px #000; -moz-border-radius: 15px; -webkit-border-radius: 15px; border-radius: 15px; }
+#prev a, #next a { position: absolute; top: 72px; padding: 5px; display: none; width: 25px; height:18px; background: #000; text-indent: -9999px; font-size: 0;}
+#next a { background: url('../img/right.png') no-repeat 0 -18px;  right: 75px;}
+#prev a { background: url('../img/left.png') no-repeat 0 -18px;  left: 75px;}
+
+.scrollable { position:relative; overflow:hidden; width: 100%; }
+.scrollable .items { width:20000em; position:absolute; clear:both; }
+.items div { float:left; padding: 0 75px; width:695px; text-align: left; }
+.scrollable .active { position:relative; cursor:default; }
+
+/* Resume */
+#resume_content { font-size: 90%;}
+#resume_content strong { font-size: 100%; } 
+#resume_content p { margin: 0; }
+#resume_content header { margin: 20px 0;}
+#resume_content header hgroup { text-transform: uppercase; margin: 0 0 15px 0;}
+#resume_content header hgroup h1, #resume_content header hgroup h2 { display: inline; vertical-align: middle; }
+#resume_content header hgroup h1 { font-size: 260%; color: #c14411;}
+#resume_content header hgroup h2 { font-size: 185%; padding-left: 10px; }
+#resume_content header p, #resume_content header address { line-height: 1.2em; border-right: 2px solid #c14411; float: left; font-size: 100%; font-weight: bold; font-style: normal; padding: 0 15px; vertical-align: middle; margin: 0;}
+#resume_content header .email { padding-left: 0;}
+#resume_content header .phone_number { border-right: none;}
+#resume_content header:after {content:""; display: block; height: 0; width: 0; clear: both; }
+#resume_content section h1, #resume_content section h2 { font-family: 'Cantarell', 'Gotham', Arial, serif; }
+#resume_content > section > h1 { text-transform: uppercase; margin: 20px 0 0 0; font-size: 135%;}
+#resume_content > section > section > h1 { margin: 20px 0 0 0; font-size: 125%; color: #c14411;}
+#resume_content > section > section > h1 span { color: #000; font-size: 70%; font-weight: normal; font-style: italic; border-left: 1px solid black; padding: 0 0 0 6px; margin: 0 0 0 5px;}
+#resume_content > section > section > h2 span { font-size: 85%; border-left: 1px solid black; font-weight: normal; font-style: italic;  padding: 0 0 0 6px; margin: 0 0 0 5px;}
+html #Resume #resume_content #ucf_web_dev { margin-top: 20px;}
+
+/* Copyright Notice */
+body>footer p { clear: both; padding: 40px 75px; font-size: 12px;}
+
+/* Bottom navigation bar */
+body>footer nav { position: fixed; bottom: 0; left: 0; background: #4d423e; clear: both; border-top: 1px solid #3c3430; width: 100%; height: 50px; -moz-box-shadow: 0px -2px 10px #666; -webkit-box-shadow: 0px -2px 10px #666; box-shadow: 0px -2px 10px #666; }
+body>footer nav ul { width: 695px; margin: 10px auto 0 auto;}
+body>footer nav ul li { display: block;}
+body>footer nav ul a {  background: #4d423e url('../img/footer_sprite.png') no-repeat; }
+body>footer nav #projects_button { float: left; text-align: left;}
+body>footer nav #projects_button a { display: block; width: 114px; height: 31px; margin: -2px 0 0 0; padding: 3px 0 0 20px; background-position: 0 -58px;}
+body>footer nav #contact_me_button { float: right; }
+body>footer nav #contact_me_button a { display: block; height: 26px; margin: 0 20px 0 0; padding: 3px 0 0 40px;}
+body>footer nav #resume_button { float: right; }
+body>footer nav #resume_button a {display: block; height: 25px; padding: 3px 0 0 34px;background-position: 0 -30px;}
+body>footer nav a { text-decoration: none; color: #fff;}

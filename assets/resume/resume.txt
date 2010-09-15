@@ -1,0 +1,33 @@
+Thomas Welfley
+Web Developer
+
+thomas@welfley.me
+
+312 Briar Bay Cir.
+Orlando, FL 32825
+
+(321) 960 - 6107
+
+I'm really good at building web applications with Django, Celery, and Python on the back end, and semantic markup, CSS, and jQuery on the front end. I can take an idea from inception to deployment either as part of a team or independently. Just say the word and let's get started building amazing things.
+
+Professional Experience
+
+Match Strike, LLC  |  2009 - Present
+Cofounder + Lead Developer
+Responsible for envisioning new products and features and then leading their execution. Interacted with and supported numerous clients. Secured an opportunity to pitch our primary product to a prominent seed capital firm. Worked extensively with the Twitter and Facebook APIs.
+
+University of Central Florida	
+Project Manager / Team Lead  |  2006 - 2009
+Led a team of 10 developers in the creation of numerous web applications using agile processes. Responsible for project management, technical planning, quality assurance, hiring, and training. Several of the projects I initiated culminated in the reduction of human resource requirements by well over a thousand person-hours per year. In other words, my team and I built cool things that made people's jobs easier.
+
+Web Developer  |  2004 - 2006
+Developed web applications in support of online learning at the nation's 3rd largest university. Rich, accessible (section 508 compliant) interfaces was one of my specialties. Went from new hire to team lead in less than two years and had more fun doing it than I could possibly describe.
+
+540 Interactive Inc. |  2003 - 2004
+Web Developer
+Converted PSD based compositions to standards compliant XHTML and CSS. Assisted with the deployment and customization of internally produced, proprietary content management systems written in PHP. 
+
+Education
+
+University of Central Florida	
+B.S. in Computer Science  |  2002 - 2006
