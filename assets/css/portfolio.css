@@ -81,6 +81,7 @@ body>header h2 strong { color:#436b69;}
 #resume_content { font-size: 90%;}
 #resume_content strong { font-size: 100%; } 
 #resume_content p { margin: 0; }
+#content #resume_content p { margin: 0; }
 #resume_content header { margin: 20px 0;}
 #resume_content header hgroup { text-transform: uppercase; margin: 0 0 15px 0;}
 #resume_content header hgroup h1, #resume_content header hgroup h2 { display: inline; vertical-align: middle; }
