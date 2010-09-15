@@ -2,6 +2,7 @@
 
 {% block title %}{{block.super}}: Projects{% endblock %}
 {% block body_attributes %}{{block.super}} id="projects" class="secondary_page"{% endblock %}
+{% block meta_description %}This is Thomas Welfley's portfolio. It contains information about several of the projects that Thomas has worked on over the last few years.{% endblock %}
 
 {% block subheading %}Projects{% endblock %}
 {% block secondary_page_content %}{% get_latest projects.Project 8 as projects %}
