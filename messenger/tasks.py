@@ -37,7 +37,7 @@ def send_message(message_id):
 		send_mail(getattr(settings,'EMAIL_SUBJECT_PREFIX','')+'Contact form', \
 			t.render(Context({'message':message})), None, \
 			(getattr(settings, 'DEFAULT_FROM_EMAIL', 'info@NONE.TLD'),))
-	except error as e:
+	except (error,), e:
 		logging.error("Attempt to send e-mail failed. Probably unable to connect to smtp server %s: %s" % (type(e), e))
 		return False
 	

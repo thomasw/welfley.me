@@ -22,7 +22,7 @@ def queue_message(sender, instance, created, **kwargs):
 		try:
 			# Attempt to send the message asynchronously
 			tasks.send_message.delay(instance.pk)
-		except (KeyError, error) as e:
+		except (KeyError, error), e:
 			logging.info("Unable to send the e-mail notice asynchronously. %s: %s" % (type(e), e))
 			tasks.send_message(instance.pk)
 
