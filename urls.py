@@ -14,6 +14,13 @@ urlpatterns = patterns('',
 	url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout')
 )
 
+# 404 & 500 debug
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^500/$', 'django.views.defaults.server_error'),
+        (r'^404/$', 'django.views.generic.simple.direct_to_template', {'template': '404.html'}),
+    )
+
 # Generic Views
 urlpatterns += patterns('',
 	url(r'^$', direct_to_template, {'template': 'home.phtml'}, name='index'),
