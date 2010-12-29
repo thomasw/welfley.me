@@ -64,6 +64,7 @@ INSTALLED_APPS = (
 	'messenger',
 	'djcelery',
 	'projects',
+	'gunicorn',
 )
 
 # Login configuration

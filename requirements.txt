@@ -1,4 +1,4 @@
-django>=1.2.2
+django>=1.2.3
 -e hg+http://bitbucket.org/andrewgodwin/south/@0.7.1#egg=django_south
 -e svn+http://django-compress.googlecode.com/svn/trunk/#egg=django_compress
 -e git+http://github.com/django-extensions/django-extensions.git#egg=django-extensions
@@ -8,3 +8,4 @@ django-celery
 PIL>=1.1.6
 MySQL-python
 python-memcached
+gunicorn
