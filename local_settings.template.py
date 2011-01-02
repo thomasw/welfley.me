@@ -1,6 +1,8 @@
 import logging
 import os
 
+from sentry.client.handlers import SentryHandler
+
 SITE_NAME='Your Name'
 
 ADMINS = (
