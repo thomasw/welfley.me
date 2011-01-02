@@ -65,6 +65,7 @@ INSTALLED_APPS = (
 	'djcelery',
 	'projects',
 	'gunicorn',
+	'sentry.client',
 )
 
 # Login configuration

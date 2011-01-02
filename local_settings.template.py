@@ -112,6 +112,20 @@ CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
 CACHE_MIDDLEWARE_SECONDS = 60*60
 CACHE_MIDDLEWARE_KEY_PREFIX = 'welfleyme'
 
+# Django Sentry
+SENTRY_REMOTE_URL = 'https://xxxxxxxxxx/sentry/store/'
+SENTRY_KEY = 'xxxxxxxxxxxx'
+
+logger = logging.getLogger()
+# ensure we havent already registered the handler
+if SentryHandler not in map(lambda x: x.__class__, logger.handlers):
+	logger.addHandler(SentryHandler())
+
+	# Add StreamHandler to sentry's default so you can catch missed exceptions
+	logger = logging.getLogger('sentry.errors')
+	logger.propagate = False
+	logger.addHandler(logging.StreamHandler())
+
 # Uncomment to add a debug toolbar if in DEBUG mode - requires debug_toolbar
 # Add the debug toolbar if in debug mode
 #if DEBUG == True:

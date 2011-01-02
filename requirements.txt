@@ -9,3 +9,4 @@ PIL>=1.1.6
 MySQL-python
 python-memcached
 gunicorn
+django-sentry
