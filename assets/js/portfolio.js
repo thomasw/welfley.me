@@ -1,4 +1,4 @@
 $(document).ready(function(){
 	init_project_slideshow();
-	$.ga("UA-8759876-2");
+	if(GA_ACCOUNT!=='nope') $.ga(GA_ACCOUNT);
 });
