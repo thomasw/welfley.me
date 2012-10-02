@@ -118,6 +118,9 @@ CACHE_MIDDLEWARE_KEY_PREFIX = 'welfleyme'
 SENTRY_REMOTE_URL = 'https://xxxxxxxxxx/sentry/store/'
 SENTRY_KEY = 'xxxxxxxxxxxx'
 
+# Google Analytics Account
+# GA_ACCOUNT = 'UA-#######-#'
+
 logger = logging.getLogger()
 # ensure we havent already registered the handler
 if SentryHandler not in map(lambda x: x.__class__, logger.handlers):
