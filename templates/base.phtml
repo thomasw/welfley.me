@@ -15,7 +15,7 @@
 	<meta name="description" content="{% block meta_description %}Thomas Welfley is a web developer that's really good with Python, Django, HTML, jQuery, and CSS. You should hire him.{% endblock %}" />
 	<meta name="author" content="{% block meta_author %}Thomas Welfley{% endblock %}" />
 	<meta name="copyright" content="{% block meta_copyright %}Copyright 2010 Thomas Welfley. All Rights Reserved.{% endblock %}" />
-	<meta name="ga-account" content="{{GA_ACCOUNT}}" />
+	{% if GA_ACCOUNT %}<meta name="ga-account" content="{{GA_ACCOUNT}}" />{% endif %}
 	{% endblock %}
 {% endblock %}</head>
 <body {% block body_attributes %}{% endblock %}>{% block body %}
