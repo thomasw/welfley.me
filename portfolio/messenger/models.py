@@ -4,6 +4,8 @@ from socket import error
 from django.db import models
 from django.db.models.signals import post_save
 
+log = logging.getLogger(__name__)
+
 
 class Message(models.Model):
     email = models.EmailField("E-mail address", max_length=320)
@@ -16,17 +18,20 @@ class Message(models.Model):
     modified = models.DateTimeField('Last Modified', auto_now=True,
                                     auto_now_add=False)
 
+    def send_message(self):
+        """Send an e-mail notice about this message."""
+        from messenger.tasks import send_message
+
+        try:
+            send_message.delay(self.pk)  # Async attempt.
+        except (KeyError, error):
+            log.info("Asynchronus e-mail send failed.", exc_info=True)
+            send_message(self.pk)  # Syncrhonus
+
 
 # Signals
 def queue_message(sender, instance, created, **kwargs):
-    from messenger import tasks
     if created:
-        try:
-            # Attempt to send the message asynchronously
-            tasks.send_message.delay(instance.pk)
-        except (KeyError, error), e:
-            logging.info("Unable to send the e-mail notice asynchronously."
-                         " %s: %s" % (type(e), e))
-            tasks.send_message(instance.pk)
+        instance.send_message()
 
 post_save.connect(queue_message, sender=Message)
