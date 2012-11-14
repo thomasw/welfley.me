@@ -4,7 +4,7 @@ import os
 from django import template
 
 
-SITE_NAME='Your Name'
+SITE_NAME = 'Your Name'
 
 ADMINS = (
     ('Your Name', 'info@site.tld'),
@@ -47,21 +47,22 @@ TEMPLATE_DIRS = (os.path.join(SITE_ROOT, 'templates'),)
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'site.db',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3'
+        # or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'site.db',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
-# Logging Configuration
 logging.basicConfig(
-    level = logging.INFO,
-    format = '%(asctime)s %(levelname)s %(message)s',
-    filename = os.path.join(SITE_ROOT, 'site.log'),
-    filemode = 'a',
+    level=logging.INFO,
+    format='%(asctime)s %(levelname)s %(message)s',
+    filename=os.path.join(SITE_ROOT, 'site.log'),
+    filemode='a',
 )
 
 # Local time zone for this installation. Choices can be found here:
@@ -162,7 +163,7 @@ MAX_MESSAGES_PER_DAY = 10
 
 CACHE_BACKEND = 'memcached://127.0.0.1:11211/' if not DEBUG else 'dummy:///'
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
-CACHE_MIDDLEWARE_SECONDS = 60*60
+CACHE_MIDDLEWARE_SECONDS = 60 * 60
 CACHE_MIDDLEWARE_KEY_PREFIX = 'welfleyme'
 
 COMPRESS = True
@@ -177,7 +178,7 @@ COMPRESS_CSS = {
         'output_filename': 'css/portfolio.r?.css',
     },
     'ie': {
-        'source_filenames':(
+        'source_filenames': (
             'css/ie.css',
         ),
         'output_filename': 'css/ie.r?.css'

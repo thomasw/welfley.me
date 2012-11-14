@@ -1,10 +1,11 @@
-from django.template import Library, Node
+from django.template import Library, Node, TemplateSyntaxError
 
 register = Library()
 
+
 # This code is borrowed almost directly from an article on writing custom
 # template tags by James Bennet at b-list.org:
-# http://www.b-list.org/weblog/2006/jun/07/django-tips-write-better-template-tags/
+# www.b-list.org/weblog/2006/jun/07/django-tips-write-better-template-tags/
 
 class LatestContentNode(Node):
     def __init__(self, model, num, varname):
@@ -18,11 +19,14 @@ class LatestContentNode(Node):
 
         return ''
 
+
 @register.tag
 def get_latest(parser, token):
     bits = token.contents.split()
     if len(bits) != 5:
-        raise TemplateSyntaxError, "get_latest tag takes exactly four arguments"
+        raise TemplateSyntaxError(
+            'get_latest tag takes exactly four arguments')
     if bits[3] != 'as':
-        raise TemplateSyntaxError, "third argument to get_latest tag must be 'as'"
+        raise TemplateSyntaxError(
+            "third argument to get_latest tag must be 'as'")
     return LatestContentNode(bits[1], bits[2], bits[4])
