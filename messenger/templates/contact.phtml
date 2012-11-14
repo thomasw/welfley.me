@@ -7,35 +7,35 @@
 {% block subheading %}Contact Me{% endblock %}
 
 {% block secondary_page_content %}
-		<section id="contact_methods" class="secondary_page_content">
-			<form method="post" id="contact_form">
-				
-				<section>
-					{{form.email.label_tag}}
-					{{form.email.errors}}
-					{{form.email}}
-				</section>
-				<section>
-					{{form.message.label_tag}}
-					{{form.message.errors}}
-					{{form.message}}
-				</section>
-				<section id="humanity_check">
-					{{form.computer.label_tag}}
-					{{form.computer}}
-				</section>
-				{% csrf_token %}
-				<p><button>Send to Thomas</button></p>
-			</form>
-			<section id="alternate_contact_methods">
-				<h1>or find me here...</h1>
-				<ul>
-					<li class="email"><a href="mailto:thomas@welfley.me">E-mail</a></li>
-					<li class="twitter"><a href="http://twitter.com/cyproject">Twitter</a></li>
-					<li class="linkedin"><a href="http://www.linkedin.com/in/thomaswelfley">LinkedIn</a></li>
-					<li class="github"><a href="http://github.com/thomasw">Github</a></li>
-					<li class="phone">(321) 960 - 6107</li>
-				</ul>
-			</section>
-		</section>
+        <section id="contact_methods" class="secondary_page_content">
+            <form method="post" id="contact_form">
+
+                <section>
+                    {{form.email.label_tag}}
+                    {{form.email.errors}}
+                    {{form.email}}
+                </section>
+                <section>
+                    {{form.message.label_tag}}
+                    {{form.message.errors}}
+                    {{form.message}}
+                </section>
+                <section id="humanity_check">
+                    {{form.computer.label_tag}}
+                    {{form.computer}}
+                </section>
+                {% csrf_token %}
+                <p><button>Send to Thomas</button></p>
+            </form>
+            <section id="alternate_contact_methods">
+                <h1>or find me here...</h1>
+                <ul>
+                    <li class="email"><a href="mailto:thomas@welfley.me">E-mail</a></li>
+                    <li class="twitter"><a href="http://twitter.com/cyproject">Twitter</a></li>
+                    <li class="linkedin"><a href="http://www.linkedin.com/in/thomaswelfley">LinkedIn</a></li>
+                    <li class="github"><a href="http://github.com/thomasw">Github</a></li>
+                    <li class="phone">(321) 960 - 6107</li>
+                </ul>
+            </section>
+        </section>
 {% endblock%}

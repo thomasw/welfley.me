@@ -6,11 +6,11 @@
 
 {% block subheading %}Thanks!{% endblock %}
 {% block secondary_page_content %}
-		<section id="thank_message" class="secondary_page_content">
-			<p>I've received your message and I put it on the books. Thomas should get back to you sometime soon but, to be honest, I can't make any promises. I'm just a website.</p>
-			<p>While you're waiting on a response, consider checking out one of these projects that Thomas worked on:</p>
-			<ul>{% get_latest projects.Project 3 as projects %}{% for project in projects%}
-				<li><a href="{{project.url}}">{{project.name}}</a></li>
-			{% endfor %}</ul>
-		</section>
+        <section id="thank_message" class="secondary_page_content">
+            <p>I've received your message and I put it on the books. Thomas should get back to you sometime soon but, to be honest, I can't make any promises. I'm just a website.</p>
+            <p>While you're waiting on a response, consider checking out one of these projects that Thomas worked on:</p>
+            <ul>{% get_latest projects.Project 3 as projects %}{% for project in projects%}
+                <li><a href="{{project.url}}">{{project.name}}</a></li>
+            {% endfor %}</ul>
+        </section>
 {% endblock %}

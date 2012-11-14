@@ -21,51 +21,51 @@ USE_I18N = True
 
 # List of all installed authentication backends
 AUTHENTICATION_BACKENDS = (
-	'django.contrib.auth.backends.ModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-	'django.template.loaders.filesystem.Loader',
-	'django.template.loaders.app_directories.Loader',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 )
 
 # List of template context processors
 TEMPLATE_CONTEXT_PROCESSORS = (
-	'django.core.context_processors.auth',
-	'django.core.context_processors.debug',
-	'django.core.context_processors.i18n',
-	'django.core.context_processors.media',
-	'context_processors.default',
+    'django.core.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'context_processors.default',
 )
 
 MIDDLEWARE_CLASSES = (
-	'django.contrib.sessions.middleware.SessionMiddleware',
-	'django.middleware.csrf.CsrfViewMiddleware',
-	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.messages.middleware.MessageMiddleware',
-	'django.middleware.cache.UpdateCacheMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
 ROOT_URLCONF = 'urls'
 
 INSTALLED_APPS = (
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.sites',
-	'django.contrib.messages',
-	'django.contrib.admin',
-	'django_extensions',
-	'south',
-	'compress',
-	'messenger',
-	'djcelery',
-	'projects',
-	'gunicorn',
-	'sentry.client',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.admin',
+    'django_extensions',
+    'south',
+    'compress',
+    'messenger',
+    'djcelery',
+    'projects',
+    'gunicorn',
+    'sentry.client',
 )
 
 # Login configuration
@@ -75,32 +75,32 @@ LOGIN_REDIRECT_URL = '/'
 
 # djanog-compress settings.
 COMPRESS_CSS = {
-	'main': {
-		'source_filenames': (
-			'css/reset.css',
-			'css/portfolio.css',
-		),
-		'output_filename': 'css/portfolio.r?.css',
+    'main': {
+        'source_filenames': (
+            'css/reset.css',
+            'css/portfolio.css',
+        ),
+        'output_filename': 'css/portfolio.r?.css',
     },
-	'ie': {
-		'source_filenames':(
-			'css/ie.css',
-		),
-		'output_filename': 'css/ie.r?.css'
-	}
+    'ie': {
+        'source_filenames':(
+            'css/ie.css',
+        ),
+        'output_filename': 'css/ie.r?.css'
+    }
 }
 
 COMPRESS_JS = {
-	'main': {
-		'source_filenames': (
-			'js/jquery.tools.min.js',
-			'js/googleAnalytics.js',
-			'js/projects.js',
-			#'js/form.js',
-			'js/portfolio.js',
-		),
-		'output_filename': 'js/portfolio.r?.js',
-	},
+    'main': {
+        'source_filenames': (
+            'js/jquery.tools.min.js',
+            'js/googleAnalytics.js',
+            'js/projects.js',
+            #'js/form.js',
+            'js/portfolio.js',
+        ),
+        'output_filename': 'js/portfolio.r?.js',
+    },
 }
 
 

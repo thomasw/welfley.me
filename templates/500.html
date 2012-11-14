@@ -5,10 +5,10 @@
 
 {% block subheading %}500 Server Error{% endblock %}
 {% block secondary_page_content %}
-	<section class="secondary_page_content">
-		<h1>Uh oh!</h1>
+    <section class="secondary_page_content">
+        <h1>Uh oh!</h1>
 
-		<p>An error occurred when I attempted to fetch the page you requested. I went ahead and sent a message to Thomas to let him know that something bad happened. If you'd like to provide additional details, feel free to <a href="{% url contact_me%}">send him a message too</a>.</p>
-		<p><a href="{% url index %}">Return home</a></p>
-	</section>
+        <p>An error occurred when I attempted to fetch the page you requested. I went ahead and sent a message to Thomas to let him know that something bad happened. If you'd like to provide additional details, feel free to <a href="{% url contact_me%}">send him a message too</a>.</p>
+        <p><a href="{% url index %}">Return home</a></p>
+    </section>
 {% endblock %}

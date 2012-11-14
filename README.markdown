@@ -7,14 +7,14 @@ Using [pip](http://pypi.python.org/pypi/pip) + [virtualenv](http://pypi.python.o
 
 If you don't want to use virtualenv, you can do things this way using only pip:
 
-	> git clone git://github.com/thomasw/welfley.me.git
-	> cd welfley.me/
-	> sudo pip install -r requirements.txt
-	> cp local_settings.template.py local_settings.py
+    > git clone git://github.com/thomasw/welfley.me.git
+    > cd welfley.me/
+    > sudo pip install -r requirements.txt
+    > cp local_settings.template.py local_settings.py
 
 Configure local_settings.py file to your liking and then do the following to fire up your development server:
 
-	> ./manage.py runserver
+    > ./manage.py runserver
 
 After that, your local instance of [welfley.me](http://welfley.me/) should be accessible to you [here](http://127.0.0.1:8000), but you probably already knew that.
 

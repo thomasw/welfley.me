@@ -6,7 +6,7 @@ from sentry.client.handlers import SentryHandler
 SITE_NAME='Your Name'
 
 ADMINS = (
-	('Your Name', 'info@site.tld'),
+    ('Your Name', 'info@site.tld'),
 )
 
 MANAGERS = ADMINS
@@ -23,7 +23,7 @@ DEFAULT_FROM_EMAIL = 'info@site.tld'
 SEND_BROKEN_LINK_EMAILS = False
 
 if DEBUG:
-	EMAIL_PORT = 1025
+    EMAIL_PORT = 1025
 
 SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
 
@@ -48,22 +48,22 @@ ADMIN_MEDIA_PREFIX = '/media/'
 TEMPLATE_DIRS = (os.path.join(SITE_ROOT, 'templates'),)
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-		'NAME': 'site.db',						# Or path to database file if using sqlite3.
-		'USER': '',						 # Not used with sqlite3.
-		'PASSWORD': '',					 # Not used with sqlite3.
-		'HOST': '',						 # Set to empty string for localhost. Not used with sqlite3.
-		'PORT': '',						 # Set to empty string for default. Not used with sqlite3.
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'site.db',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
 }
 
 # Logging Configuration
 logging.basicConfig(
-	level = logging.INFO,
-	format = '%(asctime)s %(levelname)s %(message)s',
-	filename = os.path.join(SITE_ROOT, 'site.log'),
-	filemode = 'a',
+    level = logging.INFO,
+    format = '%(asctime)s %(levelname)s %(message)s',
+    filename = os.path.join(SITE_ROOT, 'site.log'),
+    filemode = 'a',
 )
 
 # djanog-compress settings.
@@ -108,7 +108,7 @@ MAX_MESSAGES_PER_DAY = 10
 # Cache Settings
 CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 if DEBUG == True:
-	CACHE_BACKEND = 'dummy:///'
+    CACHE_BACKEND = 'dummy:///'
 
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
 CACHE_MIDDLEWARE_SECONDS = 60*60
@@ -121,16 +121,16 @@ SENTRY_KEY = 'xxxxxxxxxxxx'
 logger = logging.getLogger()
 # ensure we havent already registered the handler
 if SentryHandler not in map(lambda x: x.__class__, logger.handlers):
-	logger.addHandler(SentryHandler())
+    logger.addHandler(SentryHandler())
 
-	# Add StreamHandler to sentry's default so you can catch missed exceptions
-	logger = logging.getLogger('sentry.errors')
-	logger.propagate = False
-	logger.addHandler(logging.StreamHandler())
+    # Add StreamHandler to sentry's default so you can catch missed exceptions
+    logger = logging.getLogger('sentry.errors')
+    logger.propagate = False
+    logger.addHandler(logging.StreamHandler())
 
 # Uncomment to add a debug toolbar if in DEBUG mode - requires debug_toolbar
 # Add the debug toolbar if in debug mode
 #if DEBUG == True:
-#	MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES+('debug_toolbar.middleware.DebugToolbarMiddleware',)
-#	INTERNAL_IPS = ('127.0.0.1',)
-#	INSTALLED_APPS = INSTALLED_APPS + ('debug_toolbar',)
+#   MIDDLEWARE_CLASSES = MIDDLEWARE_CLASSES+('debug_toolbar.middleware.DebugToolbarMiddleware',)
+#   INTERNAL_IPS = ('127.0.0.1',)
+#   INSTALLED_APPS = INSTALLED_APPS + ('debug_toolbar',)

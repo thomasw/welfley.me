@@ -6,24 +6,24 @@
 
 {% block subheading %}Projects{% endblock %}
 {% block secondary_page_content %}{% get_latest projects.Project 8 as projects %}
-	{% if projects %}
-	<nav id="project_nav">
-		<p id="prev"><a href="#prev">Previous</a></p>
-		<ul id="project_selector">{% for project in projects%}
-			<li {% if forloop.first %}class="active"{% endif %} id="link_proj_{{project.name|slugify}}"><a href="#proj_{{project.name|slugify}}">{% if project.icon %}<img src="{{project.icon.url}}" alt="{{project.name}}" />{% else %}{{project.name}}{% endif %}</a></li>{% endfor %}
-		</ul>
-		<p id="next"><a href="#next">Next</a></p>
-	</nav>
-	<section id="project_slideshow">
-		<ul id="project_data">{% for project in projects %}
-			<li id="proj_{{project.name|slugify}}">
-				{% include "project.phtml" %}
-			</li>{% endfor %}
-		</ul>
-	</section>
-	{% else %}
-	<section class="secondary_page_content">
-		<p>I haven't posted about any of my projects yet. Check back soon.</p>
-	</section>
-	{% endif %}
+    {% if projects %}
+    <nav id="project_nav">
+        <p id="prev"><a href="#prev">Previous</a></p>
+        <ul id="project_selector">{% for project in projects%}
+            <li {% if forloop.first %}class="active"{% endif %} id="link_proj_{{project.name|slugify}}"><a href="#proj_{{project.name|slugify}}">{% if project.icon %}<img src="{{project.icon.url}}" alt="{{project.name}}" />{% else %}{{project.name}}{% endif %}</a></li>{% endfor %}
+        </ul>
+        <p id="next"><a href="#next">Next</a></p>
+    </nav>
+    <section id="project_slideshow">
+        <ul id="project_data">{% for project in projects %}
+            <li id="proj_{{project.name|slugify}}">
+                {% include "project.phtml" %}
+            </li>{% endfor %}
+        </ul>
+    </section>
+    {% else %}
+    <section class="secondary_page_content">
+        <p>I haven't posted about any of my projects yet. Check back soon.</p>
+    </section>
+    {% endif %}
 {% endblock %}
