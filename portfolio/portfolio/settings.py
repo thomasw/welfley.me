@@ -162,10 +162,12 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django_extensions',
     'south',
+    'django_nose',
     'pipeline',
     'messenger',
     'djcelery',
     'projects',
+    'devserver',
     'gunicorn',
 )
 
@@ -246,6 +248,10 @@ PIPELINE_JS = {
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.closure.ClosureCompressor'
 
 PIPELINE_CLOSURE_BINARY = 'closure-compiler'
+
+# Tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = ['--with-spec', '--spec-color', '--where=%s' % APP_ROOT]
 
 # Add template tags
 template.add_to_builtins('projects.templatetags.utility_tags')
