@@ -12,10 +12,14 @@ urlpatterns = patterns('',
     (r'^projects/', include('projects.urls')),
     (r'^manage/doc/', include('django.contrib.admindocs.urls')),
     (r'^manage/', include(admin.site.urls)),
-    url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout')
+    url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
+    url(r'^$', direct_to_template, {'template': 'home.phtml'}, name='index'),
+    url(r'^resume/$', direct_to_template, {'template': 'resume.phtml'},
+        name='resume'),
 )
 
 # 404 & 500 debug
+
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^500/$', 'django.views.defaults.server_error'),
@@ -24,12 +28,16 @@ if settings.DEBUG:
         }),
     )
 
-# Generic Views
-urlpatterns += patterns('',
-    url(r'^$', direct_to_template, {'template': 'home.phtml'}, name='index'),
-    url(r'^resume/$', direct_to_template, {'template': 'resume.phtml'},
-        name='resume'),
-)
+# Serve static files
 
-# Static files
 urlpatterns += staticfiles_urlpatterns()
+
+
+# Serve user uploads
+
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+    )

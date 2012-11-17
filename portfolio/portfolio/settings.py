@@ -38,7 +38,6 @@ MEDIA_ROOT = os.path.join(DATA_DIR, 'media/')
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = '/media/'
 
-
 # Absolute path to the directory static files should be collected to.
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
@@ -76,7 +75,7 @@ LOGGING = {
     'disable_existing_loggers': True,
     'root': {
         'level': 'INFO' if not DEBUG else 'DEBUG',
-        'handlers': ['file',],
+        'handlers': ['file', 'mail_admins'],
     },
     'filters': {
         'require_debug_false': {
@@ -94,13 +93,6 @@ LOGGING = {
             'class': 'django.utils.log.AdminEmailHandler'
         }
     },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
 }
 
 # Local time zone for this installation. Choices can be found here:
@@ -214,13 +206,13 @@ CACHES = {
     }
 }
 
-PIPELINE = True
+PIPELINE = False
 
 PIPELINE_CSS = {
     'main': {
         'source_filenames': (
             'css/reset.css',
-            'css/portfolio.css',
+            'css/core.css',
         ),
         'output_filename': 'css/portfolio.css',
     },
@@ -228,7 +220,7 @@ PIPELINE_CSS = {
         'source_filenames': (
             'css/ie.css',
         ),
-        'output_filename': 'css/ie.css'
+        'output_filename': 'css/ie_compatibility_layer.css'
     }
 }
 
@@ -241,7 +233,7 @@ PIPELINE_JS = {
             'js/googleAnalytics.js',
             'js/projects.js',
             #'js/form.js',
-            'js/portfolio.js',
+            'js/core.js',
         ),
         'output_filename': 'js/portfolio.js',
     },
@@ -249,9 +241,7 @@ PIPELINE_JS = {
 
 PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.closure.ClosureCompressor'
 
-
 PIPELINE_CLOSURE_BINARY = 'closure-compiler'
-
 
 # Add template tags
 template.add_to_builtins('templatetags.utility_tags')
