@@ -1,15 +1,10 @@
 from django.conf.urls.defaults import patterns, url
-from django.views.generic.simple import direct_to_template
-from django.views.generic.create_update import create_object
+from django.views.generic.base import TemplateView
 
-from messenger.forms import ContactForm
+from views import MessageCreate
 
 urlpatterns = patterns('',
-    url(r'thanks/$', direct_to_template, {'template': 'thank_you.phtml'},
+    url(r'thanks/$', TemplateView.as_view(template_name='thank_you.phtml'),
         name='thanks'),
-    url(r'$', create_object, {
-        'template_name': 'contact.phtml',
-        'post_save_redirect': 'thanks/',
-        'form_class': ContactForm,
-    }, name="contact_me"),
+    url(r'$', MessageCreate.as_view(), name="contact_me"),
 )
