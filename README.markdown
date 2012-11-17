@@ -11,9 +11,16 @@ If you don't want to use virtualenv, you can do things this way using just pip:
     > cd welfley.me/
     > sudo pip install -r requirements.txt
 
-Override settings.py to your liking by dropping a `local_settings.py` file in `welfley.me/portfolio/portfolio/`
+Override settings.py to your liking by dropping a `local_settings.py` file in `welfley.me/portfolio/portfolio/`.
 
-    > ./manage.py runserver
+Next, setup your database:
+
+    > portfolio/manage.py syncdb
+    > portfolio/manage.py migrate
+
+And finally, fire up the dev server:
+
+    > portfolio/manage.py runserver
 
 After that, your local instance of [welfley.me](http://welfley.me/) should be accessible to you [here](http://127.0.0.1:8000), but you probably already knew that.
 
