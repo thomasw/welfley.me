@@ -4,6 +4,10 @@ import os
 from django import template
 
 
+APP_ROOT = os.path.join(os.path.realpath(os.path.dirname(__file__)), '../')
+
+PROJECT_ROOT = os.path.join(APP_ROOT, '../')
+
 SITE_NAME = 'Your Name'
 
 ADMINS = (
@@ -26,11 +30,9 @@ SEND_BROKEN_LINK_EMAILS = False
 if DEBUG:
     EMAIL_PORT = 1025
 
-SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(SITE_ROOT, 'assets')
+MEDIA_ROOT = os.path.join(APP_ROOT, 'assets')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -43,7 +45,7 @@ MEDIA_URL = '/assets/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Primary templates directory.
-TEMPLATE_DIRS = (os.path.join(SITE_ROOT, 'templates'),)
+TEMPLATE_DIRS = (os.path.join(APP_ROOT, 'templates'),)
 
 DATABASES = {
     'default': {
@@ -61,7 +63,7 @@ DATABASES = {
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s %(levelname)s %(message)s',
-    filename=os.path.join(SITE_ROOT, 'site.log'),
+    filename=os.path.join(APP_ROOT, 'site.log'),
     filemode='a',
 )
 
@@ -97,11 +99,14 @@ TEMPLATE_LOADERS = (
 
 # List of template context processors
 TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.core.context_processors.auth',
+    'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
-    'context_processors.default',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+    'portfolio.context_processors.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,7 +119,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.cache.FetchFromCacheMiddleware',
 )
 
-ROOT_URLCONF = 'urls'
+ROOT_URLCONF = 'portfolio.urls'
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -161,10 +166,16 @@ CELERYBEAT_LOG_LEVEL = "INFO"
 # notify you of their creation.
 MAX_MESSAGES_PER_DAY = 10
 
-CACHE_BACKEND = 'memcached://127.0.0.1:11211/' if not DEBUG else 'dummy:///'
 CACHE_MIDDLEWARE_ANONYMOUS_ONLY = True
-CACHE_MIDDLEWARE_SECONDS = 60 * 60
 CACHE_MIDDLEWARE_KEY_PREFIX = 'welfleyme'
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        #'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 60 * 60,
+    }
+}
 
 COMPRESS = True
 COMPRESS_VERSION = True
