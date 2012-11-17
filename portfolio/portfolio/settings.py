@@ -83,7 +83,7 @@ LOGGING = {
         }
     },
     'handlers': {
-        'file' : {
+        'file': {
             'class': 'logging.FileHandler',
             'filename': os.path.join(DATA_DIR, 'site.log'),
         },
