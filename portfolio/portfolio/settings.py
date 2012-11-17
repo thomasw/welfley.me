@@ -179,6 +179,7 @@ BROKER_PORT = 5672
 BROKER_USER = "hoot"
 BROKER_PASSWORD = "yay!"
 BROKER_VHOST = "hoot"
+
 CELERY_RESULT_BACKEND = "amqp"
 CELERY_IGNORE_RESULT = True
 CELERY_DISABLE_RATE_LIMITS = True
@@ -186,10 +187,10 @@ CELERY_SEND_EVENTS = True
 CELERY_SEND_TASK_ERROR_EMAILS = True
 
 CELERYD_LOG_LEVEL = "INFO"
-CELERYD_LOG_FILE = 'celeryd.log'
+CELERYD_LOG_FILE = os.path.join(DATA_DIR, 'celeryd.log')
 
-CELERYBEAT_SCHEDULE_FILENAME = "schedule.db"
-CELERYBEAT_LOG_FILE = 'celerybeat.log'
+CELERYBEAT_SCHEDULE_FILENAME = os.path.join(DATA_DIR, 'schedule.db')
+CELERYBEAT_LOG_FILE = os.path.join(DATA_DIR, 'celerybeat.log')
 CELERYBEAT_LOG_LEVEL = "INFO"
 
 # Maximum Messages Per Day. This is the maximum number of e-mail notices the
