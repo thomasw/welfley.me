@@ -3,16 +3,15 @@
 This repository contains the source code for [welfley.me](http://welfley.me/) (Thomas Welfley's portfolio).
 
 ## Setting up Your Development Environment
-Using [pip](http://pypi.python.org/pypi/pip) + [virtualenv](http://pypi.python.org/pypi/virtualenv) is a really good idea. If you're doing things that way already, setup a new virtual environment and use the [requirements.txt](http://github.com/thomasw/welfley.me/blob/master/requirements.txt) file to install the necessary libraries. If you're not, check out Eliot's [PIP + virtualenv crash course](http://www.saltycrane.com/blog/2009/05/notes-using-pip-and-virtualenv-django/).
+Using [pip](http://pypi.python.org/pypi/pip) + [virtualenv](http://pypi.python.org/pypi/virtualenv) (or [pythonbrew](https://github.com/utahta/pythonbrew) if you're cool) is a really good idea. If you're doing things that way already, setup a new virtual environment and use the [requirements.txt](http://github.com/thomasw/welfley.me/blob/master/requirements.txt) file to install the necessary libraries. If you're not, check out Eliot's [PIP + virtualenv crash course](http://www.saltycrane.com/blog/2009/05/notes-using-pip-and-virtualenv-django/).
 
-If you don't want to use virtualenv, you can do things this way using only pip:
+If you don't want to use virtualenv, you can do things this way using just pip:
 
     > git clone git://github.com/thomasw/welfley.me.git
     > cd welfley.me/
     > sudo pip install -r requirements.txt
-    > cp local_settings.template.py local_settings.py
 
-Configure local_settings.py file to your liking and then do the following to fire up your development server:
+Override settings.py to your liking by dropping a `local_settings.py` file in `welfley.me/portfolio/portfolio/`
 
     > ./manage.py runserver
 
