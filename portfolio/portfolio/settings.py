@@ -57,6 +57,9 @@ STATIC_URL = '/assets/'
 # Primary templates directory.
 TEMPLATE_DIRS = (os.path.join(APP_ROOT, 'templates'),)
 
+# Disable migrations when running tests.
+SOUTH_TESTS_MIGRATE = False
+
 DATABASES = {
     'default': {
         # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3'
