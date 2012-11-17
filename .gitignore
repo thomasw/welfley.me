@@ -1,7 +1,3 @@
-*.db
-*.log
-assets/img/projects/*
 *.pyc
 .DS_Store
 local_settings.py
-celerybeat-schedule
