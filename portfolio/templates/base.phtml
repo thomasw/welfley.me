@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>{% block head %}{% load compressed %}
+<head>{% block head %}
     <title>{% block title %}{{SITE_NAME}}{% endblock %}</title>
     <meta charset='utf-8' />
     {% block links %}<link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>{% compressed_css 'ie' %}<![endif]-->
     {% compressed_css 'main' %}
-    <link rel="icon" href="{{MEDIA_URL}}img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="{{STATIC_URL}}img/favicon.ico" type="image/x-icon" />
     {% endblock %}
     {% block scripts %}<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     {% if DEBUG %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>{% else %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>{% endif %}

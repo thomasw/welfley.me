@@ -4,6 +4,4 @@ assets/img/projects/*
 *.pyc
 .DS_Store
 local_settings.py
-*.r[0-9]*.css
-*.r[0-9]*.js
 celerybeat-schedule

@@ -31,17 +31,29 @@ if DEBUG:
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os.path.join(APP_ROOT, 'assets')
+MEDIA_ROOT = os.path.join(DATA_DIR, 'media/')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/assets/'
+MEDIA_URL = '/media/'
 
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
+
+# Absolute path to the directory static files should be collected to.
+# Don't put anything in this directory yourself; store your static files
+# in apps' "static/" subdirectories and in STATICFILES_DIRS.
+# Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = os.path.join(DATA_DIR, 'assets/')
+
+STATICFILES_DIRS = (
+    os.path.join(APP_ROOT, 'assets/'),
+)
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+
+# URL prefix for static files.
+# Example: "http://media.lawrence.com/static/"
+STATIC_URL = '/assets/'
 
 # Primary templates directory.
 TEMPLATE_DIRS = (os.path.join(APP_ROOT, 'templates'),)
@@ -108,7 +120,8 @@ SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
-USE_I18N = True
+USE_I18N = False
+USE_L10N = False
 
 # List of all installed authentication backends
 AUTHENTICATION_BACKENDS = (
@@ -125,7 +138,6 @@ TEMPLATE_LOADERS = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
-    'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.core.context_processors.tz',
@@ -151,10 +163,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.staticfiles',
     'django.contrib.admin',
     'django_extensions',
     'south',
-    'compress',
+    'pipeline',
     'messenger',
     'djcelery',
     'projects',
@@ -201,25 +214,27 @@ CACHES = {
     }
 }
 
-COMPRESS = True
-COMPRESS_VERSION = True
-COMPRESS_AUTO = DEBUG
-COMPRESS_CSS = {
+PIPELINE = True
+
+PIPELINE_CSS = {
     'main': {
         'source_filenames': (
             'css/reset.css',
             'css/portfolio.css',
         ),
-        'output_filename': 'css/portfolio.r?.css',
+        'output_filename': 'css/portfolio.css',
     },
     'ie': {
         'source_filenames': (
             'css/ie.css',
         ),
-        'output_filename': 'css/ie.r?.css'
+        'output_filename': 'css/ie.css'
     }
 }
-COMPRESS_JS = {
+
+PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.csstidy.CSSTidyCompressor'
+
+PIPELINE_JS = {
     'main': {
         'source_filenames': (
             'js/jquery.tools.min.js',
@@ -228,13 +243,19 @@ COMPRESS_JS = {
             #'js/form.js',
             'js/portfolio.js',
         ),
-        'output_filename': 'js/portfolio.r?.js',
+        'output_filename': 'js/portfolio.js',
     },
 }
+
+PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.closure.ClosureCompressor'
+
+
+PIPELINE_CLOSURE_BINARY = 'closure-compiler'
 
 
 # Add template tags
 template.add_to_builtins('templatetags.utility_tags')
+template.add_to_builtins('pipeline.templatetags.compressed')
 
 # Import local settings.
 try:

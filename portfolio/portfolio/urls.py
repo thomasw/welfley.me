@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.conf.urls.defaults import patterns, include, url
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.views.generic.simple import direct_to_template
 
 
@@ -11,9 +12,6 @@ urlpatterns = patterns('',
     (r'^projects/', include('projects.urls')),
     (r'^manage/doc/', include('django.contrib.admindocs.urls')),
     (r'^manage/', include(admin.site.urls)),
-    (r'^assets/(?P<path>.*)$', 'django.views.static.serve', {
-        'document_root': settings.MEDIA_ROOT
-    }),
     url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout')
 )
 
@@ -32,3 +30,6 @@ urlpatterns += patterns('',
     url(r'^resume/$', direct_to_template, {'template': 'resume.phtml'},
         name='resume'),
 )
+
+# Static files
+urlpatterns += staticfiles_urlpatterns()
