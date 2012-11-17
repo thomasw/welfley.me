@@ -1,12 +1,11 @@
-import logging
 import os
 
 from django import template
 
 
-APP_ROOT = os.path.join(os.path.realpath(os.path.dirname(__file__)), '../')
-
-PROJECT_ROOT = os.path.join(APP_ROOT, '../')
+APP_ROOT = os.path.realpath(os.path.join(os.path.dirname(__file__), '../'))
+PROJECT_ROOT = os.path.realpath(os.path.join(APP_ROOT, '../'))
+DATA_DIR = os.path.join(PROJECT_ROOT, 'data/')
 
 SITE_NAME = 'Your Name'
 
@@ -52,7 +51,7 @@ DATABASES = {
         # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3'
         # or 'oracle'.
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'site.db',
+        'NAME': os.path.join(DATA_DIR, 'site.db'),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -60,12 +59,37 @@ DATABASES = {
     }
 }
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s %(levelname)s %(message)s',
-    filename=os.path.join(APP_ROOT, 'site.log'),
-    filemode='a',
-)
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'root': {
+        'level': 'INFO' if not DEBUG else 'DEBUG',
+        'handlers': ['file',],
+    },
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'file' : {
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(DATA_DIR, 'site.log'),
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    }
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
