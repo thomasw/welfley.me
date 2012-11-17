@@ -248,7 +248,7 @@ PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.closure.ClosureCompressor'
 PIPELINE_CLOSURE_BINARY = 'closure-compiler'
 
 # Add template tags
-template.add_to_builtins('templatetags.utility_tags')
+template.add_to_builtins('projects.templatetags.utility_tags')
 template.add_to_builtins('pipeline.templatetags.compressed')
 
 # Import local settings.
