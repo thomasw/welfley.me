@@ -21,6 +21,10 @@ TEMPLATE_DEBUG = DEBUG
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 
+# Compress settings
+COMPRESS_ENABLED = False
+COMPRESS_OFFLINE = True
+
 # E-mail config
 EMAIL_SUBJECT_PREFIX = '[%s] ' % (SITE_NAME,)
 DEFAULT_FROM_EMAIL = 'info@site.tld'
@@ -53,6 +57,12 @@ STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/assets/'
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
 # Primary templates directory.
 TEMPLATE_DIRS = (os.path.join(APP_ROOT, 'templates'),)
@@ -163,11 +173,12 @@ INSTALLED_APPS = (
     'django_extensions',
     'south',
     'django_nose',
-    'messenger',
+    'compressor',
     'djcelery',
-    'projects',
     'devserver',
     'gunicorn',
+    'messenger',
+    'projects',
 )
 
 
@@ -217,6 +228,7 @@ NOSE_ARGS = ['--with-spec', '--spec-color', '--where=%s' % APP_ROOT]
 
 # Add template tags
 template.add_to_builtins('projects.templatetags.utility_tags')
+#template.add_to_builtins('compressor.templatetags.compress')
 
 # Import local settings.
 try:
