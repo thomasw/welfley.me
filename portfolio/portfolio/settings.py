@@ -163,7 +163,6 @@ INSTALLED_APPS = (
     'django_extensions',
     'south',
     'django_nose',
-    'pipeline',
     'messenger',
     'djcelery',
     'projects',
@@ -212,50 +211,12 @@ CACHES = {
     }
 }
 
-PIPELINE = False
-
-PIPELINE_CSS = {
-    'main': {
-        'source_filenames': (
-            'css/reset.css',
-            'css/core.css',
-        ),
-        'output_filename': 'css/portfolio.css',
-    },
-    'ie': {
-        'source_filenames': (
-            'css/ie.css',
-        ),
-        'output_filename': 'css/ie_compatibility_layer.css'
-    }
-}
-
-PIPELINE_CSS_COMPRESSOR = 'pipeline.compressors.csstidy.CSSTidyCompressor'
-
-PIPELINE_JS = {
-    'main': {
-        'source_filenames': (
-            'js/jquery.tools.min.js',
-            'js/googleAnalytics.js',
-            'js/projects.js',
-            #'js/form.js',
-            'js/core.js',
-        ),
-        'output_filename': 'js/portfolio.js',
-    },
-}
-
-PIPELINE_JS_COMPRESSOR = 'pipeline.compressors.closure.ClosureCompressor'
-
-PIPELINE_CLOSURE_BINARY = 'closure-compiler'
-
 # Tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 NOSE_ARGS = ['--with-spec', '--spec-color', '--where=%s' % APP_ROOT]
 
 # Add template tags
 template.add_to_builtins('projects.templatetags.utility_tags')
-template.add_to_builtins('pipeline.templatetags.compressed')
 
 # Import local settings.
 try:

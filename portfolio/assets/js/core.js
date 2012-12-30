@@ -1,4 +1,2 @@
-$(document).ready(function(){
-	init_project_slideshow();
-	$.ga("UA-8759876-2");
-});
+init_project_slideshow();
+$.ga("UA-8759876-2");

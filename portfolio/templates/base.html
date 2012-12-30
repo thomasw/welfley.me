@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>{% block head %}
+<head>
+{% block head %}
     <title>{% block title %}{{SITE_NAME}}{% endblock %}</title>
-    <meta charset='utf-8' />
-    {% block links %}<link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
-    <!--[if lt IE 9]>{% compressed_css 'ie' %}<![endif]-->
-    {% compressed_css 'main' %}
-    <link rel="icon" href="{{STATIC_URL}}img/favicon.ico" type="image/x-icon" />
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    {% block links %}
+        <link href="http://fonts.googleapis.com/css?family=Cantarell" rel="stylesheet" type="text/css">
+        <link rel="icon" href="{{ STATIC_URL }}img/favicon.ico" type="image/x-icon">
+
+        <!--[if lt IE 9]><link href="{{ STATIC_URL }}css/ie.css" rel="stylesheet" type="text/css"><![endif]-->
+
+        <link href="{{ STATIC_URL }}css/reset.css" rel="stylesheet" type="text/css">
+        <link href="{{ STATIC_URL }}css/core.css" rel="stylesheet" type="text/css">
     {% endblock %}
-    {% block scripts %}<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-    {% if DEBUG %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>{% else %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>{% endif %}
-    {% compressed_js 'main' %}{% endblock %}
-    {% block meta %}<meta name="ROBOTS" content="{% block meta_robots %}ALL{% endblock %}" />
-    <meta name="description" content="{% block meta_description %}Thomas Welfley is a web developer that's really good with Python, Django, HTML, jQuery, and CSS. You should hire him.{% endblock %}" />
-    <meta name="author" content="{% block meta_author %}Thomas Welfley{% endblock %}" />
-    <meta name="copyright" content="{% block meta_copyright %}Copyright 2012 Thomas Welfley. All Rights Reserved.{% endblock %}" />{% endblock %}
-{% endblock %}</head>
-<body {% block body_attributes %}{% endblock %}>{% block body %}
+    {% block meta %}
+        <meta name="ROBOTS" content="{% block meta_robots %}ALL{% endblock %}">
+        <meta name="description" content="{% block meta_description %}Thomas Welfley is a web developer that's really good with Python, Django, HTML, jQuery, and CSS. You should hire him.{% endblock %}">
+        <meta name="author" content="{% block meta_author %}Thomas Welfley{% endblock %}">
+        <meta name="copyright" content="{% block meta_copyright %}Copyright 2012 Thomas Welfley. All Rights Reserved.{% endblock %}">
+    {% endblock %}
+{% endblock %}
+</head>
+<body {% block body_attributes %}{% endblock %}>
+{% block body %}
     {% block ie_six_error%}<!--[if lt IE 7]><div style='border: 1px solid #F7941D; background: #FEEFDA; text-align: center; clear: both; height: 75px; position: relative;'><div style='position: absolute; right: 3px; top: 3px; font-family: courier new; font-weight: bold;'><a href='#' onclick='javascript:this.parentNode.parentNode.style.display="none"; return false;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-cornerx.jpg' style='border: none;' alt='Close this notice'/></a></div><div style='width: 640px; margin: 0 auto; text-align: left; padding: 0; overflow: hidden; color: black;'>      <div style='width: 75px; float: left;'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-warning.jpg' alt='Warning!'/></div><div style='width: 275px; float: left; font-family: Arial, sans-serif;'><div style='font-size: 14px; font-weight: bold; margin-top: 12px;'>You are using an outdated browser</div>        <div style='font-size: 12px; margin-top: 6px; line-height: 12px;'>For a better experience using this site, please upgrade to a modern web browser.</div></div><div style='width: 75px; float: left;'><a href='http://www.firefox.com' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-firefox.jpg' style='border: none;' alt='Get Firefox 3.5'/></a></div><div style='width: 75px; float: left;'><a href='http://www.browserforthebetter.com/download.html' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-ie8.jpg' style='border: none;' alt='Get Internet Explorer 8'/></a></div><div style='width: 73px; float: left;'><a href='http://www.apple.com/safari/download/' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-safari.jpg' style='border: none;' alt='Get Safari 4'/></a></div><div style='float: left;'><a href='http://www.google.com/chrome' target='_blank'><img src='http://www.ie6nomore.com/files/theme/ie6nomore-chrome.jpg' style='border: none;' alt='Get Google Chrome'/></a></div></div></div><![endif]-->{% endblock %}
     <header>{% block header %}
         <h1><a href="{% url index %}">Hi, I'm <strong>Thomas Welfley</strong>.</a></h1>
@@ -37,5 +44,14 @@
         </nav>
         <p>&copy; Thomas Welfley. The <a href="{% url index %}">{{domain}}</a> source code is available for <a href="http://github.com/thomasw/welfley.me">download via Github</a>.</p>
     </footer>
-{% endblock %}</body>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery{% if not DEBUG %}.min{% endif %}.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.tools.min.js"></script>
+    <script src="{{ STATIC_URL }}js/googleAnalytics.js"></script>
+    <script src="{{ STATIC_URL }}js/projects.js"></script>
+    <script src="{{ STATIC_URL }}js/core.js"></script>
+{% endblock %}
+</body>
 </html>
