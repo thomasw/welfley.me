@@ -86,6 +86,12 @@ DATABASES = {
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': True,
+    'formatters': {
+        'default': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d '
+                      '%(thread)d %(message)s'
+        },
+    },
     'root': {
         'level': 'INFO' if not DEBUG else 'DEBUG',
         'handlers': ['file', 'mail_admins'],
@@ -99,6 +105,7 @@ LOGGING = {
         'file': {
             'class': 'logging.FileHandler',
             'filename': os.path.join(DATA_DIR, 'site.log'),
+            'formatter': 'default'
         },
         'mail_admins': {
             'level': 'ERROR',
