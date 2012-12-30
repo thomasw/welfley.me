@@ -6,7 +6,8 @@ from django.views.generic.base import TemplateView
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     (r'^contact_me/', include('messenger.urls')),
     (r'^projects/', include('projects.urls')),
     (r'^manage/doc/', include('django.contrib.admindocs.urls')),
@@ -21,7 +22,8 @@ urlpatterns = patterns('',
 # 404 & 500 debug
 
 if settings.DEBUG:
-    urlpatterns += patterns('',
+    urlpatterns += patterns(
+        '',
         (r'^500/$', 'django.views.defaults.server_error'),
         (r'^404/$', TemplateView.as_view(template_name='404.html')),
     )
@@ -33,8 +35,10 @@ urlpatterns += staticfiles_urlpatterns()
 # Serve user uploads
 
 if settings.DEBUG:
-    urlpatterns += patterns('',
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
-            'document_root': settings.MEDIA_ROOT,
-        }),
+    urlpatterns += patterns(
+        '',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+            {
+                'document_root': settings.MEDIA_ROOT
+            }),
     )
