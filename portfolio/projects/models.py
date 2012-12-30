@@ -12,8 +12,8 @@ class Project(models.Model):
 
     # Media
     icon = models.ImageField(
-        'Icon or Logo', upload_to='img/projects', blank=True)
-    screenshot = models.ImageField(upload_to='img/projects', blank=True)
+        'Icon or Logo', upload_to='projects', blank=True)
+    screenshot = models.ImageField(upload_to='projects', blank=True)
     screenshot_alt = models.CharField(
         'Screenshot alt text', max_length=255, blank=True)
     flickr_embed_code = models.TextField(
