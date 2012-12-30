@@ -5,7 +5,7 @@ from views import MessageCreate
 
 urlpatterns = patterns(
     '',
-    url(r'thanks/$', TemplateView.as_view(template_name='thank_you.phtml'),
+    url(r'thanks/$', TemplateView.as_view(template_name='thank_you.html'),
         name='thanks'),
     url(r'$', MessageCreate.as_view(), name="contact_me"),
 )

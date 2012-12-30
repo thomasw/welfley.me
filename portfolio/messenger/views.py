@@ -9,4 +9,4 @@ class MessageCreate(CreateView):
     model = Message
     success_url = reverse_lazy('thanks')
     form_class = ContactForm
-    template_name = 'contact.phtml'
+    template_name = 'contact.html'

@@ -1,4 +1,4 @@
-{% extends 'secondary.phtml' %}
+{% extends 'secondary.html' %}
 
 {% block title %}{{block.super}}: Projects{% endblock %}
 {% block body_attributes %}{{block.super}} id="projects" class="secondary_page"{% endblock %}
@@ -17,7 +17,7 @@
     <section id="project_slideshow">
         <ul id="project_data">{% for project in projects %}
             <li id="proj_{{project.name|slugify}}">
-                {% include "project.phtml" %}
+                {% include "project.html" %}
             </li>{% endfor %}
         </ul>
     </section>

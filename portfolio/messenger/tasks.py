@@ -27,9 +27,9 @@ def send_message(message_id):
         return False
 
     if len(todays_messages) < max_messages:
-        t = loader.get_template('contact_form_email.phtml')
+        t = loader.get_template('contact_form_email.html')
     elif len(todays_messages) == max_messages:
-        t = loader.get_template('message_limit_reached_email.phtml')
+        t = loader.get_template('message_limit_reached_email.html')
         logging.info("Daily message limit reached.")
     else:
         logging.error("New message received, but the daily limit has been "

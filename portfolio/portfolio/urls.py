@@ -13,9 +13,9 @@ urlpatterns = patterns(
     (r'^manage/doc/', include('django.contrib.admindocs.urls')),
     (r'^manage/', include(admin.site.urls)),
     url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
-    url(r'^$', TemplateView.as_view(template_name='home.phtml'),
+    url(r'^$', TemplateView.as_view(template_name='home.html'),
         name='index'),
-    url(r'^resume/$', TemplateView.as_view(template_name='resume.phtml'),
+    url(r'^resume/$', TemplateView.as_view(template_name='resume.html'),
         name='resume'),
 )
 
