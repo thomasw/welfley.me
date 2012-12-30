@@ -228,7 +228,7 @@ NOSE_ARGS = ['--with-spec', '--spec-color', '--where=%s' % APP_ROOT]
 
 # Add template tags
 template.add_to_builtins('projects.templatetags.utility_tags')
-#template.add_to_builtins('compressor.templatetags.compress')
+template.add_to_builtins('django.templatetags.future')
 
 # Import local settings.
 try:

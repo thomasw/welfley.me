@@ -1,5 +1,5 @@
 {% extends "secondary.html" %}
-{% block head %}{% with "/assets/" as MEDIA_URL %}{{ block.super }}{% endwith %}{% endblock %}
+{% block head %}{% with "/assets/" as STATIC_URL %}{{ block.super }}{% endwith %}{% endblock %}
 {% block body_attributes %}{{block.super}} id="error_page" class="secondary_page"{% endblock %}
 {% block meta_description %}500 Server Error{% endblock %}
 
@@ -8,7 +8,7 @@
     <section class="secondary_page_content">
         <h1>Uh oh!</h1>
 
-        <p>An error occurred when I attempted to fetch the page you requested. I went ahead and sent a message to Thomas to let him know that something bad happened. If you'd like to provide additional details, feel free to <a href="{% url contact_me%}">send him a message too</a>.</p>
-        <p><a href="{% url index %}">Return home</a></p>
+        <p>An error occurred when I attempted to fetch the page you requested. I went ahead and sent a message to Thomas to let him know that something bad happened. If you'd like to provide additional details, feel free to <a href="{% url 'contact_me' %}">send him a message too</a>.</p>
+        <p><a href="{% url 'index' %}">Return home</a></p>
     </section>
 {% endblock %}
