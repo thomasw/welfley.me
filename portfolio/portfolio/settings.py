@@ -52,7 +52,7 @@ STATICFILES_DIRS = (
     os.path.join(APP_ROOT, 'assets/'),
 )
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
