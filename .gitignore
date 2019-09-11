@@ -1,0 +1,6 @@
+# Configuration
+configuration_public.json
+configuration.json
+
+.DS_Store
+node_modules/

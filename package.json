@@ -1,0 +1,20 @@
+{
+  "name": "welfley.me",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Thomas Welfley's portfolio. https://welfley.me/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasw/welfley.me.git"
+  },
+  "author": "Thomas Welfley",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/thomasw/welfley.me/issues"
+  },
+  "homepage": "https://github.com/thomasw/welfley.me#readme"
+}
