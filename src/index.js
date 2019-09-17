@@ -5,12 +5,9 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <App />,
-  // The following could return null, but since we control the markup, this is a
-  // non-issue: $FlowFixMe
-  document.getElementById('root')
-);
+const root = document.getElementById('root');
+
+root && ReactDOM.render(<App />, root);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
