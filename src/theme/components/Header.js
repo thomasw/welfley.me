@@ -32,17 +32,10 @@ export default function Header() {
         >
           <h1>Thomas Welfley</h1>
           <p>
-            <strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing
-            elit. Vivamus aliquet est eget ligula aliquam.
+            I build <strong>engineering teams</strong> and{' '}
+            <strong>software</strong>. Whatever I build next will be better than
+            anything I've built before.
           </p>
-          <ul>
-            <li>
-              <a href="#content">Primary CTA</a>
-            </li>
-            <li>
-              <a href="#App">Secondary CTA</a>
-            </li>
-          </ul>
         </div>
       </FullHeight>
     </header>
