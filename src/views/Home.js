@@ -2,7 +2,7 @@
 import React from 'react';
 import Header from '../theme/components/Header';
 
-function App() {
+export default function Home() {
   return (
     <React.Fragment>
       <Header />
@@ -69,5 +69,3 @@ function App() {
     </React.Fragment>
   );
 }
-
-export default App;
