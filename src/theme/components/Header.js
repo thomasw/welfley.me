@@ -3,6 +3,7 @@ import React from 'react';
 
 import Overlay from './Overlay';
 import FullHeight from './FullHeight';
+import SocialBar from './SocialBar';
 
 import styles from './Header.module.scss';
 
@@ -36,6 +37,7 @@ export default function Header() {
             <strong>software</strong>. Whatever I build next will be better than
             anything I've built before.
           </p>
+          <SocialBar />
         </div>
       </FullHeight>
     </header>
