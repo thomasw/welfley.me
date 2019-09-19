@@ -1,10 +1,26 @@
 .content {
-  background: url('./header_bg.jpg') center center no-repeat;
-  background-size: cover;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  /* This element contains overlay components, so it must be position: relative
+     or those components will not work correctly. */
+  position: relative;
+  /* A contained Overlay component scales up when you scroll by this element, so
+     we need to ensure we've hidden the resulting overflow or we will end up
+     with horrizontal scroll bars */
+  overflow: hidden;
+
+  .copy {
+    color: #fff;
+    width: 20%;
+    font-size: 150%;
+    text-align: left;
+    margin: 20vw;
+
+    // Elevate copy above other overlays
+    z-index: 1;
+  }
 
   ul {
     display: flex;
@@ -17,6 +33,46 @@
     li {
       display: block;
       padding: 2rem;
+    }
+  }
+}
+
+.blur {
+  /* TODO: backdrop-filter is not compatible with Firefox */
+  backdrop-filter: blur(70px);
+}
+
+.backdrop {
+  background: url('./header_bg.jpg') center no-repeat;
+  background-size: cover;
+}
+
+:global {
+  [data-aos='transition-out-fade'] {
+    transition-property: opacity;
+    opacity: 1;
+    /* pointer-events: AOS is designed for transitioning elements in. By
+       default, it disables pointer events on an element until a transition
+       occurs. We're using AOS to transition things out so we reverse this
+       behavior (enable pointer events until a transition occurs and then
+       disable them).*/
+    pointer-events: auto !important;
+
+    &.aos-animate {
+      opacity: 0;
+      pointer-events: none !important;
+    }
+  }
+
+  [data-aos='transition-out-zoom'] {
+    transition-property: transform;
+    transform: scale(1);
+    pointer-events: auto !important;
+    transform-origin: 50% 100%;
+
+    &.aos-animate {
+      pointer-events: none !important;
+      transform: scale(1.5);
     }
   }
 }
