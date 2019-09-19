@@ -29,7 +29,7 @@
     "aos": "^3.0.0-beta.6",
     "classnames": "^2.2.6",
     "eslint": "^6.4.0",
-    "flow-bin": "^0.107.0",
+    "flow-bin": "^0.108.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
     "react": "^16.9.0",
