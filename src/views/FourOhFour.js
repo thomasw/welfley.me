@@ -1,6 +1,9 @@
 // @flow
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+
+import Header from '../theme/components/Header';
 
 export default function FourOhFour() {
   return (
@@ -10,9 +13,13 @@ export default function FourOhFour() {
         <meta name="description" content="This page could not be found." />
         <meta name="keywords" content="404, not found" />
       </Helmet>
-      <section id="content">
+      <Header>
         <h1>404: Not Found</h1>
-      </section>
+        <p>How’d we end up in a place like this?</p>
+        <p>
+          C’mon, let’s head <Link to="/">home</Link>.
+        </p>
+      </Header>
     </React.Fragment>
   );
 }
