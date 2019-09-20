@@ -1,43 +1,42 @@
 // @flow
-import React from 'react';
+import * as React from 'react';
 
 import Overlay from './Overlay';
 import FullHeight from './FullHeight';
-import SocialBar from './SocialBar';
 
 import styles from './Header.module.scss';
 
-const TRANSITION_DURATION = 2500;
+type Props = {
+  transitionAnchor?: string,
+  transitionDuration?: number,
+  children: React.Node
+};
 
-export default function Header() {
+export default function Header(props: Props) {
+  const { children, transitionAnchor, transitionDuration = 2500 } = props;
+
   return (
     <header>
       <FullHeight className={styles.content}>
         <Overlay
           className={styles.backdrop}
-          data-aos="transition-out-zoom"
-          data-aos-anchor="#content"
-          data-aos-duration={TRANSITION_DURATION}
+          data-aos={!!transitionAnchor && 'transition-out-zoom'}
+          data-aos-anchor={transitionAnchor}
+          data-aos-duration={transitionDuration}
         />
         <Overlay
           className={styles.blur}
-          data-aos="transition-out-fade"
-          data-aos-anchor="#content"
-          data-aos-duration={TRANSITION_DURATION}
+          data-aos={!!transitionAnchor && 'transition-out-fade'}
+          data-aos-anchor={transitionAnchor}
+          data-aos-duration={transitionDuration}
         />
         <div
           className={styles.copy}
-          data-aos="transition-out-fade"
-          data-aos-anchor="#content"
-          data-aos-duration={TRANSITION_DURATION}
+          data-aos={!!transitionAnchor && 'transition-out-fade'}
+          data-aos-anchor={transitionAnchor}
+          data-aos-duration={transitionDuration}
         >
-          <h1>Thomas Welfley</h1>
-          <p>
-            I build <strong>engineering teams</strong> and{' '}
-            <strong>software</strong>. Whatever I build next will be better than
-            anything I've built before.
-          </p>
-          <SocialBar />
+          {children}
         </div>
       </FullHeight>
     </header>
