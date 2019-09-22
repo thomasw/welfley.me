@@ -2,6 +2,7 @@
 import * as React from 'react';
 
 import Columns from 'theme/components/Columns';
+import ContactForm from 'contact/components/ContactForm';
 
 import styles from './ContactSection.module.scss';
 
@@ -28,13 +29,7 @@ export default function ContactSection() {
             per conubia nostra, per inceptos himenaeos.
           </p>
         </div>
-        <div>
-          <p>This is a placeholder form.</p>
-          <input />
-          <input />
-          <textarea></textarea>
-          <button>Send</button>
-        </div>
+        <ContactForm />
       </Columns>
     </section>
   );
