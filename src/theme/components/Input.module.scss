@@ -1,13 +1,14 @@
 $highlight-color: #274f74;
-$error-background: rgba(#ff5959, 0.45);
-$background: rgba(#fff, 0.45);
+$error-background: rgba(#ff5959, 0.35);
+$background: rgba(#fff, 0.35);
 
 .input {
+  box-sizing: border-box;
+  border: none;
   display: block;
   background: $background;
-  border: none;
   padding: 1rem;
-  margin: 1.5rem;
+  margin: 1.5rem 0;
   width: 100%;
   color: inherit;
   font-size: 125%;
@@ -16,7 +17,7 @@ $background: rgba(#fff, 0.45);
   border-radius: 0.5rem;
 
   &:focus {
-    background: rgba($background, 0.5);
+    background: rgba($background, 0.4);
     animation: anim-shadow 0.5s forwards;
   }
 }
