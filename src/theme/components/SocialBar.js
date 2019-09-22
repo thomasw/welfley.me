@@ -2,7 +2,7 @@
 import React from 'react';
 import cx from 'classnames';
 
-import { Link } from 'react-scroll';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -21,7 +21,7 @@ export default function SocialBar(props: Props) {
   return (
     <ul className={cx(styles.bar, props.className)}>
       <li>
-        <Link to="contact-me" smooth duration={1000} title="Contact me">
+        <Link to="/#contact-me" smooth title="Contact me">
           <FontAwesomeIcon icon={faEnvelopeOpen} />
         </Link>
       </li>

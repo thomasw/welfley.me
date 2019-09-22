@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import { NavHashLink as Link } from 'react-router-hash-link';
 import cx from 'classnames';
 
 import Columns from 'theme/components/Columns';
@@ -12,22 +11,6 @@ import styles from './Footer.module.scss';
 type Props = {
   sticky?: boolean
 };
-
-function NavigateHome() {
-  return (
-    <Link to="/" className={styles.pill}>
-      Home
-    </Link>
-  );
-}
-
-function ScrollToTop() {
-  return (
-    <ScrollLink to="root" className={styles.pill} smooth duration={1000}>
-      Home
-    </ScrollLink>
-  );
-}
 
 export default function Footer(props: Props) {
   const { sticky = false } = props;
@@ -40,10 +23,9 @@ export default function Footer(props: Props) {
           <p>&copy; 2019 Thomas Welfley.</p>
           <ul>
             <li>
-              <Switch>
-                <Route path="/" exact component={ScrollToTop} />
-                <Route component={NavigateHome} />
-              </Switch>
+              <Link to="/#root" smooth className={styles.pill}>
+                Home
+              </Link>
             </li>
             <li>
               <a
