@@ -1,8 +1,8 @@
 // @flow
 import * as React from 'react';
 
-import Overlay from './Overlay';
-import FullHeight from './FullHeight';
+import Overlay from 'theme/components/Overlay';
+import FullHeight from 'theme/components/FullHeight';
 
 import styles from './Header.module.scss';
 

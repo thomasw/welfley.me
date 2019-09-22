@@ -1,7 +1,8 @@
 // @flow
 import * as React from 'react';
-import styles from './FullHeight.module.css';
 import classes from 'classnames';
+
+import styles from './FullHeight.module.css';
 
 type Props = {
   className?: string

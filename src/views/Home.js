@@ -1,8 +1,8 @@
 // @flow
 import React from 'react';
-import Header from '../theme/components/Header';
-import SocialBar from '../theme/components/SocialBar';
-import ContactSection from '../contact/components/ContactSection';
+import Header from 'theme/components/Header';
+import SocialBar from 'theme/components/SocialBar';
+import ContactSection from 'contact/components/ContactSection';
 
 export default function Home() {
   return (

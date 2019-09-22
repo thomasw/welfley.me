@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-import Header from '../theme/components/Header';
+import Header from 'theme/components/Header';
 
 export default function FourOhFour() {
   return (

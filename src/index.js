@@ -1,10 +1,11 @@
 // @flow
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import App from 'App';
+import * as serviceWorker from 'serviceWorker';
 
 AOS.init({});
 
