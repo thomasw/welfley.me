@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 
+import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
 import {
@@ -15,9 +16,9 @@ export default function SocialBar() {
   return (
     <ul className={styles.bar}>
       <li>
-        <a href="#contact-me" title="Contact me">
+        <Link to="contact-me" smooth duration={1000} title="Contact me">
           <FontAwesomeIcon icon={faEnvelopeOpen} />
-        </a>
+        </Link>
       </li>
       <li>
         <a href="https://github.com/thomasw" title="Github">
