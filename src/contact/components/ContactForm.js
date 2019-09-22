@@ -3,10 +3,13 @@ import * as React from 'react';
 
 import Input from 'theme/components/Input';
 import TextBox from 'theme/components/TextBox';
+import Button from 'theme/components/Button';
+
+import styles from './ContactForm.module.scss';
 
 export default function ContactForm() {
   return (
-    <form>
+    <form className={styles.container}>
       <Input
         type="text"
         id="name"
@@ -32,7 +35,9 @@ export default function ContactForm() {
         name="content"
         validated={false}
       />
-      <button>Send</button>
+      <div className={styles.cta}>
+        <Button>Send</Button>
+      </div>
     </form>
   );
 }
