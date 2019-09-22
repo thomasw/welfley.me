@@ -1,5 +1,6 @@
 // @flow
 import React from 'react';
+import cx from 'classnames';
 
 import { Link } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,9 +13,13 @@ import {
 
 import styles from './SocialBar.module.scss';
 
-export default function SocialBar() {
+type Props = {
+  className?: string
+};
+
+export default function SocialBar(props: Props) {
   return (
-    <ul className={styles.bar}>
+    <ul className={cx(styles.bar, props.className)}>
       <li>
         <Link to="contact-me" smooth duration={1000} title="Contact me">
           <FontAwesomeIcon icon={faEnvelopeOpen} />
