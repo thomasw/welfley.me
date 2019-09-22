@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 import Header from 'theme/components/Header';
+import Footer from 'theme/components/Footer';
 
 export default function FourOhFour() {
   return (
@@ -20,6 +21,7 @@ export default function FourOhFour() {
           C’mon, let’s head <Link to="/">home</Link>.
         </p>
       </Header>
+      <Footer sticky />
     </React.Fragment>
   );
 }

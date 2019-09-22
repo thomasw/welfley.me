@@ -3,6 +3,7 @@ import React from 'react';
 import Header from 'theme/components/Header';
 import SocialBar from 'theme/components/SocialBar';
 import ContactSection from 'contact/components/ContactSection';
+import Footer from 'theme/components/Footer';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <SocialBar />
       </Header>
       <ContactSection />
+      <Footer />
     </React.Fragment>
   );
 }
