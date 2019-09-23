@@ -6,6 +6,10 @@ import Header from 'theme/components/Header';
 import SocialBar from 'theme/components/SocialBar';
 import ContactSection from 'contact/components/ContactSection';
 import Footer from 'theme/components/Footer';
+import Columns from 'theme/components/Columns';
+import LinkButton from 'theme/components/LinkButton';
+
+import styles from './Home.module.scss';
 
 export default function Home() {
   return (
@@ -28,7 +32,12 @@ export default function Home() {
           <strong>software</strong>. Whatever I build next will be better than
           anything I've built before.
         </p>
-        <SocialBar />
+        <Columns className={styles.cta_columns}>
+          <LinkButton to="/resume" className={styles.primary_cta}>
+            Resume
+          </LinkButton>
+          <SocialBar />
+        </Columns>
       </Header>
       <ContactSection />
       <Footer />

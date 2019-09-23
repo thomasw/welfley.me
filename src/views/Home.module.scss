@@ -1,0 +1,12 @@
+.cta_columns {
+  margin-top: 2vh;
+}
+
+.primary_cta {
+  font-size: 75%;
+  margin: 2vh 0;
+
+  @media (min-width: 800px) {
+    margin: 0 2rem 0 0;
+  }
+}
