@@ -19,7 +19,7 @@ export default function Footer(props: Props) {
   return (
     <footer id="footer" className={className}>
       <Columns className={styles.columns}>
-        <div className={styles.copyRightCol}>
+        <div className={styles.copyrightCol}>
           <p>&copy; 2019 Thomas Welfley.</p>
           <ul>
             <li>

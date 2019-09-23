@@ -2,6 +2,7 @@
   background: #373e45;
   color: #fff;
   padding: 1vh 0;
+  font-size: 80%;
 }
 
 .pill {
@@ -12,7 +13,6 @@
   text-decoration: none;
   background: rgba(black, 0.1);
   transition: 0.5s background;
-  font-size: 80%;
   cursor: pointer;
 
   &:hover {
@@ -31,7 +31,7 @@
   align-items: center;
 }
 
-.copyRightCol {
+.copyrightCol {
   flex-basis: auto;
 
   p {
@@ -55,6 +55,7 @@
 
 .socialBar {
   flex-basis: auto;
+  font-size: 150%;
 
   @media (min-width: 800px) {
     justify-content: flex-end;
