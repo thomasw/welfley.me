@@ -43,10 +43,25 @@
     "eslint": "^6.4.0",
     "flow-bin": "^0.108.0",
     "node-sass": "^4.12.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-css-modules": "^1.5.0",
+    "stylelint-config-recommended-scss": "^4.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.11.1"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recommended-scss",
+      "stylelint-config-css-modules"
+    ],
+    "rules": {
+      "declaration-colon-newline-after": null
+    }
   },
   "prettier": {
     "singleQuote": true

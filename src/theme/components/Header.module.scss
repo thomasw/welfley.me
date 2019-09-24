@@ -14,6 +14,7 @@
   /* This element contains overlay components, so it must be position: relative
      or those components will not work correctly. */
   position: relative;
+
   /* A contained Overlay component scales up when you scroll by this element, so
      we need to ensure we've hidden the resulting overflow or we will end up
      with horrizontal scroll bars */
@@ -24,9 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     color: #fff;
-
     font-size: 150%;
     text-align: center;
 
@@ -75,11 +74,12 @@
   [data-aos='transition-out-fade'] {
     transition-property: opacity;
     opacity: 1;
+
     /* pointer-events: AOS is designed for transitioning elements in. By
        default, it disables pointer events on an element until a transition
        occurs. We're using AOS to transition things out so we reverse this
        behavior (enable pointer events until a transition occurs and then
-       disable them).*/
+       disable them). */
     pointer-events: auto !important;
 
     &.aos-animate {
