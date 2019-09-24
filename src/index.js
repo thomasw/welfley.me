@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { hydrate, render } from 'react-dom';
+import smoothscroll from 'smoothscroll-polyfill';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -9,7 +10,9 @@ import * as serviceWorker from 'serviceWorker';
 
 const root = document.getElementById('root');
 
+smoothscroll.polyfill();
 AOS.init();
+
 root && (root.hasChildNodes() ? hydrate(<App />, root) : render(<App />, root));
 
 // If you want your app to work offline and load faster, you can change
