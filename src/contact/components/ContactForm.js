@@ -9,7 +9,7 @@ import styles from './ContactForm.module.scss';
 
 export default function ContactForm() {
   return (
-    <form className={styles.container}>
+    <form>
       <Input
         type="text"
         id="name"
