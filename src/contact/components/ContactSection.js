@@ -13,8 +13,8 @@ export default function ContactSection() {
         <div className={styles.content}>
           <h1>Contact Me</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-            venenatis mollis feugiat.
+            Are you building something big, complicated, and impressive? Let me
+            know how I can help.
           </p>
         </div>
         <ContactForm className={styles.form} />
