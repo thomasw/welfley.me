@@ -14,7 +14,7 @@ export default function ContactForm() {
         type="text"
         id="name"
         name="name"
-        autocomplete="name"
+        autoComplete="name"
         required
         placeholder="Name"
         validated={false}
@@ -23,7 +23,7 @@ export default function ContactForm() {
         type="email"
         id="email"
         name="email"
-        autocomplete="email"
+        autoComplete="email"
         required
         placeholder="Email"
         validated={false}
