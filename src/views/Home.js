@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 
 import Header from 'theme/components/Header';
 import SocialBar from 'theme/components/SocialBar';
