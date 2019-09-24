@@ -33,13 +33,17 @@ export default function Home() {
           anything I've built before.
         </p>
         <Columns className={styles.cta_columns}>
-          <LinkButton to="/resume" className={styles.primary_cta}>
-            Resume
-          </LinkButton>
+          <div>
+            <LinkButton to="/resume" className={styles.primary_cta}>
+              Resume
+            </LinkButton>
+          </div>
           <SocialBar />
         </Columns>
       </Header>
-      <ContactSection />
+      <main>
+        <ContactSection />
+      </main>
       <Footer />
     </React.Fragment>
   );
