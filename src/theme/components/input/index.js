@@ -1,3 +1,4 @@
+// @flow
 import Input from './Input';
 import TextBox from './TextBox';
 
