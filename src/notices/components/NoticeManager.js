@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import { connect } from 'react-redux';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import type { State } from 'reducer';
 import { Overlay } from 'theme/components/layout';
@@ -24,12 +25,20 @@ type Props = {|
 |};
 
 function NoticeManager({ notice, clearNotice }: Props) {
-  if (!notice) return null;
+  const { container, placeholder, ...transitionStyles } = styles;
 
   return (
-    <Overlay className={styles.container} onClick={clearNotice}>
-      <h1>{notice}</h1>
-    </Overlay>
+    <TransitionGroup>
+      <CSSTransition key={notice} classNames={transitionStyles} timeout={500}>
+        {notice ? (
+          <Overlay className={container} onClick={clearNotice}>
+            <h1>{notice}</h1>
+          </Overlay>
+        ) : (
+          <div className={placeholder} />
+        )}
+      </CSSTransition>
+    </TransitionGroup>
   );
 }
 

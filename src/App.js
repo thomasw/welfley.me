@@ -18,12 +18,12 @@ function App() {
   return (
     <Provider store={store}>
       <HelmetProvider>
-        <NoticeManager />
         <Router>
           <AnimatedSwitch>
             <Route path="/" exact component={Home} />
             <Route component={FourOhFour} />
           </AnimatedSwitch>
+          <NoticeManager />
         </Router>
       </HelmetProvider>
     </Provider>
