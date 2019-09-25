@@ -1,9 +1,8 @@
 // @flow
 import * as React from 'react';
 
-import Input from 'theme/components/Input';
-import TextBox from 'theme/components/TextBox';
-import Button from 'theme/components/Button';
+import { Input, TextBox } from 'theme/components/input';
+import { Button } from 'theme/components/button';
 
 import styles from './ContactForm.module.scss';
 

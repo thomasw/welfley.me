@@ -3,7 +3,7 @@ import * as React from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import cx from 'classnames';
 
-import Columns from 'theme/components/Columns';
+import { Columns } from 'theme/components/layout';
 import SocialBar from 'theme/components/SocialBar';
 
 import styles from './Footer.module.scss';

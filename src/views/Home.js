@@ -6,8 +6,8 @@ import Header from 'theme/components/Header';
 import SocialBar from 'theme/components/SocialBar';
 import ContactSection from 'contact/components/ContactSection';
 import Footer from 'theme/components/Footer';
-import Columns from 'theme/components/Columns';
-import LinkButton from 'theme/components/LinkButton';
+import { Columns } from 'theme/components/layout';
+import { LinkButton } from 'theme/components/button';
 
 import styles from './Home.module.scss';
 

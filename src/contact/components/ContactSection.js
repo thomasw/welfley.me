@@ -1,7 +1,7 @@
 // @flow
 import * as React from 'react';
 
-import Columns from 'theme/components/Columns';
+import { Columns } from 'theme/components/layout';
 import ContactForm from 'contact/components/ContactForm';
 
 import styles from './ContactSection.module.scss';
