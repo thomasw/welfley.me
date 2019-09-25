@@ -1,13 +1,11 @@
 // @flow
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension/logOnlyInProduction';
+import thunk from 'redux-thunk';
 import { reducer } from './reducer';
 
-const INSTALL_DEV_TOOLS =
-  process.env.NODE_ENV === 'development' && window.__REDUX_DEVTOOLS_EXTENSION__;
+const compose = composeWithDevTools({});
 
 export default function makeStore() {
-  return createStore(
-    reducer,
-    INSTALL_DEV_TOOLS && window.__REDUX_DEVTOOLS_EXTENSION__()
-  );
+  return createStore(reducer, compose(applyMiddleware(thunk)));
 }

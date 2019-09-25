@@ -39,6 +39,8 @@
     "react-snap": "^1.23.0",
     "react-transition-group": "^4.3.0",
     "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
