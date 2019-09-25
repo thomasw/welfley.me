@@ -7,6 +7,7 @@ body {
   font-size: 18px;
   font-weight: 200;
   line-height: 2rem;
+  text-align: center;
 }
 
 h1,
@@ -18,8 +19,4 @@ h6 {
   line-height: 5rem;
   font-weight: 100;
   letter-spacing: 0.25rem;
-}
-
-.App {
-  text-align: center;
 }
