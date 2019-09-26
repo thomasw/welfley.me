@@ -14,20 +14,28 @@ $background: rgba(#fff, 0.35);
   font-size: 100%;
   outline: none;
   border-radius: 0.5rem;
+  transition: 0.5s background;
 
   &:focus {
-    background: rgba($background, 0.4);
+    transition: 0.5s background;
+    background: rgba($background, 0.5);
     animation: anim-shadow 0.5s forwards;
+  }
+
+  &:disabled {
+    background: darken($background, 20%);
   }
 }
 
 .validated {
   &:invalid {
+    transition: 0.5s background;
     background: $error-background;
   }
 
   &:invalid:focus {
-    background: rgba($error-background, 0.5);
+    transition: 0.5s background;
+    background: lighten($error-background, 20%);
   }
 }
 
