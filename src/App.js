@@ -23,8 +23,8 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route component={FourOhFour} />
           </AnimatedSwitch>
-          <NoticeManager />
         </Router>
+        <NoticeManager />
       </HelmetProvider>
     </Provider>
   );

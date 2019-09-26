@@ -1,6 +1,6 @@
 // @flow
-import { type State } from './reducer';
+import { type State } from 'reducer';
 
 export function getNotice(state: State) {
-  return state.notice;
+  return state.notices.notice;
 }
