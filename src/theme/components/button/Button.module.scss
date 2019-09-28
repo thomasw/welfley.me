@@ -1,7 +1,7 @@
 $background-color: #36bc59;
 
 .button {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   box-sizing: border-box;
   background: $background-color;
@@ -15,10 +15,12 @@ $background-color: #36bc59;
   font-size: 125%;
   cursor: pointer;
   transition: 0.5s background;
+  text-decoration: none;
 
   &:hover,
   &:active {
     background: darken($background-color, 5%);
+    text-decoration: none;
   }
 
   span {
@@ -34,4 +36,5 @@ $background-color: #36bc59;
 
 .withIcon {
   padding-left: 0;
+  padding-right: 1rem;
 }
