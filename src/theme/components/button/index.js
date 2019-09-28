@@ -1,5 +1,6 @@
 // @flow
 import Button from './Button';
 import LinkButton from './LinkButton';
+import AButton from './AButton';
 
-export { Button, LinkButton };
+export { AButton, Button, LinkButton };
