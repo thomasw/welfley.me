@@ -14,13 +14,14 @@ $background-color: #36bc59;
   border: none;
   font-size: 125%;
   cursor: pointer;
-  transition: 0.5s background;
+  filter: brightness(100%);
+  transition: 0.5s filter;
   text-decoration: none;
 
   &:hover,
   &:active {
-    background: darken($background-color, 5%);
     text-decoration: none;
+    filter: brightness(90%);
   }
 
   span {
