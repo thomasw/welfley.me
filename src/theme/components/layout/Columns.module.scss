@@ -26,3 +26,12 @@
     }
   }
 }
+
+.flex {
+  flex: auto;
+
+  > * {
+    flex: auto;
+    flex-basis: auto;
+  }
+}

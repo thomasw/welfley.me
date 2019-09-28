@@ -3,7 +3,7 @@ import * as React from 'react';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import cx from 'classnames';
 
-import { Columns } from 'theme/components/layout';
+import { FlexColumns } from 'theme/components/layout';
 import SocialBar from 'theme/components/SocialBar';
 
 import styles from './Footer.module.scss';
@@ -18,7 +18,7 @@ export default function Footer(props: Props) {
 
   return (
     <footer id="footer" className={className}>
-      <Columns className={styles.columns}>
+      <FlexColumns className={styles.columns}>
         <div className={styles.copyrightCol}>
           <p>&copy; 2019 Thomas Welfley.</p>
           <ul>
@@ -46,7 +46,7 @@ export default function Footer(props: Props) {
           </ul>
         </div>
         <SocialBar className={styles.socialBar} />
-      </Columns>
+      </FlexColumns>
     </footer>
   );
 }
