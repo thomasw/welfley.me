@@ -2,6 +2,10 @@
   background: #373e45;
   color: #fff;
   font-size: 80%;
+
+  @media print {
+    display: none;
+  }
 }
 
 .pill {
