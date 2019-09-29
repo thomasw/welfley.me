@@ -1,5 +1,6 @@
 // @flow
 import * as React from 'react';
+import { withRouter } from 'react-router';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import cx from 'classnames';
 
@@ -9,12 +10,17 @@ import SocialBar from 'theme/components/SocialBar';
 import styles from './Footer.module.scss';
 
 type Props = {
+  location: { pathname: string },
   sticky?: boolean
 };
 
-export default function Footer(props: Props) {
-  const { sticky = false } = props;
+export function Footer(props: Props) {
+  const {
+    sticky = false,
+    location: { pathname }
+  } = props;
   const className = cx(styles.container, { [styles.sticky]: sticky });
+  const smoothToTop = pathname === '/';
 
   return (
     <footer id="footer" className={className}>
@@ -24,7 +30,7 @@ export default function Footer(props: Props) {
             <p>&copy; 2019 Thomas Welfley.</p>
             <ul>
               <li>
-                <Link to="/" smooth className={styles.pill}>
+                <Link to="/#top" smooth={smoothToTop} className={styles.pill}>
                   Home
                 </Link>
               </li>
@@ -52,3 +58,5 @@ export default function Footer(props: Props) {
     </footer>
   );
 }
+
+export default withRouter(Footer);
