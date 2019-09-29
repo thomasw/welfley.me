@@ -1,0 +1,38 @@
+$text-color: black;
+
+.container {
+  margin-bottom: 2vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media print {
+    display: none;
+  }
+}
+
+.back {
+  color: $text-color;
+  text-decoration: none;
+  padding: 0.5rem 0;
+
+  svg {
+    padding-right: 0.5rem;
+  }
+
+  &:hover,
+  &:visited {
+    color: $text-color;
+    text-decoration: none;
+  }
+}
+
+.backText {
+  display: none;
+
+  @media (min-width: 600px) {
+    display: inline-block;
+  }
+}
