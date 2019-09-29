@@ -20,7 +20,7 @@ import styles from './Resume.module.scss';
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
         <title>Thomas Welfley: Resume</title>
         <meta
@@ -171,6 +171,6 @@ export default function Home() {
         </main>
       </div>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }

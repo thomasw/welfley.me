@@ -13,9 +13,11 @@
   left: 0;
   right: 0;
   opacity: 1;
+  overflow: hidden;
+  max-height: 100vh;
+  transition: opacity 500ms;
 }
 
 .exitActive {
   opacity: 0;
-  transition: opacity 500ms;
 }

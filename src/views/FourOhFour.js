@@ -8,7 +8,7 @@ import Footer from 'theme/components/Footer';
 
 export default function FourOhFour() {
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
         <title>404: Page not found</title>
         <meta name="description" content="This page could not be found." />
@@ -22,6 +22,6 @@ export default function FourOhFour() {
         </p>
       </Header>
       <Footer sticky />
-    </React.Fragment>
+    </div>
   );
 }

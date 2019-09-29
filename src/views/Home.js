@@ -13,7 +13,7 @@ import styles from './Home.module.scss';
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <div>
       <Helmet>
         <title>Thomas Welfley: Portfolio</title>
         <meta
@@ -45,6 +45,6 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
-    </React.Fragment>
+    </div>
   );
 }
