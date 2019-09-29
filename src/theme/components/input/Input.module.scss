@@ -1,4 +1,4 @@
-$highlight-color: #274f74;
+$highlight-color: #3370a8;
 $error-background: rgba(#ff5959, 0.35);
 $background: rgba(#fff, 0.35);
 
@@ -15,6 +15,7 @@ $background: rgba(#fff, 0.35);
   outline: none;
   border-radius: 0.5rem;
   transition: 0.5s background;
+  box-shadow: none;
 
   &:focus {
     transition: 0.5s background;
