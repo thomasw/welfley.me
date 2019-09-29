@@ -8,6 +8,7 @@ import makeStore from './store';
 import { NoticeManager } from 'notices';
 import AnimatedSwitch from 'router/components/AnimatedSwitch';
 import Home from 'views/Home';
+import Resume from 'resume/views/Resume';
 import FourOhFour from 'views/FourOhFour';
 
 import './App.css';
@@ -21,6 +22,7 @@ function App() {
         <Router>
           <AnimatedSwitch>
             <Route path="/" exact component={Home} />
+            <Route path="/resume" exact component={Resume} />
             <Route component={FourOhFour} />
           </AnimatedSwitch>
         </Router>
