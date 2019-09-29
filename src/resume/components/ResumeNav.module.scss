@@ -1,0 +1,15 @@
+$accent-color: #c44e48;
+
+.navAction {
+  color: #7a7a7a;
+  font-size: 95%;
+  background-color: transparent;
+  margin: 0;
+}
+
+.navAction:last-child {
+  /* Buttons have 1rem padding. We want the button text to align with the right
+     side of the screen, so we achieve that by forcing it over by the padding
+     width */
+  margin-right: -1rem;
+}
