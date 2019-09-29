@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 
 import makeStore from './store';
 import { NoticeManager } from 'notices';
+import ScrollManager from 'router/components/ScrollManager';
 import AnimatedSwitch from 'router/components/AnimatedSwitch';
 import Home from 'views/Home';
 import Resume from 'resume/views/Resume';
@@ -20,11 +21,13 @@ function App() {
     <Provider store={store}>
       <HelmetProvider>
         <Router>
-          <AnimatedSwitch>
-            <Route path="/" exact component={Home} />
-            <Route path="/resume" exact component={Resume} />
-            <Route component={FourOhFour} />
-          </AnimatedSwitch>
+          <ScrollManager>
+            <AnimatedSwitch>
+              <Route path="/" exact component={Home} />
+              <Route path="/resume" exact component={Resume} />
+              <Route component={FourOhFour} />
+            </AnimatedSwitch>
+          </ScrollManager>
         </Router>
         <NoticeManager />
       </HelmetProvider>

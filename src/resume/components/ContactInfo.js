@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
-import { NavHashLink as Link } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 import {
   faPhoneAlt,
   faGlobeAmericas,
@@ -27,14 +28,14 @@ export default function Home() {
         <span>
           <CircleIcon icon={faEnvelope} />
         </span>
-        <Link
+        <NavHashLink
           to="/#contact-me"
           smooth
           title="Contact me"
           className={styles.text}
         >
           thomas@welfley.me
-        </Link>
+        </NavHashLink>
       </li>
       <li>
         <span>
