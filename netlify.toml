@@ -12,29 +12,33 @@
 [context.branch-deploy]
   command = "REACT_APP_STAGE=dev npm run build"
 
+
+# Redirect legacy URLs to their equivalents
 [[redirects]]
-  from    = "/*"
-  to      = "/index.html"
-  status  = 200
+  from    = "/assets/resume/resume.txt"
+  to      = "/resume.txt"
 
 [[redirects]]
-  from    = "/assets/resume/resume.*"
-  to      = "/resume.:splat"
-  status  = 301
+  from    = "/assets/resume/resume.pdf"
+  to      = "/resume.pdf"
 
 [[redirects]]
   from    = "/contact_me/"
   to      = "/"
-  status  = 301
 
 [[redirects]]
   from    = "/projects/"
   to      = "/"
-  status  = 301
+
+# Server the SPA
+[[redirects]]
+  from    = "/*"
+  to      = "/index.html"
+  status  = 200
 
 # The HTML version is the canonical version of the Resume. Alternate assets
 # can indicate this to crawlers via the link header.
 [[headers]]
   for = "/resume.*"
   [headers.values]
-    Link = '/resume; rel="canonical";'
+    Link = '/resume/; rel="canonical";'
