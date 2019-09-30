@@ -22,4 +22,4 @@
 [[headers]]
   for = "/resume.*"
   [headers.values]
-    Link: /resume; rel="canonical";
+    Link = '/resume; rel="canonical";'
