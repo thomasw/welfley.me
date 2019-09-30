@@ -8,6 +8,7 @@ import makeStore from './store';
 import { NoticeManager } from 'notices';
 import ScrollManager from 'router/components/ScrollManager';
 import AnimatedSwitch from 'router/components/AnimatedSwitch';
+import TrailingSlashRedirect from 'router/components/TrailingSlashRedirect';
 import Home from 'views/Home';
 import Resume from 'resume/views/Resume';
 import FourOhFour from 'views/FourOhFour';
@@ -23,8 +24,14 @@ function App() {
         <Router>
           <ScrollManager>
             <AnimatedSwitch>
+              <Route
+                exact
+                strict
+                path="/:url*"
+                component={TrailingSlashRedirect}
+              />
               <Route path="/" exact component={Home} />
-              <Route path="/resume" exact component={Resume} />
+              <Route path="/resume/" exact component={Resume} />
               <Route component={FourOhFour} />
             </AnimatedSwitch>
           </ScrollManager>
