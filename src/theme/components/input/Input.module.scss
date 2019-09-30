@@ -16,11 +16,14 @@ $background: rgba(#fff, 0.35);
   border-radius: 0.5rem;
   transition: 0.5s background;
   box-shadow: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue;
 
   &:focus {
     transition: 0.5s background;
     background: rgba($background, 0.5);
     animation: anim-shadow 0.5s forwards;
+    outline: none;
   }
 
   &:disabled {
