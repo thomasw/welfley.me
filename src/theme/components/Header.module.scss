@@ -66,8 +66,29 @@
 }
 
 .backdrop {
+  /* header_bg.jpg is small enough to be embeded in the build, so we will never
+     need to wait for it to load. We should always use it as the last BG
+     regardless of  user resolution to aovid a white flash. */
   background: url('./header_bg.jpg') center no-repeat;
   background-size: cover;
+
+  @media (min-width: 474px), (min-height: 355px) {
+    background: url('./header_bg@2x.jpg') center no-repeat,
+      url('./header_bg.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 945px), (min-height: 710px) {
+    background: url('./header_bg@3x.jpg') center no-repeat,
+      url('./header_bg.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 1891px), (min-height: 1419px) {
+    background: url('./header_bg@4x.jpg') center no-repeat,
+      url('./header_bg.jpg') center no-repeat;
+    background-size: cover;
+  }
 }
 
 :global {
