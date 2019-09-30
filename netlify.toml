@@ -15,8 +15,12 @@
 
 # Redirect legacy URLs to their equivalents
 [[redirects]]
-  from    = "/assets/resume/resume.:extension"
-  to      = "/resume.:extension"
+  from    = "/assets/resume/resume.txt"
+  to      = "/resume.txt"
+
+[[redirects]]
+  from    = "/assets/resume/resume.pdf"
+  to      = "/resume.pdf"
 
 [[redirects]]
   from    = "/contact_me/"
