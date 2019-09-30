@@ -1,6 +1,6 @@
 # Welfley.me
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a13dfcd3-32eb-47af-a7ae-083f7e69074a/deploy-status)](https://app.netlify.com/sites/clever-fermat-de0f75/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a13dfcd3-32eb-47af-a7ae-083f7e69074a/deploy-status)](https://app.netlify.com/sites/welfley/deploys)
 
 This repository contains the source code for [welfley.me](https://welfley.me/) (Thomas Welfley's portfolio).
 
