@@ -47,8 +47,9 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={styles.container} onSubmit={handleSubmit}>
       <ContactErrorMessage />
+      <label htmlFor="name">Name</label>
       <Input
         type="text"
         id="name"
@@ -61,6 +62,7 @@ export default function ContactForm() {
         placeholder="Name"
         validated={showErrors}
       />
+      <label htmlFor="email">Email</label>
       <Input
         type="email"
         id="email"
@@ -73,11 +75,12 @@ export default function ContactForm() {
         placeholder="Email"
         validated={showErrors}
       />
+      <label htmlFor="message">Message</label>
       <TextBox
         rows={5}
         disabled={loading}
         required
-        id="content"
+        id="message"
         name="message"
         value={formData.message}
         onChange={updateField}
