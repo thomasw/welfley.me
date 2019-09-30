@@ -1,17 +1,13 @@
 // @flow
+import { sendEmailNotice, type EmailNotice } from 'api-client';
 import { monitorThunk } from 'redux-thunk-monitor';
 
 import type { Dispatch } from 'reducer';
 import { setExpiringNotice } from 'notices';
 
-function wait() {
-  return new Promise(r => setTimeout(r, 1000));
-}
-
-export function sendMessage(name: string, email: string, message: string) {
+export function sendMessage(message: EmailNotice) {
   async function sendMessageAsync(dispatch: Dispatch) {
-    //TODO: Replace with real implementation.
-    await wait();
+    await sendEmailNotice(message);
     dispatch(setExpiringNotice('Your message is on its way!'));
   }
 
