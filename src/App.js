@@ -24,7 +24,7 @@ function App() {
           <ScrollManager>
             <AnimatedSwitch>
               <Route path="/" exact component={Home} />
-              <Route path="/resume" exact component={Resume} />
+              <Route path="/resume/" exact component={Resume} />
               <Route component={FourOhFour} />
             </AnimatedSwitch>
           </ScrollManager>

@@ -34,7 +34,7 @@ export default function Home() {
         </p>
         <Columns className={styles.cta_columns}>
           <div>
-            <LinkButton to="/resume" className={styles.primary_cta}>
+            <LinkButton to="/resume/" className={styles.primary_cta}>
               Resume
             </LinkButton>
           </div>
