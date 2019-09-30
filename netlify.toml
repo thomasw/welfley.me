@@ -1,0 +1,25 @@
+[build]
+  base    = ""
+  publish = "build"
+  command = "REACT_APP_STAGE=dev npm run build"
+
+[context.production]
+  command = "REACT_APP_STAGE=prod npm run build"
+
+[context.deploy-preview]
+  command = "REACT_APP_STAGE=dev npm run build"
+
+[context.branch-deploy]
+  command = "REACT_APP_STAGE=dev npm run build"
+
+[[redirects]]
+  from    = "/*"
+  to      = "/index.html"
+  status  = 200
+
+# The HTML version is the canonical version of the Resume. Alternate assets
+# can indicate this to crawlers via the link header.
+[[headers]]
+  for = "/resume.*"
+  [headers.values]
+    Link: /resume; rel="canonical";
