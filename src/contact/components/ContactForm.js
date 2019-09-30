@@ -27,7 +27,10 @@ export default function ContactForm() {
 
   const handleSubmit = event => {
     event.preventDefault();
-    actions.sendMessage(formData).then(resetForm);
+    actions
+      .sendMessage(formData)
+      .then(resetForm)
+      .catch(() => {});
   };
 
   const updateField = e => {
