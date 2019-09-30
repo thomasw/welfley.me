@@ -10,6 +10,7 @@ import { Button } from 'theme/components/button';
 import { isSendingMessage } from '../selectors';
 import { sendMessage } from '../actions';
 
+import ContactErrorMessage from './ContactErrorMessage';
 import styles from './ContactForm.module.scss';
 
 const initialFormData = {
@@ -47,6 +48,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit}>
+      <ContactErrorMessage />
       <Input
         type="text"
         id="name"
