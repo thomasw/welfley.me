@@ -8,6 +8,7 @@ import { setExpiringNotice } from 'notices';
 export function sendMessage(message: EmailNotice) {
   async function sendMessageAsync(dispatch: Dispatch) {
     await sendEmailNotice(message);
+
     dispatch(setExpiringNotice('Your message is on its way!'));
   }
 

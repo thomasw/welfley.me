@@ -47,7 +47,12 @@ export default function ContactForm() {
   };
 
   return (
-    <form className={styles.container} onSubmit={handleSubmit}>
+    <form
+      className={styles.container}
+      onSubmit={handleSubmit}
+      name="contact"
+      data-netlify="true"
+    >
       <ContactErrorMessage />
       <label htmlFor="name">Name</label>
       <Input
