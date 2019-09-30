@@ -25,7 +25,7 @@ export default function Header(props: Props) {
         />
         <Overlay
           className={styles.blur}
-          data-aos={!!transitionAnchor && 'transition-out-fade'}
+          data-aos={!!transitionAnchor && 'transition-out-unblur'}
           data-aos-anchor={transitionAnchor}
           data-aos-duration={transitionDuration}
         />
