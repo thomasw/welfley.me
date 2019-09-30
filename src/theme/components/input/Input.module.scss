@@ -1,0 +1,59 @@
+$highlight-color: #3370a8;
+$error-background: rgba(#ff5959, 0.35);
+$background: rgba(#fff, 0.35);
+
+.input {
+  box-sizing: border-box;
+  border: none;
+  display: block;
+  background: $background;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  color: inherit;
+  font-size: 100%;
+  outline: none;
+  border-radius: 0.5rem;
+  transition: 0.5s background;
+  box-shadow: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue;
+
+  &:focus {
+    transition: 0.5s background;
+    background: rgba($background, 0.5);
+    animation: anim-shadow 0.5s forwards;
+    outline: none;
+  }
+
+  &:disabled {
+    background: darken($background, 20%);
+  }
+}
+
+.validated {
+  &:invalid {
+    transition: 0.5s background;
+    background: $error-background;
+  }
+
+  &:invalid:focus {
+    transition: 0.5s background;
+    background: lighten($error-background, 20%);
+  }
+}
+
+@keyframes anim-shadow {
+  from {
+    box-shadow: 0 0 0 0 rgba($highlight-color, 0), 0 0 0 0 transparent;
+  }
+
+  50% {
+    box-shadow: 0 0 0 2px $highlight-color,
+      0 0 50px 10px rgba($highlight-color, 0.5);
+  }
+
+  to {
+    box-shadow: 0 0 0 2px $highlight-color, 0 0 50px 100px transparent;
+  }
+}

@@ -1,0 +1,132 @@
+$accent-color: #c44e48;
+$color: #7a7a7a;
+
+.resume {
+  color: $color;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 110%;
+    padding: 0.5rem 0;
+    margin: 0;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 110%;
+  }
+
+  a,
+  a:visited {
+    color: $color;
+    text-decoration: none;
+  }
+
+  main {
+    margin: 10vh 0;
+  }
+
+  header {
+    font-size: 90%;
+
+    @media screen and (min-width: 500px) {
+      margin-top: 10vh;
+      font-size: 100%;
+    }
+
+    h1,
+    h2 {
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 350%;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 200%;
+      font-weight: 400;
+      color: $accent-color;
+    }
+  }
+
+  section {
+    text-align: left;
+
+    div {
+      text-align: left;
+    }
+
+    h1,
+    h2,
+    h3 {
+      letter-spacing: normal;
+      font-weight: 300;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 140%;
+      color: $accent-color;
+    }
+
+    h2 {
+      font-size: 160%;
+    }
+
+    h3 {
+      font-size: 120%;
+      color: rgba($color, 0.6);
+      font-style: oblique;
+    }
+  }
+
+  /* The first column of resume content columns is a date range, split in the
+    middle by a line break. At lower resolutions, we want it rendered in
+    english as "start date to end date". This egregious hack achieves that
+    by replacing the br with "to" */
+  .timeRange {
+    align-self: flex-start;
+    margin-bottom: -1.5rem;
+
+    @media (max-width: 800px) {
+      br {
+        display: inline-block;
+        content: '';
+
+        &::after {
+          padding: 0 0.5em;
+          display: inline-block;
+          content: 'to';
+        }
+      }
+    }
+
+    @media (min-width: 800px) {
+      text-align: left;
+      margin: 1rem 5rem 0 8rem;
+    }
+  }
+
+  .subColumns {
+    text-align: left;
+
+    p {
+      padding: 0;
+    }
+
+    p:first-child {
+      @media (min-width: 800px) {
+        padding-right: 2rem;
+      }
+    }
+  }
+}

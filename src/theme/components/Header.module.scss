@@ -1,0 +1,138 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10vh;
+
+  @media (min-width: 500px) {
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  align-items: center;
+
+  /* This element contains overlay components, so it must be position: relative
+     or those components will not work correctly. */
+  position: relative;
+
+  /* A contained Overlay component scales up when you scroll by this element, so
+     we need to ensure we've hidden the resulting overflow or we will end up
+     with horrizontal scroll bars */
+  overflow: hidden;
+
+  .copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 150%;
+    text-align: center;
+
+    // Elevate copy above other overlays
+    z-index: 1;
+
+    h1 {
+      margin: 2vh;
+      font-size: 4rem;
+
+      @media (min-width: 500px) {
+        font-size: 6rem;
+      }
+    }
+
+    p {
+      width: 75%;
+      min-width: 300px;
+      max-width: 900px;
+      line-height: 150%;
+      margin: 0;
+      padding: 0;
+    }
+
+    a,
+    a:visited,
+    a:hover {
+      text-decoration: none;
+      font-weight: 400;
+      color: #fff;
+    }
+  }
+}
+
+.blur {
+  background: url('./blur_bg@2x.png') center no-repeat,
+    url('./blur_bg.png') center no-repeat;
+  background-size: cover;
+}
+
+.backdrop {
+  /* header_bg.jpg is small enough to be embeded in the build, so we will never
+     need to wait for it to load. We should always use it as the last BG
+     regardless of  user resolution to aovid a white flash. */
+  background: url('./header_bg.jpg') center no-repeat;
+  background-size: cover;
+
+  @media (min-width: 474px), (min-height: 355px) {
+    background: url('./header_bg@2x.jpg') center no-repeat,
+      url('./header_bg.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 945px), (min-height: 710px) {
+    background: url('./header_bg@3x.jpg') center no-repeat,
+      url('./header_bg.jpg') center no-repeat;
+    background-size: cover;
+  }
+
+  @media (min-width: 1891px), (min-height: 1419px) {
+    background: url('./header_bg@4x.jpg') center no-repeat,
+      url('./header_bg.jpg') center no-repeat;
+    background-size: cover;
+  }
+}
+
+:global {
+  [data-aos='transition-out-fade'] {
+    transition-property: opacity;
+    opacity: 1;
+
+    /* pointer-events: AOS is designed for transitioning elements in. By
+       default, it disables pointer events on an element until a transition
+       occurs. We're using AOS to transition things out so we reverse this
+       behavior (enable pointer events until a transition occurs and then
+       disable them). */
+    pointer-events: auto !important;
+
+    &.aos-animate {
+      opacity: 0;
+      pointer-events: none !important;
+    }
+  }
+
+  [data-aos='transition-out-zoom'] {
+    transition-property: transform;
+    transform: scale(1);
+    pointer-events: auto !important;
+    transform-origin: 50% 100%;
+
+    &.aos-animate {
+      pointer-events: none !important;
+      transform: scale(1.5);
+    }
+  }
+
+  [data-aos='transition-out-unblur'] {
+    transition-property: transform, opacity;
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto !important;
+    transform-origin: 50% 100%;
+
+    &.aos-animate {
+      opacity: 0;
+      pointer-events: none !important;
+      transform: scale(1.5);
+    }
+  }
+}

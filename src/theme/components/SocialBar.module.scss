@@ -1,0 +1,27 @@
+.bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 2rem 0;
+
+  li {
+    display: block;
+    padding: 0 0.5rem;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.5s;
+    cursor: pointer;
+  }
+
+  a:hover {
+    background: #0001;
+  }
+}

@@ -1,0 +1,55 @@
+.container {
+  label {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+}
+
+.wobble {
+  color: #fffd;
+  animation: wobble 1s;
+  animation-delay: 0.25s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wobble {
+  0% {
+    transform: translateY(0%) rotate(46deg);
+  }
+
+  15% {
+    transform: translateY(0%) rotate(46deg);
+  }
+
+  30% {
+    transform: translateY(10%) rotate(43deg);
+  }
+
+  45% {
+    transform: translateY(-5%) rotate(49deg);
+  }
+
+  60% {
+    transform: translateY(0%) rotate(43deg);
+  }
+
+  75% {
+    transform: translateY(-5%) rotate(49deg);
+  }
+
+  100% {
+    transform: translateY(0%) rotate(46deg);
+  }
+}

@@ -1,0 +1,19 @@
+.container {
+  // Changing this to fixed makes Overlay components overlay the entire screen
+  // not just their parent.
+  position: fixed;
+  background: rgba(#36bc59, 0.9);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.placeHolder {
+  display: none;
+}

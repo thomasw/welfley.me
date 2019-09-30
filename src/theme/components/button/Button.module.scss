@@ -1,0 +1,41 @@
+$background-color: #36bc59;
+
+.button {
+  display: inline-flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background: $background-color;
+  color: #fffd;
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  font-size: 125%;
+  cursor: pointer;
+  filter: brightness(100%);
+  transition: 0.5s filter;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+    filter: brightness(90%);
+  }
+
+  span {
+    display: block;
+    padding: 0 0.75rem 0 1rem;
+    transform: scale(0.8);
+  }
+
+  &:disabled {
+    color: #fff6;
+  }
+}
+
+.withIcon {
+  padding-left: 0;
+  padding-right: 1rem;
+}

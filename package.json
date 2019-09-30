@@ -1,0 +1,88 @@
+{
+  "name": "welfley.me",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Thomas Welfley's portfolio. https://welfley.me/",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "postbuild": "react-snap && react-snap-sitemap --base-url='https://welfley.me/'",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasw/welfley.me.git"
+  },
+  "author": "Thomas Welfley",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/thomasw/welfley.me/issues"
+  },
+  "homepage": "https://welfley.me/",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-brands-svg-icons": "^5.11.2",
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
+    "aos": "^3.0.0-beta.6",
+    "classnames": "^2.2.6",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1",
+    "react-helmet-async": "^1.0.3",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.1",
+    "react-router-hash-link": "^1.2.2",
+    "react-scripts": "^3.1.2",
+    "react-snap": "^1.23.0",
+    "react-transition-group": "^4.3.0",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "redux-thunk-monitor": "^1.0.0",
+    "smoothscroll-polyfill": "^0.4.4"
+  },
+  "devDependencies": {
+    "@arcadian-digital/react-snap-sitemap": "^1.2.5",
+    "eslint": "^6.4.0",
+    "flow-bin": "^0.108.0",
+    "node-sass": "^4.12.0",
+    "prettier": "^1.18.2",
+    "stylelint": "^11.0.0",
+    "stylelint-config-css-modules": "^1.5.0",
+    "stylelint-config-recommended-scss": "^4.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-scss": "^3.11.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-recommended-scss",
+      "stylelint-config-css-modules"
+    ],
+    "rules": {
+      "declaration-colon-newline-after": null,
+      "value-list-comma-newline-after": null
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

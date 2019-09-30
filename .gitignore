@@ -1,3 +1,7 @@
-*.pyc
+# Configuration
+configuration_public.json
+configuration.json
+
 .DS_Store
-local_settings.py
+node_modules/
+build/
