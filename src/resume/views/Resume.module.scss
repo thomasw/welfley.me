@@ -97,6 +97,11 @@ $color: #7a7a7a;
     align-self: flex-start;
     margin-bottom: -1.5rem;
 
+    /* Always prevent the timeRange column from expanding to take up extra space
+      even when subsequent columns are narrow. */
+    flex: 0;
+    flex-basis: 0;
+
     @media (max-width: 800px) {
       br {
         display: inline-block;

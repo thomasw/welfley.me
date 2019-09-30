@@ -1,18 +1,18 @@
 $background-color: #36bc59;
 
 .button {
+  font-size: 20.2px;
   display: inline-flex;
   flex-direction: row;
   box-sizing: border-box;
   background: $background-color;
-  color: #fffd;
+  color: rgba(white, 0.8);
   margin: 0.5rem;
   padding: 0.5rem 2rem;
   border-radius: 0.5rem;
   outline: none;
   box-shadow: none;
   border: none;
-  font-size: 125%;
   cursor: pointer;
   filter: brightness(100%);
   transition: 0.5s filter;
