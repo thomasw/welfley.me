@@ -1,6 +1,7 @@
 # Welfley.me
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a13dfcd3-32eb-47af-a7ae-083f7e69074a/deploy-status)](https://app.netlify.com/sites/welfley/deploys)
+[![test status](https://img.shields.io/travis/thomasw/welfley.me?label=tests)](https://travis-ci.org/thomasw/welfley.me)
+[![Netlify Status](https://img.shields.io/netlify/a13dfcd3-32eb-47af-a7ae-083f7e69074a)](https://app.netlify.com/sites/welfley/deploys)
 
 This repository contains the source code for [welfley.me](https://welfley.me/) (Thomas Welfley's portfolio).
 
