@@ -1,18 +1,27 @@
 // @flow
-import * as React from 'react';
+import { useEffect } from 'react';
 import { withRouter } from 'react-router';
 
 type Props = {
-  children: React.Node,
   location: { pathname: string }
 };
 
-function ScrollManager({ children, location: { pathname } }: Props) {
-  React.useEffect(() => {
+let MOUNTED = false;
+
+function ScrollManager({ location: { pathname } }: Props) {
+  useEffect(() => {
+    // Disregard the first pathname change. That's the initial url and
+    // we want to honor whatever #hash is specified by not scrolling up to the
+    // top.
+    if (!MOUNTED) {
+      MOUNTED = true;
+      return;
+    }
+
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  return children || null;
+  return null;
 }
 
 export default withRouter(ScrollManager);

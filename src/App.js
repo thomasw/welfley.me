@@ -22,19 +22,18 @@ function App() {
     <Provider store={store}>
       <HelmetProvider>
         <Router>
-          <ScrollManager>
-            <AnimatedSwitch>
-              <Route
-                exact
-                strict
-                path="/:url*"
-                component={TrailingSlashRedirect}
-              />
-              <Route path="/" exact component={Home} />
-              <Route path="/resume/" exact component={Resume} />
-              <Route component={FourOhFour} />
-            </AnimatedSwitch>
-          </ScrollManager>
+          <AnimatedSwitch>
+            <Route
+              exact
+              strict
+              path="/:url*"
+              component={TrailingSlashRedirect}
+            />
+            <Route path="/" exact component={Home} />
+            <Route path="/resume/" exact component={Resume} />
+            <Route component={FourOhFour} />
+          </AnimatedSwitch>
+          <ScrollManager />
         </Router>
         <NoticeManager />
       </HelmetProvider>
