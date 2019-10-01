@@ -1,16 +1,16 @@
 [build]
   base    = ""
   publish = "build"
-  command = "REACT_APP_STAGE=dev npm run build"
+  command = "REACT_APP_STAGE=prod npm run build"
 
 [context.production]
   command = "REACT_APP_STAGE=prod npm run build"
 
 [context.deploy-preview]
-  command = "REACT_APP_STAGE=dev npm run build"
+  command = "REACT_APP_STAGE=prod npm run build"
 
 [context.branch-deploy]
-  command = "REACT_APP_STAGE=dev npm run build"
+  command = "REACT_APP_STAGE=prod npm run build"
 
 
 # Redirect legacy URLs to their equivalents
