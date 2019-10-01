@@ -15,6 +15,7 @@ $accent-color: #c44e48;
   top: 3rem;
   bottom: 4rem;
   background-size: 4px auto;
+  z-index: 0;
 
   @media (min-width: 800px) {
     display: block;
@@ -33,6 +34,6 @@ $accent-color: #c44e48;
   left: 50%;
   width: 4px;
   margin-left: -2px;
-  z-index: -1;
   background-color: $accent-color;
+  z-index: -1;
 }
