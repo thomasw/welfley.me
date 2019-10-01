@@ -9,7 +9,8 @@
     "build": "react-scripts build",
     "postbuild": "react-snap && react-snap-sitemap --base-url='https://welfley.me/'",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "scripts/lint.sh"
   },
   "repository": {
     "type": "git",
