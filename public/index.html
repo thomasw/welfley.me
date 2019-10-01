@@ -58,31 +58,6 @@
 
       gtag('config', 'UA-8759876-2');
     </script>
-    <script>
-      // This implementation is from https://developers.google.com/speed/webp/faq
-      function hasWebPSupport(feature, callback) {
-        var kTestImages = {
-          lossy: 'UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AAAAAA',
-          lossless: 'UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==',
-          alpha:
-            'UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAARBxAR/Q9ERP8DAABWUDggGAAAABQBAJ0BKgEAAQAAAP4AAA3AAP7mtQAAAA==',
-          animation:
-            'UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA'
-        };
-        var img = new Image();
-        img.onload = function() {
-          callback(feature, img.width > 0 && img.height > 0);
-        };
-        img.onerror = function() {
-          callback(feature, false);
-        };
-        img.src = 'data:image/webp;base64,' + kTestImages[feature];
-      }
-
-      hasWebPSupport('lossless', (feature, result) => {
-        document.body.classList.add(result ? 'webp' : 'no-webp');
-      });
-    </script>
   </head>
   <body id="top">
     <noscript>You need to enable JavaScript to see this site.</noscript>
