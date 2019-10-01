@@ -61,7 +61,18 @@
 }
 
 .blur {
+  background: url('./blur_bg.png') center no-repeat;
+  background-size: cover;
+}
+
+:global(.no-webp) .blur {
   background: url('./blur_bg@2x.png') center no-repeat,
+    url('./blur_bg.png') center no-repeat;
+  background-size: cover;
+}
+
+:global(.webp) .blur {
+  background: url('./blur_bg.webp') center no-repeat,
     url('./blur_bg.png') center no-repeat;
   background-size: cover;
 }
