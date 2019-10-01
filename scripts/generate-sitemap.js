@@ -57,7 +57,7 @@ const blackList = [];
   await readSite('build');
 
   const siteUrls = allRoots.map(root =>
-    root.replace('build/', baseUrl).replace('/index.html', '')
+    root.replace('build/', baseUrl).replace('index.html', '')
   );
 
   const urlset = builder.create('urlset', {
