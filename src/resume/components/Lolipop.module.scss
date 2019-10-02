@@ -10,35 +10,44 @@ $accent-color: #c44e48;
 }
 
 .lolipop {
-  display: none;
-  position: absolute;
-  top: 3rem;
-  bottom: 4rem;
-  background-size: 4px auto;
-  z-index: 0;
+  @media print, (min-width: 800px) {
+    position: absolute;
+    top: 3rem;
+    bottom: 4rem;
+  }
 
   @media print {
     top: 1rem;
     bottom: 2rem;
   }
 
-  @media print, (min-width: 800px) {
-    display: block;
-  }
-
   svg {
+    position: relative;
+    z-index: 1;
     font-size: 150%;
     padding: 0.75rem;
+    margin-left: -1.25rem;
+
+    @media print, (min-width: 800px) {
+      margin: 0;
+    }
   }
 }
 
 .lolipopStick {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 4px;
-  margin-left: -2px;
   background-color: $accent-color;
-  z-index: -1;
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  right: 0;
+  height: 4px;
+
+  @media print, (min-width: 800px) {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: auto;
+    margin-left: -2px;
+  }
 }
