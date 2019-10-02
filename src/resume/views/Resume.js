@@ -3,7 +3,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {
   faBriefcase,
-  faGraduationCap
+  faGraduationCap,
+  faArrowCircleRight
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -12,6 +13,8 @@ import {
   FlexColumns
 } from 'theme/components/layout';
 import Footer from 'theme/components/Footer';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import ContactInfo from '../components/ContactInfo';
 import ResumeNav from '../components/ResumeNav';
@@ -144,6 +147,12 @@ export default function Home() {
                   </p>
                 </div>
               </FlexColumns>
+              <p className={styles.moreLink}>
+                <a href="https://www.linkedin.com/in/thomaswelfley/">
+                  Full History via LinkedIn
+                  <FontAwesomeIcon icon={faArrowCircleRight} fixedWidth />
+                </a>
+              </p>
             </Lolipop>
           </section>
           <section>
