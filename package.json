@@ -7,7 +7,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "postbuild": "react-snap && react-snap-sitemap --base-url='https://welfley.me/'",
+    "postbuild": "react-snap && scripts/generate-sitemap.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "scripts/lint.sh"
@@ -37,8 +37,6 @@
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.1",
     "react-router-hash-link": "^1.2.2",
-    "react-scripts": "^3.1.2",
-    "react-snap": "^1.23.0",
     "react-transition-group": "^4.3.0",
     "redux": "^4.0.4",
     "redux-devtools-extension": "^2.13.8",
@@ -47,16 +45,18 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "@arcadian-digital/react-snap-sitemap": "^1.2.5",
     "eslint": "^6.4.0",
     "flow-bin": "^0.108.0",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
+    "react-scripts": "^3.1.2",
+    "react-snap": "^1.23.0",
     "stylelint": "^11.0.0",
     "stylelint-config-css-modules": "^1.5.0",
     "stylelint-config-recommended-scss": "^4.0.0",
     "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.11.1"
+    "stylelint-scss": "^3.11.1",
+    "xmlbuilder": "^13.0.2"
   },
   "eslintConfig": {
     "extends": "react-app"
