@@ -13,7 +13,7 @@ import Home from 'views/Home';
 import Resume from 'resume/views/Resume';
 import FourOhFour from 'views/FourOhFour';
 
-import './App.css';
+import './App.scss';
 
 const store = makeStore();
 
