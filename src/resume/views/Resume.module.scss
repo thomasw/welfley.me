@@ -5,6 +5,11 @@ $color: #7a7a7a;
   color: $color;
   font-weight: 300;
 
+  @media print {
+    font-size: 10px;
+    line-height: normal;
+  }
+
   h1,
   h2,
   h3,
@@ -14,6 +19,10 @@ $color: #7a7a7a;
     line-height: 110%;
     padding: 0.5rem 0;
     margin: 0;
+
+    @media print {
+      padding: 0.25rem 0;
+    }
   }
 
   strong {
@@ -32,6 +41,10 @@ $color: #7a7a7a;
 
   main {
     margin: 10vh 0;
+
+    @media print {
+      margin: 2rem 0;
+    }
   }
 
   header {
@@ -61,6 +74,10 @@ $color: #7a7a7a;
 
   section {
     text-align: left;
+
+    @media print {
+      font-size: 10px;
+    }
 
     div {
       text-align: left;
@@ -103,7 +120,7 @@ $color: #7a7a7a;
     flex: 0;
     flex-basis: 0;
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       br {
         display: inline-block;
         content: '';
@@ -116,9 +133,15 @@ $color: #7a7a7a;
       }
     }
 
-    @media (min-width: 800px) {
+    @media print, (min-width: 800px) {
       text-align: left;
       margin: 1rem 5rem 0 8rem;
+    }
+
+    @media print {
+      font-size: 8px;
+      text-align: left;
+      margin: 1rem 2rem 0 5rem;
     }
   }
 

@@ -4,7 +4,7 @@ $accent-color: #c44e48;
   position: relative;
   padding: 3rem 0;
 
-  @media (max-width: 800px) {
+  @media print, (max-width: 800px) {
     padding: 1rem 0;
   }
 }
@@ -17,7 +17,12 @@ $accent-color: #c44e48;
   background-size: 4px auto;
   z-index: 0;
 
-  @media (min-width: 800px) {
+  @media print {
+    top: 1rem;
+    bottom: 2rem;
+  }
+
+  @media print, (min-width: 800px) {
     display: block;
   }
 
