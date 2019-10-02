@@ -167,10 +167,10 @@ export default function Home() {
                   <h1>Bachelor of Science in Computer Science</h1>
                   <h3>University of Central Florida</h3>
                   <Columns className={styles.subColumns}>
-                    <p>Founding member of UCF Student IT Advisory Council.</p>
+                    <p>Founding member of UCF Student IT Advisory Council</p>
                     <p>
                       3x AASCU presenter for leadership of colleges and
-                      universities.
+                      universities
                     </p>
                   </Columns>
                 </div>
