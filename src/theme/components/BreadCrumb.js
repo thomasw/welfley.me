@@ -16,7 +16,7 @@ type Props = {
 export default function BreadCrumb(props: Props) {
   return (
     <LimitWidth className={styles.container}>
-      <Link to="/" className={styles.back}>
+      <Link to="/" className={styles.back} aria-label="Back to Portfolio">
         <FontAwesomeIcon icon={faArrowLeft} fixedWidth />{' '}
         <span className={styles.backText}>Back to Portfolio</span>
       </Link>
