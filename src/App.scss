@@ -9,7 +9,15 @@ body {
   font-weight: 200;
   line-height: 2rem;
   text-align: center;
-  background: #373e45;
+
+  @media screen {
+    background: #373e45;
+  }
+}
+
+@page {
+  size: auto;
+  margin: 1in 1in 0.5in 1in;
 }
 
 #root {

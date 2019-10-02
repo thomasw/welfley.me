@@ -14,9 +14,17 @@
     padding: 0.5rem;
     justify-content: space-between;
 
+    @media print {
+      padding: 0;
+    }
+
     .text {
       @media (min-width: 800px) {
         min-width: 150px;
+      }
+
+      @media print {
+        min-width: 100px;
       }
     }
 
@@ -28,7 +36,7 @@
     }
   }
 
-  @media (min-width: 800px) {
+  @media print, (min-width: 800px) {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
