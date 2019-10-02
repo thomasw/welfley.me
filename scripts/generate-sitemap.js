@@ -37,7 +37,7 @@ const asyncForEach = async (array, callback) => {
 let allRoots = [];
 
 const readSite = async dir => {
-  const directory = await asyncReaddir(dir, { withFileTypes: true });
+  const directory = await asyncReaddir(dir);
 
   await asyncForEach(directory, async fileOrDirectory => {
     const root = `${dir}/${fileOrDirectory}`;
