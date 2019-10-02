@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
+    "start:production": "REACT_APP_STAGE=prod npm run build && serve build/",
     "build": "react-scripts build",
     "postbuild": "react-snap && scripts/generate-sitemap.js",
     "test": "react-scripts test",
@@ -51,6 +52,7 @@
     "prettier": "^1.18.2",
     "react-scripts": "^3.1.2",
     "react-snap": "^1.23.0",
+    "serve": "^11.2.0",
     "stylelint": "^11.0.0",
     "stylelint-config-css-modules": "^1.5.0",
     "stylelint-config-recommended-scss": "^4.0.0",
