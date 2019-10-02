@@ -3,6 +3,7 @@ $color: #7a7a7a;
 
 .resume {
   color: $color;
+  font-weight: 300;
 
   h1,
   h2,
@@ -48,12 +49,12 @@ $color: #7a7a7a;
 
     h1 {
       font-size: 350%;
-      font-weight: 400;
+      font-weight: 300;
     }
 
     h2 {
       font-size: 200%;
-      font-weight: 400;
+      font-weight: 300;
       color: $accent-color;
     }
   }
