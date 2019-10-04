@@ -59,16 +59,20 @@ $color: #7a7a7a;
     h1,
     h2 {
       text-transform: uppercase;
+      font-weight: 300;
+
+      @media print {
+        font-weight: 700;
+      }
     }
 
     h1 {
       font-size: 350%;
-      font-weight: 300;
+      padding-top: 0;
     }
 
     h2 {
       font-size: 200%;
-      font-weight: 300;
       color: $accent-color;
     }
   }
