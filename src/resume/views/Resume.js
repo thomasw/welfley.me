@@ -28,7 +28,7 @@ export default function Home() {
         <title>Thomas Welfley: Resume</title>
         <meta
           name="description"
-          content="Thomas Welfley builds engineering organizations and amazing software. From Python and JS microservices to SPAs and React Native mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I can define and implement the hiring and management strategies required to scale. From inception to production, either as part of a team or independently, I make software happen. Just say the word and let's start building."
+          content="Thomas Welfley builds amazing engineering organizations and software. From Python and JS microservices to SPAs and React Native mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I can define and implement the hiring and management strategies required to scale. From inception to production, either as part of a team or independently, I make software happen. Just say the word and let's start building."
         />
         <meta
           name="keywords"
@@ -52,7 +52,7 @@ export default function Home() {
           <section>
             <LimitWidthNarrow>
               <p>
-                I build <strong>engineering organizations</strong> and amazing{' '}
+                I build amazing <strong>engineering organizations</strong> and{' '}
                 <strong>software</strong>. From <strong>Python</strong> and{' '}
                 <strong>JS</strong> microservices to <strong>SPAs</strong> and{' '}
                 <strong>React Native</strong> mobile apps, I have extensive
@@ -77,14 +77,15 @@ export default function Home() {
                   <h1>HipHipGo</h1>
                   <h2>Founder</h2>
                   <p>
-                    Built and shipped a <strong>mobile app</strong> that alerts
-                    people when they stop at places that impact their health and
-                    that forecasts weight change based on activity and spending
-                    patterns. Built systems to geolocate credit card
+                    Designed and built a product that forecasts user weight
+                    change based on activity levels and spending patterns.
+                    Shipped React Native <strong>mobile apps</strong> for{' '}
+                    <strong>iOS</strong> and <strong>Android</strong> that alert
+                    users when they visit places correlated with negative health
+                    outcomes. Built systems to geolocate credit card
                     transactions based on profile and mobile device location
-                    cues, health score businesses based on aggregate visitor
-                    data, and <strong>React Native</strong> apps for{' '}
-                    <strong>iOS</strong> and <strong>Android</strong>.
+                    cues. Built systems to health score businesses based on
+                    aggregate visitor data.
                   </p>
                 </div>
               </FlexColumns>
@@ -98,32 +99,31 @@ export default function Home() {
                   <h1>Yola, Inc.</h1>
                   <h2>VP of Engineering</h2>
                   <p>
-                    Reorganized <strong>global engineering team</strong>{' '}
-                    supporting over 12 million users; enabled onboarding 40
-                    additional engineers. Transitioned company from hiring
-                    full-stack engineers to specialists; established
-                    team-directed interview processes. Designed and executed
-                    transition from monolithic architecture to{' '}
-                    <strong>microservice architecture</strong>; from 13 deployed
-                    frontends and services to 62. Executed{' '}
-                    <strong>micro-frontend</strong> strategy for shipping UIs
+                    Reorganized a <strong>global engineering team</strong>{' '}
+                    supporting over 13 million users; enabled onboarding 40
+                    additional engineers. Transitioned company from hiring full
+                    stack engineers to specialists; established team-directed
+                    interview processes. Designed and executed transition from
+                    monolithic to <strong>microservice architecture</strong>,
+                    from 13 deployed frontends and services to 62. Executed{' '}
+                    <strong>microfrontend</strong> strategy for shipping UIs
                     with independent stacks. Architected and led the execution
-                    of new partner <strong>APIs</strong>; secured strategic
+                    of new partner <strong>APIs</strong> securing a strategic
                     partnership with Plesk and additional venture capital.
                   </p>
                   <h2>Director of Engineering</h2>
                   <p>
                     Decreased time to first release for new engineers from 3
-                    months to 1 day. Executed transition from copypasta standard
-                    library to over 100 well tested,{' '}
+                    months to 1 day. Executed transition from a copypasta
+                    standard library to over 100 well tested,{' '}
                     <strong>single purpose installables</strong>. Organized and
-                    led a project to make millions of customer websites{' '}
+                    led a project to make 9 million customer websites{' '}
                     <strong>responsive</strong> by default. Rebuilt UIs and
                     purchase flows to support 8 currencies and 18 languages,
                     securing strategic, multinational partnerships with Google.
                     Designed and secured the adoption of an organization-wide{' '}
-                    <strong>code review</strong> process, managing the review of
-                    6,000 pull requests per year.
+                    <strong>code review</strong> process, ensuring the quality
+                    of 6,000 pull requests per year.
                   </p>
                 </div>
               </FlexColumns>
