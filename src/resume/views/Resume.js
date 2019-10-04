@@ -32,7 +32,7 @@ export default function Home() {
         />
         <meta
           name="keywords"
-          content="resume, engineer, software engineer, python developer, developer, web developer, engineering manager, San Francisco, California, Welfley, Thomas, portfolio, resume"
+          content="engineer, software engineer, python developer, developer, web developer, engineering manager, vice president, CTO, director, San Francisco, California, Welfley, Thomas, portfolio, resume"
         />
       </Helmet>
       <ResumeNav />
