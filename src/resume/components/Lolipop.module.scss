@@ -50,4 +50,9 @@ $accent-color: #c44e48;
     height: auto;
     margin-left: -2px;
   }
+
+  @media print {
+    width: 2px;
+    margin-left: -1px;
+  }
 }
