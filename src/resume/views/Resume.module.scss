@@ -180,7 +180,7 @@ $color: #7a7a7a;
     }
 
     p:first-child {
-      @media (min-width: 800px) {
+      @media print, (min-width: 800px) {
         padding-right: 2rem;
       }
     }
