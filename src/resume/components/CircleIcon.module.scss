@@ -5,4 +5,9 @@
   background-color: #c44e48;
   padding: 0.3rem;
   border-radius: 50%;
+
+  @media print {
+    padding: 0.2rem;
+    font-size: 8px;
+  }
 }
