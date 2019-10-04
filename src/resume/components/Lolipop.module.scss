@@ -31,6 +31,11 @@ $accent-color: #c44e48;
     @media print, (min-width: 800px) {
       margin: 0;
     }
+
+    @media print {
+      font-size: 120%;
+      padding: 0.4rem 0.3rem;
+    }
   }
 }
 
