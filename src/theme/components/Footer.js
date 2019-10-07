@@ -21,13 +21,14 @@ export function Footer(props: Props) {
   } = props;
   const className = cx(styles.container, { [styles.sticky]: sticky });
   const smoothToTop = pathname === '/';
+  const now = new Date();
 
   return (
     <footer id="footer" className={className}>
       <LimitWidth>
         <FlexColumns className={styles.columns}>
           <div className={styles.copyrightCol}>
-            <p>&copy; 2019 Thomas Welfley.</p>
+            <p>&copy; {now.getFullYear()} Thomas Welfley</p>
             <ul>
               <li>
                 <Link to="/#top" smooth={smoothToTop} className={styles.pill}>
