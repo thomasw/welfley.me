@@ -1,0 +1,15 @@
+.container {
+  background: #fff;
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: 60rem;
+  padding: 1vh 0;
+}
+
+:global(.no-webp) .container {
+  background-image: url(git_field.svg);
+}
+
+:global(.webp) .container {
+  background-image: url(git_field.webp);
+}
