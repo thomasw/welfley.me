@@ -1,0 +1,47 @@
+.container {
+  position: relative;
+  min-height: 10vh;
+  background: #020202;
+  z-index: 100;
+  padding: 3vh 0;
+
+  a {
+    display: block;
+    text-align: center;
+    transform: scale(0.8);
+
+    @media (min-width: 1000px) {
+      transform: scale(1);
+    }
+  }
+}
+
+.hhgLogo {
+  filter: invert(1);
+}
+
+.yolaLogo {
+  width: 75px;
+
+  @media (min-width: 800px) {
+    margin-bottom: -7px;
+  }
+}
+
+.openSourceLogo {
+  font-size: 200%;
+  font-family: monospace;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.1rem;
+  line-height: 100%;
+}
+
+.resume {
+  text-align: center;
+
+  & > * {
+    display: inline-block;
+    transform: scale(1) !important;
+  }
+}
