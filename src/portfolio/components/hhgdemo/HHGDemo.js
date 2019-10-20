@@ -88,7 +88,7 @@ export default class HHGDemo extends PureComponent<Props, State> {
           aria-hidden
           autoPlay
           controls={false}
-          disableRemotePlayback
+          disableremoteplayback="true"
           loop
           muted
           onCanPlay={this.handleCanPlay}
