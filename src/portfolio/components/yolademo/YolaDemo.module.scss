@@ -1,0 +1,58 @@
+.container {
+  display: inline-block;
+  margin: 10vw 0;
+  border: 1px solid rgba(#000, 0.1);
+  padding: 5px;
+  padding-top: 15px;
+  border-radius: 15px;
+}
+
+.content {
+  box-sizing: border-box;
+  flex-direction: column;
+  background: #d279f9;
+  background-size: cover;
+  width: 1022px;
+  height: 766px;
+  border-radius: 15px;
+  border: 1px solid rgba(#ddd, 0.5);
+  color: #fff;
+  padding-top: 30%;
+  padding-left: 5rem;
+  text-align: left;
+  box-shadow: 0 0 10vw 1rem rgba(#b84fe9, 0.6);
+
+  h1,
+  h2 {
+    letter-spacing: normal;
+    line-height: normal;
+    font-weight: 800;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+  }
+
+  .cursor {
+    display: inline-block;
+    border-left: 0.05em solid rgba(#fff, 0.75); /* The typwriter cursor */
+    animation: blink-caret 0.75s step-end infinite;
+  }
+}
+
+:global(.no-webp) .content {
+  background: url('./frame.jpg') center center no-repeat;
+}
+
+:global(.webp) .content {
+  background: url('./frame.webp') center center no-repeat;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
