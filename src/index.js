@@ -10,13 +10,15 @@ import App from 'App';
 import { hasWebPSupport } from './featureDetection';
 
 const root = document.getElementById('root');
+const isDriven = navigator.webdriver || false;
+const isProduction = process.env.NODE_ENV === 'production';
 
-process.env.NODE_ENV === 'production' &&
+isProduction &&
   Sentry.init({
     dsn: 'https://cfe35a9e688e4f4b83d3c1c5dcd9cc3b@sentry.io/1768567'
   });
 
-!navigator.webdriver &&
+!isDriven &&
   hasWebPSupport('lossless', (feature, result) => {
     document.body && document.body.classList.add(result ? 'webp' : 'no-webp');
   });
