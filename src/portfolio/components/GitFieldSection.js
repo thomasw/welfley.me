@@ -2,7 +2,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 
-import { LimitWidth } from 'theme/components/layout';
+import { LimitWidth, Overlay } from 'theme/components/layout';
 
 import styles from './GitFieldSection.module.scss';
 
@@ -14,7 +14,8 @@ export default function GitFieldSection(props: Props) {
 
   return (
     <section {...containerProps} className={mergedClassName}>
-      <LimitWidth>{children}</LimitWidth>
+      <LimitWidth className={styles.content}>{children}</LimitWidth>
+      <Overlay className={styles.bg} />
     </section>
   );
 }

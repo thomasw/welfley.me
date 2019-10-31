@@ -1,15 +1,26 @@
 .container {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.bg {
   background: #fff;
   background-position: center bottom;
   background-repeat: repeat-x;
-  background-size: 60rem;
+  background-size: 80rem;
   padding: 1vh 0;
+  opacity: 0.4;
+  z-index: 0;
 }
 
-:global(.no-webp) .container {
+:global(.no-webp) .bg {
   background-image: url(git_field.svg);
 }
 
-:global(.webp) .container {
+:global(.webp) .bg {
   background-image: url(git_field.webp);
 }
