@@ -2,16 +2,17 @@
   display: inline-block;
   background: transparent;
   user-select: none;
-  border: 2px solid rgba(#fff, 0.2);
+  border: 2px solid rgba(#fff, 0.15);
   border-radius: 20px;
   width: auto;
   padding: 15px 5px;
+  margin: 5vw;
 
   video {
     display: block;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 10vw 0.1vw rgba(#fff, 0.3);
+    box-shadow: 0 0 10vw 0.1vw rgba(#fff, 0.1);
   }
 }
 
