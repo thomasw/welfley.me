@@ -18,51 +18,24 @@ export default function CurvedBottomSection(props: Props) {
     <nav className={mergedClassName} {...containerProps}>
       <LimitWidth>
         <Columns>
-          <Link
-            to="#hhg"
-            smooth
-            data-aos="fade-right"
-            data-aos-anchor="#portfolio"
-            data-aos-duration={1000}
-          >
+          <Link to="#hhg" smooth>
             <img
               src={require('./hiphipgo.png')}
               alt="HipHipGo"
               className={styles.hhgLogo}
             />
           </Link>
-          <Link
-            to="#yola"
-            smooth
-            data-aos="fade-right"
-            data-aos-anchor="#portfolio"
-            data-aos-duration={1000}
-            data-aos-delay={250}
-          >
+          <Link to="#yola" smooth>
             <img
               src={require('./yola.svg')}
               className={styles.yolaLogo}
               alt="Yola"
             />
           </Link>
-          <Link
-            to="#open_source"
-            smooth
-            className={styles.openSourceLogo}
-            data-aos="fade-right"
-            data-aos-anchor="#portfolio"
-            data-aos-duration={1000}
-            data-aos-delay={500}
-          >
+          <Link to="#open_source" smooth className={styles.openSourceLogo}>
             Open Source
           </Link>
-          <div
-            className={styles.resume}
-            data-aos="fade-right"
-            data-aos-anchor="#portfolio"
-            data-aos-duration={1000}
-            data-aos-delay={750}
-          >
+          <div className={styles.resume}>
             <LinkButton
               to="/resume/"
               smooth
