@@ -17,10 +17,10 @@
   border-radius: 15px;
   border: 1px solid rgba(#ddd, 0.5);
   color: #fff;
-  padding-top: 30%;
-  padding-left: 5rem;
+  padding: 30% 5% 0 5%;
   text-align: left;
   box-shadow: 0 0 10vw 1rem rgba(#b84fe9, 0.6);
+  max-width: 75vw;
 
   h1,
   h2 {
@@ -38,11 +38,11 @@
 }
 
 :global(.no-webp) .content {
-  background: url('./frame.jpg') center center no-repeat;
+  background: url('./frame.jpg') center left no-repeat;
 }
 
 :global(.webp) .content {
-  background: url('./frame.webp') center center no-repeat;
+  background: url('./frame.webp') center left no-repeat;
 }
 
 /* The typewriter cursor effect */
