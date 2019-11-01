@@ -22,6 +22,7 @@ isProduction &&
   hasWebPSupport('lossless', (feature, result) => {
     document.body && document.body.classList.add(result ? 'webp' : 'no-webp');
   });
+
 smoothscroll.polyfill();
 AOS.init();
 
