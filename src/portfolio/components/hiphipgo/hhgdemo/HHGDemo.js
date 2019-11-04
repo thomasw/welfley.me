@@ -2,13 +2,15 @@
 import React, { PureComponent } from 'react';
 
 import DeviceFrame from './DeviceFrame';
-
-export const neutral = '#00aeff';
-export const negative = '#db4255';
-export const positive = '#7ec783';
+import {
+  neutral,
+  negative,
+  positive,
+  type ColorOption
+} from '../BackgroundFader';
 
 type Props = {
-  onColorChange?: (color: string) => any
+  onColorChange?: (color: ColorOption) => any
 };
 
 type State = {
@@ -50,7 +52,7 @@ export default class HHGDemo extends PureComponent<Props, State> {
     return this.handleColorChange(neutral);
   };
 
-  handleColorChange = async (color: string) => {
+  handleColorChange = async (color: ColorOption) => {
     if (color === this.state.color) return;
 
     this.setState({ color });
