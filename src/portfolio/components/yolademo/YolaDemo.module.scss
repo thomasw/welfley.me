@@ -27,12 +27,12 @@
     letter-spacing: normal;
     line-height: normal;
     font-weight: 800;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    margin: 0.5rem 0;
   }
 
   .cursor {
     display: inline-block;
-    border-left: 0.05em solid rgba(#fff, 0.75); /* The typwriter cursor */
+    border-left: 0.05em solid rgba(#fff, 0.75);
     animation: blink-caret 0.75s step-end infinite;
   }
 }
