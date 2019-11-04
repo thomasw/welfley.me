@@ -4,4 +4,23 @@
   border-bottom-left-radius: 70vw 5vw;
   color: #fff;
   padding: 1vh 0;
+
+  a,
+  a:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #3dbc62;
+    font-weight: bold;
+    transition: 0.5s transform, 0.5s color;
+
+    svg {
+      padding: 0 5px;
+      font-size: 80%;
+    }
+  }
+
+  a:hover {
+    color: lighten(#3dbc62, 10%);
+    transform: scale(1.05);
+  }
 }
