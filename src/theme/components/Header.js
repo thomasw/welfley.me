@@ -19,19 +19,19 @@ export default function Header(props: Props) {
       <FullHeight className={styles.content}>
         <Overlay
           className={styles.backdrop}
-          data-aos={!!transitionAnchor && 'transition-out-zoom'}
+          data-aos={transitionAnchor ? 'transition-out-zoom' : undefined}
           data-aos-anchor={transitionAnchor}
           data-aos-duration={transitionDuration}
         />
         <Overlay
           className={styles.blur}
-          data-aos={!!transitionAnchor && 'transition-out-unblur'}
+          data-aos={transitionAnchor ? 'transition-out-unblur' : undefined}
           data-aos-anchor={transitionAnchor}
           data-aos-duration={transitionDuration}
         />
         <div
           className={styles.copy}
-          data-aos={!!transitionAnchor && 'transition-out-fade'}
+          data-aos={transitionAnchor ? 'transition-out-fade' : undefined}
           data-aos-anchor={transitionAnchor}
           data-aos-duration={transitionDuration}
         >
