@@ -12,8 +12,9 @@ export default function OpenSource() {
       <h1>Open Source Projects</h1>
       <Columns className={styles.columns}>
         <article
+          id="djproxy"
           data-aos="slide-left"
-          data-aos-anchor="#open_source"
+          data-aos-anchor="#djproxy"
           data-aos-duration={1000}
           data-aos-once
         >
@@ -38,7 +39,7 @@ export default function OpenSource() {
             </div>
           </a>
         </article>
-        <article className={styles.topOfStack}>
+        <article id="testtube" className={styles.topOfStack}>
           <a href="https://github.com/thomasw/testtube/">
             <div className={styles.testtubeBg} />
             <div className={styles.content}>
@@ -61,8 +62,9 @@ export default function OpenSource() {
           </a>
         </article>
         <article
+          id="redux-thunk-monitor"
           data-aos="slide-right"
-          data-aos-anchor="#open_source"
+          data-aos-anchor="#djproxy"
           data-aos-duration={1000}
           data-aos-once
         >
