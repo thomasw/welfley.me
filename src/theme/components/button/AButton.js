@@ -3,13 +3,13 @@ import * as React from 'react';
 import cx from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import type { AElementProps } from 'types';
 import styles from './Button.module.scss';
 
-type Props = {
-  className?: string,
+type Props = {|
   icon?: string,
-  children: React.Node
-};
+  ...AElementProps
+|};
 
 export default function AButton(props: Props) {
   const { className, icon, children, ...linkProps } = props;

@@ -18,6 +18,7 @@ export default function NoticeManager(props: Props) {
         key={sceneId}
         classNames={styles}
         timeout={500}
+        // $FlowFixMe - CSSTransition is untyped.
         {...transitionProps}
       >
         {children}

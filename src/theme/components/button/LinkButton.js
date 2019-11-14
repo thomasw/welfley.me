@@ -1,16 +1,19 @@
 // @flow
 import * as React from 'react';
 import cx from 'classnames';
+
+import { Link as TypedLink } from 'react-router-dom';
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './Button.module.scss';
 
-type Props = {
-  className?: string,
+type Props = {|
+  ...$Exact<React.ElementConfig<typeof TypedLink>>,
   icon?: string,
-  children: React.Node
-};
+  smooth?: boolean,
+  scroll?: (el: React.Element<any>) => any
+|};
 
 export default function LinkButton(props: Props) {
   const { className, icon, children, ...linkProps } = props;

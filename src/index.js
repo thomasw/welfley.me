@@ -10,6 +10,7 @@ import App from 'App';
 import { hasWebPSupport } from './featureDetection';
 
 const root = document.getElementById('root');
+// $FlowFixMe
 const isDriven = navigator.webdriver || false;
 const isProduction = process.env.NODE_ENV === 'production';
 

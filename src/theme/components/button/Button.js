@@ -4,15 +4,15 @@ import cx from 'classnames';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import type { HTMLElementProps } from 'types';
 import styles from './Button.module.scss';
 
-type Props = {
-  className?: string,
+type Props = {|
   loading?: boolean,
   iconLoadingClassName?: string,
   icon: string,
-  children: React.Node
-};
+  ...HTMLElementProps
+|};
 
 export default function Button(props: Props) {
   const {

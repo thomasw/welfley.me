@@ -15,6 +15,7 @@ export default function CirlceIcon(props: Props) {
     <FontAwesomeIcon
       className={cx(styles.container, className)}
       fixedWidth
+      // $FlowFixMe - FontAwesomeIcon is untyped.
       {...faProps}
     />
   );

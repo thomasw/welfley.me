@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 
+import type { HTMLElementProps } from 'types';
 import DeviceFrame from './DeviceFrame';
 import {
   neutral,
@@ -9,9 +10,10 @@ import {
   type ColorOption
 } from '../BackgroundFader';
 
-type Props = {
-  onColorChange?: (color: ColorOption) => any
-};
+type Props = {|
+  onColorChange?: (color: ColorOption) => any,
+  ...HTMLElementProps
+|};
 
 type State = {
   color: string,
@@ -80,7 +82,7 @@ export default class HHGDemo extends PureComponent<Props, State> {
     return (
       <DeviceFrame
         data-aos="fade-up"
-        data-aos-duration="1500"
+        data-aos-duration={1500}
         data-aos-once
         data-aos-mirror={false}
         data-aos-id="hhg"

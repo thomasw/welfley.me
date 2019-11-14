@@ -2,11 +2,10 @@
 import React from 'react';
 import cx from 'classnames';
 
+import type { HTMLElementProps } from 'types';
 import styles from './Overlay.module.scss';
 
-type Props = {
-  className?: string
-};
+type Props = HTMLElementProps;
 
 export default function overlay(props: Props) {
   const { className, ...otherProps } = props;

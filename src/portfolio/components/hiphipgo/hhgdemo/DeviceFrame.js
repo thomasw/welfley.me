@@ -2,13 +2,13 @@
 import * as React from 'react';
 import cx from 'classnames';
 
+import type { HTMLElementProps } from 'types';
 import styles from './DeviceFrame.module.scss';
 
-type Props = {
-  children: React.Node,
-  shake?: boolean,
-  className?: string
-};
+type Props = {|
+  ...HTMLElementProps,
+  shake?: boolean
+|};
 
 export default function DeviceFrame(props: Props) {
   const { children, className, shake = false, ...divProps } = props;
