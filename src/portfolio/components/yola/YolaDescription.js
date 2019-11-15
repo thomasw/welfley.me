@@ -50,10 +50,10 @@ export default function YolaDescription() {
           <FontAwesomeIcon icon={faJsSquare} style={{ color: '#ABD439' }} />
           <p>
             Architected and executed a micro-frontend strategy for shipping new
-            UIs with independent, modern stacks. This facilitated a transition
-            from Django/server side rendered UIs to static, client-side
-            rendering while simultaneously improving the org's ability to ship
-            new features quickly.
+            UIs with independent, modern stacks. Facilitated a transition from
+            Django/server side rendered UIs to static, client-side rendering
+            while simultaneously improving the org's ability to ship new
+            features quickly.
           </p>
         </div>
         <div
