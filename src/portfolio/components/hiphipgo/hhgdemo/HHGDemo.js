@@ -84,7 +84,6 @@ export default class HHGDemo extends PureComponent<Props, State> {
         data-aos="fade-up"
         data-aos-duration={1500}
         data-aos-once
-        data-aos-mirror={false}
         data-aos-id="hhg"
         {...containerProps}
       >
