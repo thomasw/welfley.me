@@ -45,3 +45,15 @@
     display: inline-block;
   }
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 90vw;
+
+  & > * {
+    flex: 1;
+    margin: 1rem 0.2rem;
+  }
+}

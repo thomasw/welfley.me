@@ -5,7 +5,7 @@ import { NavHashLink as Link } from 'react-router-hash-link';
 
 import type { HTMLElementProps } from 'types';
 import { LinkButton } from 'theme/components/button';
-import { Columns, LimitWidth } from 'theme/components/layout';
+import { LimitWidth } from 'theme/components/layout';
 
 import styles from './PortfolioMenu.module.scss';
 
@@ -16,7 +16,7 @@ export default function PortfolioMenu(props: HTMLElementProps) {
   return (
     <nav className={mergedClassName} {...containerProps}>
       <LimitWidth>
-        <Columns>
+        <div className={styles.content}>
           <Link to="#hhg" smooth>
             <img
               src={require('./hiphipgo.png')}
@@ -39,7 +39,7 @@ export default function PortfolioMenu(props: HTMLElementProps) {
               Resume
             </LinkButton>
           </div>
-        </Columns>
+        </div>
       </LimitWidth>
     </nav>
   );
