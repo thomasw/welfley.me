@@ -17,9 +17,11 @@ export type AOSAttributes = {|
   'data-aos-anchor'?: string,
   'data-aos-anchor-placement'?: string,
   'data-aos-duration'?: number,
+  'data-aos-delay'?: number,
   'data-aos-once'?: 'true' | 'false',
   'data-aos-mirror'?: 'true' | 'false',
-  'data-aos-id'?: string
+  'data-aos-id'?: string,
+  'data-aos-easing'?: string
 |};
 
 export type HTMLElementProps = {|
