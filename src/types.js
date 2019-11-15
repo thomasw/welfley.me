@@ -15,9 +15,10 @@ import * as React from 'react';
 export type AOSAttributes = {|
   'data-aos'?: string,
   'data-aos-anchor'?: string,
+  'data-aos-anchor-placement'?: string,
   'data-aos-duration'?: number,
-  'data-aos-once'?: boolean,
-  'data-aos-mirror'?: boolean,
+  'data-aos-once'?: 'true' | 'false',
+  'data-aos-mirror'?: 'true' | 'false',
   'data-aos-id'?: string
 |};
 
