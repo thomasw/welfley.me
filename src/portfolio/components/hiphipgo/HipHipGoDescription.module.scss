@@ -4,23 +4,6 @@
   margin: 0 auto;
 }
 
-.content {
-  list-style-type: none;
-  text-align: left;
-
-  li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 1rem;
-  }
-}
-
-.demo {
-  text-align: right;
-  margin: 10vh 0;
-}
-
 .icon {
   position: relative;
   display: flex;
@@ -398,4 +381,36 @@
   svg {
     z-index: 1;
   }
+}
+
+.content {
+  list-style-type: none;
+  text-align: left;
+
+  li {
+    .icon {
+      float: left;
+    }
+
+    @media (min-width: 500px) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 1rem;
+
+      .icon {
+        float: none;
+      }
+    }
+  }
+}
+
+.demo {
+  text-align: center;
+
+  @media (min-width: 800px) {
+    text-align: right;
+  }
+
+  margin: 10vh 0;
 }
