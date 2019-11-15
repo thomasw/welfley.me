@@ -4,6 +4,7 @@ import cx from 'classnames';
 
 import { NavHashLink as Link } from 'react-router-hash-link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileInvoice } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelopeOpen } from '@fortawesome/free-regular-svg-icons';
 import {
   faGithub,
@@ -23,6 +24,11 @@ export default function SocialBar(props: Props) {
       <li>
         <Link to="/#contact-me" smooth title="Contact me">
           <FontAwesomeIcon icon={faEnvelopeOpen} />
+        </Link>
+      </li>
+      <li>
+        <Link to="/resume/" smooth title="Resume">
+          <FontAwesomeIcon icon={faFileInvoice} />
         </Link>
       </li>
       <li>
