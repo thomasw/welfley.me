@@ -1,11 +1,13 @@
 // @flow
 import React from 'react';
+import cx from 'classnames';
 
+import type { HTMLElementProps } from 'types';
 import styles from './YolaDemo.module.scss';
 
-export default function YolaDemo() {
+export default function YolaDemo(props: HTMLElementProps) {
   return (
-    <div className={styles.container}>
+    <div className={cx(styles.container, props.className)}>
       <div className={styles.content}>
         <h1>Yola</h1>
         <h2>Vice President of Engineering</h2>

@@ -1,5 +1,6 @@
 .container {
-  display: inline-block;
+  display: flex;
+  box-sizing: border-box;
   margin: 10vw 0;
   border: 1px solid rgba(#000, 0.1);
   padding: 5px;
@@ -8,10 +9,9 @@
 }
 
 .content {
+  flex: 1;
   box-sizing: border-box;
   flex-direction: column;
-  background: #d279f9;
-  background-size: cover;
   width: 1022px;
   height: 766px;
   border-radius: 15px;
@@ -20,7 +20,7 @@
   padding: 30% 5% 0 5%;
   text-align: left;
   box-shadow: 0 0 10vw 1rem rgba(#b84fe9, 0.6);
-  max-width: 75vw;
+  max-width: 100%;
 
   h1,
   h2 {
@@ -38,11 +38,13 @@
 }
 
 :global(.no-webp) .content {
-  background: url('./frame.jpg') center left no-repeat;
+  background: #d279f9 url('./frame.jpg') top left no-repeat;
+  background-size: cover;
 }
 
 :global(.webp) .content {
-  background: url('./frame.webp') center left no-repeat;
+  background: #d279f9 url('./frame.webp') top left no-repeat;
+  background-size: cover;
 }
 
 /* The typewriter cursor effect */
