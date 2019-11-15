@@ -4,10 +4,12 @@ import { Helmet } from 'react-helmet-async';
 
 import Header from 'theme/components/Header';
 import SocialBar from 'theme/components/SocialBar';
-import ContactSection from 'contact/components/ContactSection';
 import Footer from 'theme/components/Footer';
 import { Columns } from 'theme/components/layout';
 import { LinkButton } from 'theme/components/button';
+
+import ContactSection from 'contact/components/ContactSection';
+import PortfolioSection from 'portfolio/components/PortfolioSection';
 
 import styles from './Home.module.scss';
 
@@ -25,7 +27,7 @@ export default function Home() {
           content="engineer, software engineer, python developer, developer, web developer, engineering manager, vice president, CTO, director, San Francisco, California, Welfley, Thomas, portfolio, resume"
         />
       </Helmet>
-      <Header transitionAnchor="#contact-me">
+      <Header transitionAnchor="#portfolio_content">
         <h1>Thomas Welfley</h1>
         <p>
           I build <strong>engineering teams</strong> and{' '}
@@ -34,14 +36,15 @@ export default function Home() {
         </p>
         <Columns className={styles.cta_columns}>
           <div>
-            <LinkButton to="/resume/" className={styles.primary_cta}>
-              Resume
+            <LinkButton to="#portfolio" smooth className={styles.primary_cta}>
+              Portfolio
             </LinkButton>
           </div>
           <SocialBar />
         </Columns>
       </Header>
       <main>
+        <PortfolioSection />
         <ContactSection />
       </main>
       <Footer />
