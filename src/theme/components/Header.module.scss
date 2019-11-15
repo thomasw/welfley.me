@@ -61,6 +61,10 @@
   }
 }
 
+.fade {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 85%, #020202 100%);
+}
+
 .blur {
   background: url('./blur_bg.png') center no-repeat;
   background-size: cover;

@@ -23,6 +23,7 @@ export default function Header(props: Props) {
           data-aos-anchor={transitionAnchor}
           data-aos-duration={transitionDuration}
         />
+        <Overlay className={styles.fade} />
         <Overlay
           className={styles.blur}
           data-aos={transitionAnchor ? 'transition-out-unblur' : undefined}
