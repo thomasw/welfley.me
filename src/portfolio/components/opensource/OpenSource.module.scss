@@ -9,11 +9,12 @@
 
 .container {
   article > a {
-    display: block;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     background: #fff;
-    border-radius: 30px;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
     text-decoration: none;
     overflow: hidden;
     line-height: normal;
@@ -28,6 +29,20 @@
 
   @media (min-width: 800px) {
     article > a {
+      margin: 0 0.5rem;
+    }
+
+    article:first-child > a {
+      margin-right: 0.5rem;
+    }
+
+    article:last-child > a {
+      margin-left: 0.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    article > a {
       margin: 0 1.5rem;
     }
 
@@ -41,18 +56,19 @@
   }
 
   .content {
+    flex: 1;
+    border: 1px solid #eaeaea;
+    border-radius: 0 0 1rem 1rem;
+    border-top: 0;
     padding: 2rem;
-    border-radius: 30px 30px 0 0;
-    margin: -30px 0;
     background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
     font-weight: normal;
     font-size: 100%;
     text-align: left;
-    color: #636363;
+    color: #000;
 
     p {
       padding: 1rem 0;
@@ -89,6 +105,38 @@
   }
 }
 
+.tags {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+  font-size: 70%;
+
+  li {
+    color: darken(#e1edae, 50%);
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.5rem;
+    margin: 0.3rem;
+    margin-left: 0;
+    background-color: #e1edae;
+    border-radius: 5px;
+  }
+}
+
+.djTags {
+  li {
+    color: darken(#0bf, 10%);
+    background-color: lighten(#0bf, 40%);
+  }
+}
+
+.reduxTags {
+  li {
+    color: darken(#ff91a1, 20%);
+    background-color: lighten(#ff91a1, 15%);
+  }
+}
+
 .topOfStack {
   z-index: 100;
 }
@@ -96,7 +144,11 @@
 .djproxyBg,
 .testtubeBg,
 .reduxThunkMonitorBg {
-  height: 180px;
+  height: 200px;
+
+  @media (min-width: 1000px) {
+    height: 300px;
+  }
 }
 
 .djproxyBg {
@@ -105,6 +157,7 @@
 
 .testtubeBg {
   background: rgb(172, 1, 1) url(./tubes-rotated.svg) no-repeat center center;
+  background-size: 115%;
 }
 
 .reduxThunkMonitorBg {

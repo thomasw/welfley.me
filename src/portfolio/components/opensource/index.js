@@ -1,4 +1,6 @@
 import React from 'react';
+import cx from 'classnames';
+
 import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -24,7 +26,14 @@ export default function OpenSource() {
               <div>
                 <header>
                   <h1>djproxy</h1>
-                  <h2>Python, Django, APIs, proxies, developer tools</h2>
+
+                  <ul className={cx(styles.tags, styles.djTags)}>
+                    <li>Python</li>
+                    <li>Django</li>
+                    <li>APIs</li>
+                    <li>Proxies</li>
+                    <li>Developer Tools</li>
+                  </ul>
                 </header>
                 <p>
                   djproxy is a class-based generic view reverse HTTP proxy for
@@ -46,7 +55,12 @@ export default function OpenSource() {
               <div>
                 <header>
                   <h1>testtube</h1>
-                  <h2>Python, automation, developer tools, testing</h2>
+                  <ul className={styles.tags}>
+                    <li>Python</li>
+                    <li>Automation</li>
+                    <li>Developer Tools</li>
+                    <li>Testing</li>
+                  </ul>
                 </header>
                 <p>
                   Spare your alt and tab keys by automatically running your
@@ -74,7 +88,13 @@ export default function OpenSource() {
               <div>
                 <header>
                   <h1>redux-thunk-monitor</h1>
-                  <h2>JavaScript, React, Redux, Redux Thunk</h2>
+
+                  <ul className={cx(styles.tags, styles.reduxTags)}>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Redux</li>
+                    <li>Redux Thunk</li>
+                  </ul>
                 </header>
                 <p>
                   Automatically record redux-thunk loading and error disposition
