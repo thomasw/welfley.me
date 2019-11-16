@@ -13,7 +13,9 @@
     display: block;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 10vw 0.1vw rgba(#fff, 0.1);
+    // TODO: The following line adds a slight glow effect. However, this breaks
+    // video elements in the latest version of safari.
+    // box-shadow: 0 0 10vw 0.1vw rgba(#fff, 0.1);
   }
 }
 
