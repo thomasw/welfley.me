@@ -152,7 +152,12 @@
 }
 
 .djproxyBg {
-  background: url(./djproxy.png) no-repeat center center;
+  background: #01a6fe url(./djproxy.webp) no-repeat top center;
+  background-size: cover;
+}
+
+:global(.no-webp) .djproxyBg {
+  background-image: url(./djproxy.jpg);
 }
 
 .testtubeBg {
@@ -161,6 +166,6 @@
 }
 
 .reduxThunkMonitorBg {
-  background: url(./thunk.svg) no-repeat center center;
-  background-size: 200% 150%;
+  background: #ff8ea5 url(./thunk.svg) no-repeat center center;
+  background-size: 300% 150%;
 }
