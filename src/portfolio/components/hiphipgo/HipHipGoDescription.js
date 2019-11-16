@@ -10,7 +10,7 @@ import {
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import { Columns } from 'theme/components/layout';
-import BackgroundFader from './BackgroundFader';
+import BackgroundFader, { type ColorOption } from './BackgroundFader';
 import HHGDemo from './hhgdemo';
 
 import styles from './HipHipGoDescription.module.scss';
@@ -20,7 +20,7 @@ const STEP_DELAY = 200;
 const TRANSITION = 'fade-left';
 
 export default function HipHipGoDescription() {
-  const [color, setColor] = useState(BackgroundFader.neutral);
+  const [color, setColor] = useState<ColorOption>(BackgroundFader.neutral);
 
   return (
     <>
