@@ -5,20 +5,13 @@ import cx from 'classnames';
 import type { HTMLElementProps } from 'types';
 import styles from './DeviceFrame.module.scss';
 
-type Props = {|
-  ...HTMLElementProps,
-  shake?: boolean
-|};
-
-export default function DeviceFrame(props: Props) {
-  const { children, className, shake = false, ...divProps } = props;
-  const mergedClass = cx(styles.container, className, {
-    [styles.shake]: shake
-  });
+export default function DeviceFrame(props: HTMLElementProps) {
+  const { children, className, ...divProps } = props;
+  const mergedClass = cx(styles.container, className);
 
   return (
-    <div className={mergedClass} aria-hidden {...divProps}>
-      {children}
+    <div aria-hidden {...divProps} className={mergedClass}>
+      <div className={styles.content}>{children}</div>
     </div>
   );
 }
