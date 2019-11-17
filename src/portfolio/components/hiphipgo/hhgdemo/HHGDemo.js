@@ -42,21 +42,18 @@ export default function HHGDemo(props: Props) {
   };
 
   const start = () => {
-    if (!video.current) return;
-
-    video.current.muted = true;
-    video.current.play();
+    video.current && video.current.play();
   };
 
-  const markVisible = () => setVisible(true);
+  const handleAnimateIn = () => setVisible(true);
 
-  const pause = () => video.current && video.current.pause();
+  const handleCanPlayThrough = () => setLoaded(true);
 
   useEffect(() => {
-    window.document.addEventListener('aos:in:hhg', markVisible);
+    window.document.addEventListener('aos:in:hhg', handleAnimateIn);
 
     return () => {
-      window.document.removeEventListener('aos:in:hhg', markVisible);
+      window.document.removeEventListener('aos:in:hhg', handleAnimateIn);
     };
   }, []);
 
@@ -80,8 +77,7 @@ export default function HHGDemo(props: Props) {
         loop
         muted
         onTimeUpdate={handleTimeUpdate}
-        onCanPlay={pause}
-        onCanPlayThrough={() => setLoaded(true)}
+        onCanPlayThrough={handleCanPlayThrough}
         playsInline
         preload="auto"
         ref={video}
