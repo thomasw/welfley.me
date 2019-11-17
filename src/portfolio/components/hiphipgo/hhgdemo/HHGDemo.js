@@ -1,5 +1,5 @@
 // @flow
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import type { HTMLElementProps } from 'types';
 import DeviceFrame from './DeviceFrame';
@@ -17,7 +17,9 @@ type Props = {|
 
 export default function HHGDemo(props: Props) {
   const [color, setColor] = useState<ColorOption>(neutral);
-  const video = React.createRef<HTMLVideoElement>();
+  const [loaded, setLoaded] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const video = useRef<?HTMLVideoElement>(null);
   const { onColorChange, ...containerProps } = props;
 
   const handleTimeUpdate = () => {
@@ -39,6 +41,29 @@ export default function HHGDemo(props: Props) {
     onColorChange && onColorChange(newColor);
   };
 
+  const start = () => {
+    if (!video.current) return;
+
+    video.current.muted = true;
+    video.current.play();
+  };
+
+  const markVisible = () => setVisible(true);
+
+  const pause = () => video.current && video.current.pause();
+
+  useEffect(() => {
+    window.document.addEventListener('aos:in:hhg', markVisible);
+
+    return () => {
+      window.document.removeEventListener('aos:in:hhg', markVisible);
+    };
+  }, []);
+
+  useEffect(() => {
+    loaded && visible && start();
+  }, [loaded, visible]);
+
   return (
     <DeviceFrame
       data-aos="fade-up"
@@ -55,6 +80,8 @@ export default function HHGDemo(props: Props) {
         loop
         muted
         onTimeUpdate={handleTimeUpdate}
+        onCanPlay={pause}
+        onCanPlayThrough={() => setLoaded(true)}
         playsInline
         preload="auto"
         ref={video}
