@@ -32,7 +32,7 @@ export default function HipHipGoDescription() {
           you get there, and what you spend.
         </p>
         <p>
-          <a href="https://www.hiphipgo.com/">
+          <a href="https://www.hiphipgo.com/demo/">
             See it in action <FontAwesomeIcon icon={faArrowRight} fixedWidth />
           </a>
         </p>
