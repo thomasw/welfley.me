@@ -8,14 +8,14 @@
   padding: 15px 5px;
 
   .content {
-    display: flex;
+    display: inline-block;
     border-radius: 15px;
     box-shadow: 0 0 10vw 0.1vw rgba(#fff, 0.4);
-    min-width: 15vw;
-    max-width: 75vw;
 
     video {
-      object-fit: fill;
+      display: flex;
+      min-width: 15vw;
+      max-width: 75vw;
       border-radius: 15px;
       overflow: hidden;
     }
