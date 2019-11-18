@@ -49,8 +49,27 @@ export default function HHGDemo(props: Props) {
 
   const handleCanPlayThrough = () => setLoaded(true);
 
+  // We let autoplay happen so that we ensure the video asset gets fully loaded
+  // We don't want it to autoplay though, at least not until it has animated in
+  // and it is fully loaded, so we pause it here.
+  const handleCanPlay = () => {
+    if (loaded && visible) return;
+
+    video.current && video.current.pause();
+  };
+
   useEffect(() => {
     window.document.addEventListener('aos:in:hhg', handleAnimateIn);
+
+    // autoPlay sometimes doesn't trigger video playback because muted
+    // isn't explicitly written to the dom. See
+    // https://github.com/facebook/react/issues/10389 This is an attempt
+    // to workaround that by ensuring that muted is enabled and then manually
+    // triggering playback.
+    if (video.current) {
+      video.current.muted = true;
+      video.current.play().catch(() => {});
+    }
 
     return () => {
       window.document.removeEventListener('aos:in:hhg', handleAnimateIn);
@@ -77,6 +96,7 @@ export default function HHGDemo(props: Props) {
         loop
         muted
         onTimeUpdate={handleTimeUpdate}
+        onCanPlay={handleCanPlay}
         onCanPlayThrough={handleCanPlayThrough}
         playsInline
         preload="auto"
