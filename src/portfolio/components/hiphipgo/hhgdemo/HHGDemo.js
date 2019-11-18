@@ -67,6 +67,10 @@ export default function HHGDemo(props: Props) {
     // to workaround that by ensuring that muted is enabled and then manually
     // triggering playback.
     if (video.current) {
+      // TODO: The following line causes a warning in the test suite.
+      // Warning: unstable_flushDiscreteUpdates: Cannot flush updates when
+      // React is already rendering.
+      // It conflicts with the muted attribute on the video tag itsself.
       video.current.muted = true;
       video.current.play().catch(() => {});
     }
