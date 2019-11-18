@@ -30,12 +30,6 @@
   from    = "/projects/"
   to      = "/"
 
-# Server the SPA
-[[redirects]]
-  from    = "/*"
-  to      = "/index.html"
-  status  = 200
-
 # The HTML version is the canonical version of the Resume. Alternate assets
 # can indicate this to crawlers via the link header.
 [[headers]]
