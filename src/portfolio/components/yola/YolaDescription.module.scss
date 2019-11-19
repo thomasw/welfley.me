@@ -64,17 +64,20 @@
   justify-content: space-between;
   align-items: flex-start;
   text-align: center;
-  margin: 5vh 0;
+
+  @media (min-width: 650px) {
+    margin: 5vh 0;
+  }
 
   & > div {
     box-sizing: border-box;
-    padding: 2vh 1rem;
     min-width: 100%;
     text-align: left;
 
     @media (min-width: 650px) {
       text-align: center;
       min-width: 50%;
+      padding: 2vh 1rem;
     }
 
     @media (min-width: 900px) {
