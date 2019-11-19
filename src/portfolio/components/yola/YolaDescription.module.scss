@@ -1,16 +1,4 @@
 .container {
-  position: relative;
-  text-align: left;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 15vh;
-
-  @media (min-width: 1300px) {
-    flex-direction: row;
-    justify-content: flex-end;
-  }
-
   h1,
   h2,
   h3,
@@ -20,6 +8,23 @@
     letter-spacing: normal;
     line-height: normal;
     font-weight: bold;
+  }
+
+  svg {
+    font-size: 400%;
+  }
+}
+
+.demoContainer {
+  position: relative;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 1300px) {
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
 
@@ -49,6 +54,66 @@
   svg {
     padding: 0 0 4rem 2rem;
     float: right;
-    font-size: 400%;
   }
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+  margin: 5vh 0;
+
+  & > div {
+    box-sizing: border-box;
+    padding: 2vh 1rem;
+    min-width: 100%;
+    text-align: left;
+
+    @media (min-width: 650px) {
+      text-align: center;
+      min-width: 50%;
+    }
+
+    @media (min-width: 900px) {
+      min-width: 33.33%;
+    }
+  }
+}
+
+// TODO: The blinking cursor animation is breaking the filters on these
+// elements in safari. It causes a distortion to toggle as the caret blinks.
+
+.code {
+  color: #acd450;
+  //filter: drop-shadow(0 0 10px #acd450);
+}
+
+.globe {
+  color: #0073a3;
+  //filter: drop-shadow(0 0 5px rgba(#1a600e, 1));
+}
+
+.language {
+  color: #c739a8;
+  //filter: drop-shadow(0 0 3px #c739a8);
+}
+
+.users {
+  color: #febc5e;
+  //filter: drop-shadow(0 0 5px #febc5e);
+}
+
+.installables {
+  color: #ab050e;
+  //filter: drop-shadow(0 0 5px #ab050e);
+}
+
+.microservices {
+  color: #8e8e8e;
+  //filter: drop-shadow(0 0 5px #8e8e8e);
+  transition: none;
+  animation: none;
 }
