@@ -93,7 +93,7 @@ export default function YolaDescription() {
           />
           <h2>62 microservices</h2>
           <p>
-            Executed a microserivce archiecture at scale, radically improving
+            Executed a microservice archite at scale, radically improving
             performance and site reliability.
           </p>
         </div>
