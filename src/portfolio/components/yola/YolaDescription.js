@@ -19,6 +19,16 @@ import YolaDemo from './yolademo';
 
 import styles from './YolaDescription.module.scss';
 
+function popInProps(placemennt: number) {
+  return {
+    'data-aos': 'zoom-out-down',
+    'data-aos-anchor': '#yola-stats',
+    'data-aos-duration': 750,
+    'data-aos-delay': 150 * placemennt,
+    'data-aos-once': 'true'
+  };
+}
+
 export default function YolaDescription() {
   return (
     <section id="yola" className={styles.container}>
@@ -85,8 +95,8 @@ export default function YolaDescription() {
           </div>
         </div>
       </div>
-      <Columns className={styles.stats}>
-        <div>
+      <Columns className={styles.stats} id="yola-stats">
+        <div {...popInProps(0)}>
           <FontAwesomeIcon
             icon={faNetworkWired}
             className={styles.microservices}
@@ -97,7 +107,7 @@ export default function YolaDescription() {
             performance and site reliability.
           </p>
         </div>
-        <div>
+        <div {...popInProps(1)}>
           <FontAwesomeIcon
             icon={faPuzzlePiece}
             className={styles.installables}
@@ -108,7 +118,7 @@ export default function YolaDescription() {
             installabes.
           </p>
         </div>
-        <div>
+        <div {...popInProps(2)}>
           <FontAwesomeIcon icon={faUsers} className={styles.users} />
           <h2>13 million users</h2>
           <p>
@@ -116,7 +126,7 @@ export default function YolaDescription() {
             user base from 6&nbsp;million to 13&nbsp;million.
           </p>
         </div>
-        <div>
+        <div {...popInProps(3)}>
           <FontAwesomeIcon icon={faLanguage} className={styles.language} />
           <h2>8 currencies, 18 languages</h2>
           <p>
@@ -124,7 +134,7 @@ export default function YolaDescription() {
             effectively, and consistently.
           </p>
         </div>
-        <div>
+        <div {...popInProps(4)}>
           <FontAwesomeIcon icon={faCodeBranch} className={styles.code} />
           <h2>6,000+ pull requests per year</h2>
           <p>
@@ -132,7 +142,7 @@ export default function YolaDescription() {
             the quality of over 6,000 pull requests per year.
           </p>
         </div>
-        <div>
+        <div {...popInProps(5)}>
           <FontAwesomeIcon icon={faGlobeAmericas} className={styles.globe} />
           <h2>Global Engineering</h2>
           <p>
