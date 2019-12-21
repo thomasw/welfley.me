@@ -36,3 +36,9 @@
   for = "/resume.*"
   [headers.values]
     Link = '/resume/; rel="canonical";'
+
+[[redirects]]
+  from = "https://welfley.netlify.com/*"
+  to = "https://welfley.me/:splat"
+  status = 301
+  force = true
