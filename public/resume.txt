@@ -38,6 +38,8 @@ Decreased time to first release for new engineers from 3 months to 1 day. Execut
 
 Designed and implemented new products; scaled real-time web apps for educators to 10,000 online courses. Secured opportunity to pitch product to a prominent seed capital firm. Worked extensively with Facebook and Twitter APIs; shipped first open source Twitter Streams API client for Python. Shipped software for clients with hundreds of thousands of users.
 
+Full work history: https://www.linkedin.com/in/thomaswelfley/
+
 ## Education
 
 ### Bachelor of Science in Computer Science
