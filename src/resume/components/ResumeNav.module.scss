@@ -5,6 +5,12 @@ $accent-color: #c44e48;
   font-size: 95%;
   background-color: transparent;
   margin: 0;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    color: #7a7a7a;
+  }
 }
 
 .navAction:last-child {

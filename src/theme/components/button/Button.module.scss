@@ -15,14 +15,14 @@ $background-color: #36bc59;
   box-shadow: none;
   border: none;
   cursor: pointer;
-  filter: brightness(100%);
-  transition: 0.5s filter;
+  transition: background-color 0.5s, color 0.5s;
   text-decoration: none;
 
   &:hover,
   &:active {
     text-decoration: none;
-    filter: brightness(90%);
+    background-color: darken($background-color, 5%);
+    color: rgba(white, 0.9);
   }
 
   span {
