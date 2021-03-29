@@ -6,37 +6,45 @@
 ⌂   San Francisco, CA
 ✭   https://welfley.me/
 
-I build amazing engineering organizations and software. From Python and JS microservices to SPAs and React Native mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I can define and implement the hiring and management strategies required to scale. From inception to production, either as part of a team or independently, I make software happen. Just say the word and let's start building.
+I build amazing engineering organizations and software. From Python and JS microservice architectures to SPAs, React Native, iOS, and Android mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I define and implement the hiring and management strategies required to scale. From inception to production, I make software happen. Just say the word and let's start building.
 
 ## Work Experience
 
+### Google
+
+03/2020 to Present
+
+#### Sr. Engineering Manager, Developer Programs
+
+Led a cross-functional team of 20 to design and execute developer experience for the Google Assistant on speakers, Smart Displays, and Android devices. Reported at the director level. Enabled 2x developer growth and 4x end user growth for their integrations (tens of millions of new monthly active users). Enabled integrations with some of the top engineering companies in the world (Twitter, Microsoft, Snap). Designed and recruited teams to expand developer platforms spanning multiple product areas (Search, Nest, Android).
+
 ### HipHipGo
 
-09/2016 to Present
+09/2016 to 03/2020
 
 #### Founder
 
-Designed and built a product that forecasts user weight change based on activity levels and spending patterns. Shipped React Native mobile apps for iOS and Android that alert users when they visit places correlated with negative health outcomes. Built systems to geolocate credit card transactions based on profile and mobile device location cues. Built systems to health score businesses based on aggregate visitor data.
+Principal engineer for a product that forecasts body weight change based on automatically tracked fitness and food spend data.
 
-### Yola, Inc.
+### Yola
 
 10/2011 to 09/2016
 
-#### VP of Engineering
+#### Vice President of Engineering
 
-Reorganized a global engineering team supporting over 13 million users; enabled onboarding 40 additional engineers. Transitioned company from hiring full stack engineers to specialists; established team-directed interview processes. Designed and executed transition from monolithic to microservice architecture, from 13 deployed frontends and services to 62. Executed microfrontend strategy for shipping UIs with independent stacks. Architected and led the execution of new partner APIs securing a strategic partnership with Plesk and additional venture capital.
+Reorganized a global engineering team supporting over 20 million monthly active users; enabled onboarding 40 additional engineers. Transitioned company from hiring full stack engineers to specialists; established team-directed interview processes. Designed and executed transition from monolithic to microservice architecture, from 13 deployed frontends and services to hundreds. Executed frontend strategy for shipping decoupled UIs with independent stacks. Architected and led the execution of new partner APIs securing a strategic partnership with Plesk and additional venture capital.
 
 #### Director of Engineering
 
-Decreased time to first release for new engineers from 3 months to 1 day. Executed transition from a copypasta standard library to over 100 well tested, single purpose installables. Organized and led a project to make 9 million customer websites responsive by default. Rebuilt UIs and purchase flows to support 8 currencies and 18 languages, securing strategic, multinational partnerships with Google. Designed and secured the adoption of an organization-wide code review process, ensuring the quality of 6,000 pull requests per year.
+Decreased time to first release for new engineers from 3 months to 1 day. Organized and led a project to make 9 million websites responsive by default. Rebuilt UIs and purchase flows to support 8 currencies and 18 languages, securing strategic, multinational partnerships with Google. Designed and secured the adoption of an organization-wide code review process, ensuring the quality of 6,000 pull requests per year.
 
-### Match Strike LLC
+### Match Strike - Cofounder; Principal Engineer
 
-09/2009 to 10/2011
+08/2009 to 10/2011
 
-#### Cofounder, CTO
+### University of Central Florida - Software Engineer; Manager
 
-Designed and implemented new products; scaled real-time web apps for educators to 10,000 online courses. Secured opportunity to pitch product to a prominent seed capital firm. Worked extensively with Facebook and Twitter APIs; shipped first open source Twitter Streams API client for Python. Shipped software for clients with hundreds of thousands of users.
+05/2004 to 08/2009
 
 Full work history: https://www.linkedin.com/in/welfley/
 
