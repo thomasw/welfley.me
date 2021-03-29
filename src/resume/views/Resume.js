@@ -148,7 +148,6 @@ export default function Home() {
                 </div>
               </FlexColumns>
               <p className={styles.moreLink}>
-                <a href="https://www.linkedin.com/in/thomaswelfley/">
                   Full History via LinkedIn
                   <FontAwesomeIcon icon={faArrowCircleRight} fixedWidth />
                 </a>
