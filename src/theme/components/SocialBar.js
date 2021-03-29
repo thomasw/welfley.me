@@ -37,7 +37,7 @@ export default function SocialBar(props: Props) {
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/thomaswelfley/" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/welfley/" title="LinkedIn">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </li>

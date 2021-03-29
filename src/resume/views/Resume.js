@@ -28,7 +28,7 @@ export default function Home() {
         <title>Thomas Welfley: Resume</title>
         <meta
           name="description"
-          content="Thomas Welfley builds amazing engineering organizations and software. From Python and JS microservices to SPAs and React Native mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I can define and implement the hiring and management strategies required to scale. From inception to production, either as part of a team or independently, I make software happen. Just say the word and let's start building."
+          content="Thomas Welfley builds amazing engineering organizations and software. From Python and JS microservice architectures to SPAs, React Native, iOS, and Android mobile apps, he has extensive experience shipping software across all parts of the stack. Further, he defines and implements the hiring and management strategies required to scale. From inception to production, he makes software happen."
         />
         <meta
           name="keywords"
@@ -42,7 +42,7 @@ export default function Home() {
             <FlexColumns>
               <div>
                 <h1>Thomas welfley</h1>
-                <h2>Engineering Manager</h2>
+                <h2>Engineering Leader</h2>
               </div>
               <ContactInfo />
             </FlexColumns>
@@ -54,14 +54,16 @@ export default function Home() {
               <p>
                 I build amazing <strong>engineering organizations</strong> and{' '}
                 <strong>software</strong>. From <strong>Python</strong> and{' '}
-                <strong>JS</strong> microservices to <strong>SPAs</strong> and{' '}
-                <strong>React Native</strong> mobile apps, I have extensive
-                experience shipping software across all parts of the stack.
-                Further, I can define and implement the{' '}
-                <strong>hiring and management strategies</strong> required to{' '}
-                <strong>scale</strong>. From inception to production, either as
-                part of a team or independently, I make software happen. Just
-                say the word and <strong>let's start building</strong>.
+                <strong>JS</strong> <strong>microservice architectures</strong>{' '}
+                to web <strong>SPAs</strong>, <strong>React Native</strong>,{' '}
+                <strong>iOS</strong>, and <strong>Android</strong> mobile apps,
+                I have extensive experience shipping software across all parts
+                of the stack. Further, I define and implement the{' '}
+                <strong>hiring</strong> and{' '}
+                <strong>management strategies</strong> required to{' '}
+                <strong>scale</strong>. From inception to production, I make
+                software happen. Just say the word and{' '}
+                <strong>let's start building</strong>.
               </p>
             </LimitWidthNarrow>
           </section>
@@ -69,23 +71,41 @@ export default function Home() {
             <Lolipop icon={faBriefcase}>
               <FlexColumns>
                 <div className={styles.timeRange}>
-                  09.2016
+                  03.2020
                   <br />
                   Present
+                </div>
+                <div>
+                  <h1>Google</h1>
+                  <h2>Sr. Engineering Manager, Developer Programs</h2>
+                  <p>
+                    Led a cross-functional team of 20 to design and execute{' '}
+                    <strong>developer experience</strong> for the Google
+                    Assistant on speakers, Smart Displays, and Android devices.
+                    Reported at the director level. Enabled 2x developer growth
+                    and 4x end user growth for their integrations (tens of
+                    millions of new monthly active users). Enabled integrations
+                    with some of the top engineering companies in the world
+                    (Twitter, Microsoft, Snap). Designed and{' '}
+                    <strong>recruited teams</strong> to expand developer
+                    platforms spanning multiple product areas (Search, Nest,
+                    Android).
+                  </p>
+                </div>
+              </FlexColumns>
+              <FlexColumns>
+                <div className={styles.timeRange}>
+                  09.2016
+                  <br />
+                  03.2020
                 </div>
                 <div>
                   <h1>HipHipGo</h1>
                   <h2>Founder</h2>
                   <p>
-                    Designed and built a product that forecasts user weight
-                    change based on activity levels and spending patterns.
-                    Shipped React Native <strong>mobile apps</strong> for{' '}
-                    <strong>iOS</strong> and <strong>Android</strong> that alert
-                    users when they visit places correlated with negative health
-                    outcomes. Built systems to geolocate credit card
-                    transactions based on profile and mobile device location
-                    cues. Built systems to health score businesses based on
-                    aggregate visitor data.
+                    Principal engineer for a product that forecasts body weight
+                    change based on automatically tracked fitness and food spend
+                    data.
                   </p>
                 </div>
               </FlexColumns>
@@ -96,32 +116,32 @@ export default function Home() {
                   09.2016
                 </div>
                 <div>
-                  <h1>Yola, Inc.</h1>
+                  <h1>Yola</h1>
                   <h2>VP of Engineering</h2>
                   <p>
                     Reorganized a <strong>global engineering team</strong>{' '}
-                    supporting over 13 million users; enabled onboarding 40
-                    additional engineers. Transitioned company from hiring full
-                    stack engineers to specialists; established team-directed
-                    interview processes. Designed and executed transition from
-                    monolithic to <strong>microservice architecture</strong>,
-                    from 13 deployed frontends and services to 62. Executed{' '}
-                    <strong>microfrontend</strong> strategy for shipping UIs
-                    with independent stacks. Architected and led the execution
-                    of new partner <strong>APIs</strong> securing a strategic
-                    partnership with Plesk and additional venture capital.
+                    supporting over 20 million monthly active users; enabled
+                    onboarding 40 additional engineers. Transitioned company
+                    from hiring full stack engineers to specialists; established
+                    team-directed interview processes. Designed and executed
+                    transition from monolithic to{' '}
+                    <strong>microservice architecture</strong>, from 13 deployed
+                    frontends and services to hundreds. Executed{' '}
+                    <strong>frontend</strong> strategy for shipping decoupled
+                    UIs with independent stacks. Architected and led the
+                    execution of new partner <strong>APIs</strong> securing a
+                    strategic partnership with Plesk and additional venture
+                    capital.
                   </p>
                   <h2>Director of Engineering</h2>
                   <p>
                     Decreased time to first release for new engineers from 3
-                    months to 1 day. Executed transition from a copypasta
-                    standard library to over 100 well tested,{' '}
-                    <strong>single purpose installables</strong>. Organized and
-                    led a project to make 9 million customer websites{' '}
-                    <strong>responsive</strong> by default. Rebuilt UIs and
-                    purchase flows to support 8 currencies and 18 languages,
-                    securing strategic, multinational partnerships with Google.
-                    Designed and secured the adoption of an organization-wide{' '}
+                    months to 1 day. Organized and led a project to make 9
+                    million customer websites <strong>responsive</strong> by
+                    default. Rebuilt UIs and purchase flows to support 8
+                    currencies and 18 languages, securing strategic,
+                    multinational partnerships with Google. Designed and secured
+                    the adoption of an organization-wide{' '}
                     <strong>code review</strong> process, ensuring the quality
                     of 6,000 pull requests per year.
                   </p>
@@ -135,20 +155,22 @@ export default function Home() {
                 </div>
                 <div>
                   <h1>Match Strike LLC</h1>
-                  <h2>Cofounder, CTO</h2>
-                  <p>
-                    Designed and implemented new products; scaled{' '}
-                    <strong>real-time web apps</strong> for educators to 10,000
-                    online courses. Secured opportunity to pitch product to a
-                    prominent seed capital firm. Worked extensively with
-                    Facebook and Twitter APIs; shipped first open source Twitter
-                    Streams API client for <strong>Python</strong>. Shipped
-                    software for clients with hundreds of thousands of users.
-                  </p>
+                  <h2>Cofounder; Principal Engineer</h2>
+                </div>
+              </FlexColumns>
+              <FlexColumns>
+                <div className={styles.timeRange}>
+                  05.2004
+                  <br />
+                  08.2009
+                </div>
+                <div>
+                  <h1>University of Central Florida</h1>
+                  <h2>Software Engineer; Manager</h2>
                 </div>
               </FlexColumns>
               <p className={styles.moreLink}>
-                <a href="https://www.linkedin.com/in/thomaswelfley/">
+                <a href="https://www.linkedin.com/in/welfley/">
                   Full History via LinkedIn
                   <FontAwesomeIcon icon={faArrowCircleRight} fixedWidth />
                 </a>
