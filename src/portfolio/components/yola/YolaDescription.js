@@ -101,7 +101,7 @@ export default function YolaDescription() {
             icon={faNetworkWired}
             className={styles.microservices}
           />
-          <h2>62 microservices</h2>
+          <h2>100+ microservices and frontends</h2>
           <p>
             Executed a microservice architecture at scale, radically improving
             performance and site reliability.
