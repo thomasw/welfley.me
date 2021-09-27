@@ -12,7 +12,7 @@ export default function YolaDemo(props: HTMLElementProps) {
         <h1>Yola</h1>
         <h2>Vice President of Engineering</h2>
         <h2>
-          13 million users. 9 million websites.
+          13 million websites.
           <span className={styles.cursor}>&nbsp;</span>
         </h2>
       </div>
