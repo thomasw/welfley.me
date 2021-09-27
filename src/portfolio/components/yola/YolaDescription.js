@@ -120,10 +120,10 @@ export default function YolaDescription() {
         </div>
         <div {...popInProps(2)}>
           <FontAwesomeIcon icon={faUsers} className={styles.users} />
-          <h2>13 million users</h2>
+          <h2>13 million websites</h2>
           <p>
-            Shipped quality software on time and on budget while growing the
-            user base from 6&nbsp;million to 13&nbsp;million.
+            Shipped quality software on time and on budget while growing total
+            sites from 6&nbsp;million to 13&nbsp;million.
           </p>
         </div>
         <div {...popInProps(3)}>
