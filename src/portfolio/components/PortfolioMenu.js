@@ -7,6 +7,8 @@ import type { HTMLElementProps } from 'types';
 import { LinkButton } from 'theme/components/button';
 import { LimitWidth } from 'theme/components/layout';
 
+import hiphipgo from './hiphipgo.png';
+import yola from './yola.svg';
 import styles from './PortfolioMenu.module.scss';
 
 export default function PortfolioMenu(props: HTMLElementProps) {
@@ -19,14 +21,14 @@ export default function PortfolioMenu(props: HTMLElementProps) {
         <div className={styles.content}>
           <Link to="#hhg" smooth>
             <img
-              src={require('./hiphipgo.png')}
+              src={hiphipgo}
               alt="HipHipGo"
               className={styles.hhgLogo}
             />
           </Link>
           <Link to="#yola" smooth>
             <img
-              src={require('./yola.svg')}
+              src={yola}
               className={styles.yolaLogo}
               alt="Yola"
             />

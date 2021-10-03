@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import type { HTMLElementProps } from 'types';
 import DeviceFrame from './DeviceFrame';
+import timelinevideo from './timeline-small.mp4';
 import {
   neutral,
   negative,
@@ -96,7 +97,7 @@ export default function HHGDemo(props: Props) {
         aria-hidden
         autoPlay
         controls={false}
-        disableremoteplayback="true"
+        disableRemotePlayback
         loop
         muted
         onTimeUpdate={handleTimeUpdate}
@@ -106,7 +107,7 @@ export default function HHGDemo(props: Props) {
         preload="auto"
         ref={video}
       >
-        <source src={require('./timeline-small.mp4')} type="video/mp4" />
+        <source src={timelinevideo} type="video/mp4" />
       </video>
     </DeviceFrame>
   );
