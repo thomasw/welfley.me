@@ -6,7 +6,7 @@
 ⌂   San Francisco, CA
 ✭   https://welfley.me/
 
-I build amazing engineering organizations and software. From Python and JS microservice architectures to SPAs, React Native, iOS, and Android mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I define and implement the hiring and management strategies required to scale. From inception to production, I make software happen. Just say the word and let's start building.
+I build amazing engineering organizations and software. From microservice architectures, to developer platforms, and web, iOS, and Android frontends, I have extensive experience shipping software across all parts of the stack. Further, I define and implement the hiring and management strategies required to scale. From inception to production, I make software and teams happen. Just say the word and let's start building.
 
 ## Work Experience
 

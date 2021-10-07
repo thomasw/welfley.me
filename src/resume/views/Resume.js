@@ -52,18 +52,18 @@ export default function Home() {
           <section>
             <LimitWidthNarrow>
               <p>
-                I build amazing <strong>engineering organizations</strong> and{' '}
-                <strong>software</strong>. From <strong>Python</strong> and{' '}
-                <strong>JS</strong> <strong>microservice architectures</strong>{' '}
-                to web <strong>SPAs</strong>, <strong>React Native</strong>,{' '}
-                <strong>iOS</strong>, and <strong>Android</strong> mobile apps,
-                I have extensive experience shipping software across all parts
-                of the stack. Further, I define and implement the{' '}
-                <strong>hiring</strong> and{' '}
-                <strong>management strategies</strong> required to{' '}
-                <strong>scale</strong>. From inception to production, I make
-                software happen. Just say the word and{' '}
-                <strong>let's start building</strong>.
+                I build amazing <strong>engineering organizations</strong> and
+                {' '}<strong>software</strong>. From <strong>microservice
+                {' '}architectures</strong>, to <strong>developer
+                {' '}platforms</strong>, and <strong>web</strong>,
+                {' '}<strong>iOS</strong>, and <strong>Android</strong>
+                {' '}frontends, I have extensive experience shipping software
+                {' '}across all parts of the stack. Further, I define and 
+                {' '}implement the <strong>hiring</strong> and
+                {' '}<strong>management strategies</strong> required to
+                {' '}<strong>scale</strong>. From inception to production, I
+                {' '}make software and teams happen. Just say the word and
+                {' '}<strong>let's start building</strong>.
               </p>
             </LimitWidthNarrow>
           </section>
