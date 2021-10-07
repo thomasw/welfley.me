@@ -77,7 +77,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h1>Google</h1>
-                  <h2>Sr. Engineering Manager, Developer Programs</h2>
+                  <h2>Sr. Engineering Manager</h2>
                   <p>
                     Led a cross-functional team of 20 to design and execute{' '}
                     <strong>developer experience</strong> for the Google

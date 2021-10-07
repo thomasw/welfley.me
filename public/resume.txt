@@ -14,7 +14,7 @@ I build amazing engineering organizations and software. From microservice archit
 
 03/2020 to Present
 
-#### Sr. Engineering Manager, Developer Programs
+#### Sr. Engineering Manager
 
 Led a cross-functional team of 20 to design and execute developer experience for the Google Assistant on speakers, Smart Displays, and Android devices. Reported at the director level. Enabled 2x developer growth and 4x end user growth for their integrations (tens of millions of new monthly active users). Enabled integrations with some of the top engineering companies in the world (Twitter, Microsoft, Snap). Designed and recruited teams to expand developer platforms spanning multiple product areas (Search, Nest, Android).
 
