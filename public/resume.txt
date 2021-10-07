@@ -6,7 +6,7 @@
 ⌂   San Francisco, CA
 ✭   https://welfley.me/
 
-I build amazing engineering organizations and software. From Python and JS microservice architectures to SPAs, React Native, iOS, and Android mobile apps, I have extensive experience shipping software across all parts of the stack. Further, I define and implement the hiring and management strategies required to scale. From inception to production, I make software happen. Just say the word and let's start building.
+I build amazing engineering organizations and software. From microservice architectures, to developer platforms, and web, iOS, and Android frontends, I have extensive experience shipping software across all parts of the stack. Further, I define and implement the hiring and management strategies required to scale. From inception to production, I make software and teams happen. Just say the word and let's start building.
 
 ## Work Experience
 
@@ -14,7 +14,7 @@ I build amazing engineering organizations and software. From Python and JS micro
 
 03/2020 to Present
 
-#### Sr. Engineering Manager, Developer Programs
+#### Sr. Engineering Manager
 
 Led a cross-functional team of 20 to design and execute developer experience for the Google Assistant on speakers, Smart Displays, and Android devices. Reported at the director level. Enabled 2x developer growth and 4x end user growth for their integrations (tens of millions of new monthly active users). Enabled integrations with some of the top engineering companies in the world (Twitter, Microsoft, Snap). Designed and recruited teams to expand developer platforms spanning multiple product areas (Search, Nest, Android).
 
